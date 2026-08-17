@@ -41,6 +41,8 @@ export interface BusinessDetails {
 export interface Article {
   id: string;
   slug: string;
+  metaTitle?: LocalizedString | string;
+  metaDescription?: LocalizedString | string;
   category: 'horeca' | 'evenements' | 'lifestyle';
   categoryLabel: LocalizedString;
   title: LocalizedString;

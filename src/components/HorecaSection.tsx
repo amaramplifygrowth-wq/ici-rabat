@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Article } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { MapPin, Clock, ArrowUpRight, ArrowRight, UtensilsCrossed } from 'lucide-react';
+import { ScrollReveal } from './ScrollReveal';
 
 interface HorecaSectionProps {
   articles: Article[];
@@ -40,138 +41,146 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
   const displayList = showAll ? filteredArticles : filteredArticles.slice(0, 9);
 
   return (
-    <section id="horeca-guide-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-6 sm:pt-14 sm:pb-8">
-      {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b border-[#E5DFD5]">
-        <div>
-          <div className="flex items-center gap-2 mb-2">
-            <UtensilsCrossed className="w-4 h-4 text-[#D95D39]" />
-            <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D95D39]">
-              {t.navHoreca}
-            </span>
+    <section id="horeca-guide-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 sm:pt-14 sm:pb-8">
+      <ScrollReveal direction="up" distance={16}>
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b border-[#E5DFD5]">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <UtensilsCrossed className="w-4 h-4 text-[#D95D39]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D95D39]">
+                {t.navHoreca}
+              </span>
+            </div>
+            <h2 className="font-heading font-bold text-2xl sm:text-4xl text-[#182338]">
+              {t.horecaSectionTitle}
+            </h2>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#182338]">
-            {t.horecaSectionTitle}
-          </h2>
+          <p className="text-xs sm:text-base text-[#6F645A] max-w-md mt-2 md:mt-0 font-normal">
+            {t.horecaSectionSubtitle}
+          </p>
         </div>
-        <p className="text-sm sm:text-base text-[#6F645A] max-w-md mt-2 md:mt-0 font-normal">
-          {t.horecaSectionSubtitle}
-        </p>
-      </div>
 
-      {/* Neighborhood Filter Pills */}
-      <div className="flex flex-wrap items-center gap-2 mb-10" id="neighborhood-filter-bar">
-        {neighborhoods.map((n) => {
-          const isActive = selectedNeighborhood === n.id;
-          return (
-            <button
-              key={n.id}
-              id={`filter-nh-${n.id}`}
-              onClick={() => setSelectedNeighborhood(n.id)}
-              className={`px-4 py-1.5 text-xs sm:text-sm font-semibold rounded-full transition-all cursor-pointer ${
-                isActive
-                  ? 'bg-[#182338] text-white shadow-xs'
-                  : 'bg-[#EAE2D8] text-[#55657E] hover:bg-[#DDD4C7] hover:text-[#182338]'
-              }`}
-            >
-              {n.label}
-            </button>
-          );
-        })}
-      </div>
+        {/* Neighborhood Filter Pills */}
+        <div className="flex flex-wrap items-center gap-2 mb-8 sm:mb-10" id="neighborhood-filter-bar">
+          {neighborhoods.map((n) => {
+            const isActive = selectedNeighborhood === n.id;
+            return (
+              <button
+                key={n.id}
+                id={`filter-nh-${n.id}`}
+                onClick={() => setSelectedNeighborhood(n.id)}
+                className={`px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-full transition-all cursor-pointer ${
+                  isActive
+                    ? 'bg-[#182338] text-white shadow-xs'
+                    : 'bg-[#EAE2D8] text-[#55657E] hover:bg-[#DDD4C7] hover:text-[#182338]'
+                }`}
+              >
+                {n.label}
+              </button>
+            );
+          })}
+        </div>
+      </ScrollReveal>
 
       {/* Articles Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {displayList.map((item) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {displayList.map((item, idx) => {
           return (
-            <div
+            <ScrollReveal
               key={item.id}
-              id={`horeca-card-${item.id}`}
-              className="bg-[#FFFFFF] border border-[#E8E1D7] rounded-xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              direction="up"
+              distance={24}
+              delay={Math.min(idx * 0.06, 0.3)}
             >
-              {/* Photo Area with no overlapping text */}
               <div
-                className="relative aspect-[16/10] overflow-hidden bg-[#EAE2D8] cursor-pointer"
-                onClick={() => onSelectArticle(item)}
+                id={`horeca-card-${item.id}`}
+                className="bg-[#FFFFFF] border border-[#E8E1D7] rounded-xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full"
               >
-                <img
-                  src={item.heroImage}
-                  alt={getLocalized(item.title)}
-                  className="w-full h-full object-cover editorial-photo group-hover:scale-105 transition-transform duration-500 ease-out"
-                  referrerPolicy="no-referrer"
-                />
-                {/* Warm Editorial Color-Grading Overlay (8-10% intensity) */}
-                <div className="absolute inset-0 editorial-overlay z-10" />
-                {item.businessDetails?.priceLevel && (
-                  <div className="absolute top-3 right-3 z-20 bg-[#FAF8F5]/95 text-[#182338] font-bold text-xs px-2.5 py-1 rounded-md shadow-xs border border-[#E0D8CE]">
-                    {item.businessDetails.priceLevel}
-                  </div>
-                )}
-              </div>
-
-              {/* Text Body */}
-              <div className="p-6 flex flex-col flex-grow justify-between">
-                <div>
-                  <div className="flex items-center justify-between text-xs text-[#8E7E73] font-medium mb-3">
-                    <span className="flex items-center gap-1 text-[#D95D39] font-bold">
-                      <MapPin className="w-3.5 h-3.5" />
-                      {getLocalized(item.location)}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      {getLocalized(item.readTime)}
-                    </span>
-                  </div>
-
-                  <h3
-                    onClick={() => onSelectArticle(item)}
-                    className="font-heading font-bold text-xl text-[#182338] group-hover:text-[#D95D39] transition-colors leading-snug mb-3 cursor-pointer"
-                  >
-                    {getLocalized(item.title)}
-                  </h3>
-
-                  <p className="text-sm text-[#55657E] leading-relaxed line-clamp-3 mb-4 font-normal">
-                    {getLocalized(item.excerpt)}
-                  </p>
-
-                  {/* Business Specialty Tag */}
-                  {item.businessDetails?.specialty && (
-                    <div className="bg-[#FAF8F5] border border-[#EBE4DA] rounded-md p-2.5 mb-4 text-xs text-[#6F645A]">
-                      <span className="font-bold text-[#182338] block mb-0.5">
-                        {t.specialtyLabel} :
-                      </span>
-                      <span className="line-clamp-2">
-                        {getLocalized(item.businessDetails.specialty)}
-                      </span>
+                {/* Photo Area with no overlapping text */}
+                <div
+                  className="relative aspect-[16/10] overflow-hidden bg-[#EAE2D8] cursor-pointer"
+                  onClick={() => onSelectArticle(item)}
+                >
+                  <img
+                    src={item.heroImage}
+                    alt={getLocalized(item.title)}
+                    className="w-full h-full object-cover editorial-photo group-hover:scale-105 transition-transform duration-500 ease-out"
+                    referrerPolicy="no-referrer"
+                  />
+                  {/* Warm Editorial Color-Grading Overlay (8-10% intensity) */}
+                  <div className="absolute inset-0 editorial-overlay z-10" />
+                  {item.businessDetails?.priceLevel && (
+                    <div className="absolute top-3 right-3 z-20 bg-[#FAF8F5]/95 text-[#182338] font-bold text-xs px-2.5 py-1 rounded-md shadow-xs border border-[#E0D8CE]">
+                      {item.businessDetails.priceLevel}
                     </div>
                   )}
                 </div>
 
-                {/* Footer Buttons */}
-                <div className="pt-4 border-t border-[#F0EAE1] flex items-center justify-between">
-                  <button
-                    onClick={() => onSelectArticle(item)}
-                    className="text-xs font-bold text-[#182338] hover:text-[#D95D39] flex items-center gap-1.5 transition-colors cursor-pointer"
-                  >
-                    <span>{t.readArticle}</span>
-                    <ArrowRight className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`} />
-                  </button>
+                {/* Text Body */}
+                <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+                  <div>
+                    <div className="flex items-center justify-between text-xs text-[#8E7E73] font-medium mb-2.5 sm:mb-3">
+                      <span className="flex items-center gap-1 text-[#D95D39] font-bold">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {getLocalized(item.location)}
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        {getLocalized(item.readTime)}
+                      </span>
+                    </div>
 
-                  {item.relatedBusinessUrl && (
-                    <a
-                      href={item.relatedBusinessUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs font-semibold text-[#8E7E73] hover:text-[#182338] flex items-center gap-1"
-                      title={t.visitWebsite}
+                    <h3
+                      onClick={() => onSelectArticle(item)}
+                      className="font-heading font-bold text-lg sm:text-xl text-[#182338] group-hover:text-[#D95D39] transition-colors leading-snug mb-2.5 sm:mb-3 cursor-pointer"
                     >
-                      <span>Web</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </a>
-                  )}
+                      {getLocalized(item.title)}
+                    </h3>
+
+                    <p className="text-xs sm:text-sm text-[#55657E] leading-relaxed line-clamp-3 mb-4 font-normal">
+                      {getLocalized(item.excerpt)}
+                    </p>
+
+                    {/* Business Specialty Tag */}
+                    {item.businessDetails?.specialty && (
+                      <div className="bg-[#FAF8F5] border border-[#EBE4DA] rounded-md p-2.5 mb-4 text-xs text-[#6F645A]">
+                        <span className="font-bold text-[#182338] block mb-0.5">
+                          {t.specialtyLabel} :
+                        </span>
+                        <span className="line-clamp-2">
+                          {getLocalized(item.businessDetails.specialty)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Footer Buttons */}
+                  <div className="pt-4 border-t border-[#F0EAE1] flex items-center justify-between">
+                    <button
+                      onClick={() => onSelectArticle(item)}
+                      className="text-xs font-bold text-[#182338] hover:text-[#D95D39] flex items-center gap-1.5 transition-colors cursor-pointer"
+                    >
+                      <span>{t.readArticle}</span>
+                      <ArrowRight className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`} />
+                    </button>
+
+                    {item.relatedBusinessUrl && (
+                      <a
+                        href={item.relatedBusinessUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-semibold text-[#8E7E73] hover:text-[#182338] flex items-center gap-1"
+                        title={t.visitWebsite}
+                      >
+                        <span>Web</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           );
         })}
       </div>
@@ -182,7 +191,7 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
           <button
             id="view-all-horeca-btn"
             onClick={onViewAllHoreca}
-            className="inline-flex items-center gap-2 px-8 py-3.5 border-2 border-[#182338] text-[#182338] hover:bg-[#182338] hover:text-white font-bold text-sm rounded-lg transition-all duration-200 cursor-pointer shadow-xs"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-[#182338] text-[#182338] hover:bg-[#182338] hover:text-white font-bold text-xs sm:text-sm rounded-lg transition-all duration-200 cursor-pointer shadow-xs"
           >
             <span>{t.viewAllHoreca}</span>
             <ArrowRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />

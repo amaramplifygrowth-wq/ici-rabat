@@ -247,11 +247,17 @@ async function runPrerender() {
     }
 
     const pubDate = article.publishedAt || '2026-08-16';
+    const pageTitle = typeof article.metaTitle === 'string'
+      ? article.metaTitle
+      : (article.metaTitle?.fr || `${article.title.fr} | Ici Rabat`);
+    const pageDescription = typeof article.metaDescription === 'string'
+      ? article.metaDescription
+      : (article.metaDescription?.fr || article.excerpt.fr);
 
     routes.push({
       path: articlePath,
-      title: `${article.title.fr} | Ici Rabat`,
-      description: article.excerpt.fr,
+      title: pageTitle,
+      description: pageDescription,
       image: articleImage,
       type: 'article',
       publishedTime: pubDate,

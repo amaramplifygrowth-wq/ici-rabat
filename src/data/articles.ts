@@ -881,7 +881,7 @@ export const ARTICLES_DATA: Article[] = [
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'
     },
     relatedBusinessName: 'Indian Flavors',
-    relatedBusinessUrl: 'https://indianflavorsrabat.com',
+    relatedBusinessUrl: 'https://indianflavor.pages.dev',
     businessDetails: {
       name: 'Indian Flavors',
       category: {
@@ -901,7 +901,7 @@ export const ARTICLES_DATA: Article[] = [
         ar: 'يومياً: ١٣:٠٠ – ٢٣:٠٠ (خدمة مستمرة وتوصيل عبر واتساب)',
         en: 'Daily: 1:00 PM – 11:00 PM (Continuous service & WhatsApp delivery)'
       },
-      websiteUrl: 'https://indianflavorsrabat.com',
+      websiteUrl: 'https://indianflavor.pages.dev',
       instagramUrl: 'https://instagram.com/indianflavors_rabat',
       phone: '+212 5 37 77 00 00',
       whatsapp: '+212 6 00 00 00 00',
@@ -924,6 +924,157 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Butter Chicken', ar: 'بتر تشيكن', en: 'Butter Chicken' },
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Tandoor', ar: 'تندور', en: 'Tandoor' }
+    ]
+  },
+  {
+    id: 'doms-cafe-agdal',
+    slug: 'doms-cafe-agdal',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Café & Restauration Urbaine',
+      ar: 'مقهى ومطعم حضري',
+      en: 'Café & Urban Dining'
+    },
+    title: {
+      fr: "Dom's Café : Le Repaire où le Billard Rencontre la Bonne Table",
+      ar: "دومز كافيه: الملاذ الذي يلتقي فيه البلياردو بالمأكولات الشهية",
+      en: "Dom's Café: Where Billiards Meets Good Food"
+    },
+    subtitle: {
+      fr: "Billard, snooker, wifi haut débit et réconfort culinaire au cœur de l'Agdal.",
+      ar: "بلياردو، سنوكر، واي فاي عالي السرعة وأطباق شهية في قلب أكدال.",
+      en: "Billiards, snooker, high-speed wifi, and comforting dishes in the heart of Agdal."
+    },
+    metaTitle: {
+      fr: "Dom's Café Agdal : Café Wifi & Billard à Rabat | Ici Rabat",
+      ar: "دومز كافيه أكدال: مقهى مع واي فاي وبلياردو في الرباط | هنا الرباط",
+      en: "Dom's Café Agdal: Wifi Café & Billiards in Rabat | Ici Rabat"
+    },
+    metaDescription: {
+      fr: "Dom's Café à Agdal : café avec wifi rapide idéal pour travailler, tacos et pâtes généreux, billard et snooker. L'adresse à Rabat pour combiner travail et détente.",
+      ar: "دومز كافيه في أكدال: مقهى مع واي فاي سريع مثالي للعمل، تاكوس ومعكرونة غنية، بلياردو وسنوكر. العنوان الأمثل في الرباط للجمع بين العمل والاسترخاء.",
+      en: "Dom's Café in Agdal: cafe with fast wifi ideal for remote work, generous tacos and pasta, billiards and snooker. The top spot in Rabat to combine work and leisure."
+    },
+    excerpt: {
+      fr: "Il y a des adresses qui ne rentrent dans aucune case, et Dom's Café en fait clairement partie : wifi rapide pour télétravailler, billard entre amis et cuisine généreuse au 26 Rue Jabal El Ayachi.",
+      ar: "يتميز دومز كافيه بكونه فضاءً هجيناً فريداً يجمع بين الواي فاي فائق السرعة للعمل، وطاولات البلياردو والسنوكر، وقائمة مأكولات دسمة في قلب أكدال.",
+      en: "Dom's Café stands out as a unique hybrid venue in Agdal, combining high-speed wifi for work, billiards and snooker tables, and generous comfort dining."
+    },
+    body: {
+      fr: [
+        "Il y a des adresses qui ne rentrent dans aucune case, et Dom's Café, niché au 26 Rue Jabal El Ayachi, en fait clairement partie. Ici, l'ambiance résolument décontractée cohabite avec une cuisine soignée, le tout ponctué du claquement discret des boules de billard sur fond de wifi rapide, une combinaison rare parmi les cafés à Rabat.",
+        "Derrière la verrière en résille dorée qui sépare l'espace restauration de la salle de jeux, plusieurs tables de billard et de snooker attendent les habitués. On y vient pour une partie entre amis, on y reste pour l'ambiance feutrée, les banquettes en velours vert et bleu, et les portraits vintage qui donnent au lieu des airs de club anglais revisité. Le genre d'endroit où une partie rapide se transforme facilement en après-midi entière, sans que personne ne s'en plaigne.",
+        "Mais Dom's Café, c'est aussi devenu bien plus qu'un simple lieu de détente. De plus en plus de télétravailleurs et de freelances en ont fait leur adresse de prédilection pour travailler à Rabat : le wifi rapide et stable, affiché fièrement à l'entrée, en fait naturellement l'un des meilleurs cafés avec wifi à Agdal, autant qu'un vrai café internet pour ceux qui cherchent à s'installer plusieurs heures sans mauvaise surprise de connexion. On y croise autant de groupes d'amis venus pour une partie de billard que de laptops ouverts en fin de matinée.",
+        "Côté cuisine, Dom's Café ne joue pas la carte du minimalisme. Les tacos y sont généreux et bien assaisonnés, pensés pour être partagés entre deux manches de billard, tandis que les pâtes, préparées avec soin, séduisent celles et ceux qui cherchent un repas plus consistant sans sacrifier la convivialité du lieu. Ce n'est pas une cuisine qui cherche à impressionner par la sophistication, elle mise plutôt sur la générosité et le réconfort.",
+        "Ce qui distingue vraiment Dom's Café, c'est cette capacité à réunir plusieurs envies sous un même toit : une table correcte, un espace de jeu digne de ce nom, et une connexion fiable pour ceux qui veulent transformer leur pause café en session de travail productive. Ouvert tous les jours sauf le dimanche, dès 7h30 en semaine, l'adresse s'adapte aussi bien aux lève-tôt en quête d'un café pour travailler qu'aux habitués du soir venus suivre un match sur grand écran.",
+        "Que vous cherchiez un café avec wifi à Agdal pour enchaîner les réunions en ligne, ou simplement une bonne table entre amis autour d'un billard, Dom's Café a su créer un espace hybride qui ne ressemble à aucun autre à Rabat."
+      ],
+      ar: [
+        "هناك أماكن لا يمكن حصرها في قالب واحد، ومقهى دومز كافيه، الكائن في 26 زنقة جبل العياشي بحي أكدال، ينتمي بالتأكيد إلى هذه الفئة. هنا، تتعايش الأجواء العفوية والمريحة مع مطبخ متقن، تتخللها أصوات ضربات كرات البلياردو الهادئة على وقع شبكة واي فاي فائقة السرعة، وهي توليفة نادرة بين مقاهي الرباط.",
+        "خلف الواجهة الزجاجية ذات الشبك الذهبي التي تفصل ركن المطعم عن صالة الألعاب، تنتظر عدة طاولات بلياردو وسنوكر رواد المكان الدائمين. يأتي الزوار لخوض جولة حماسية مع الأصدقاء، ويطيب لهم البقاء بفضل الأجواء الدافئة، والأرائك المخملية الخضراء والزرقاء، والصور الكلاسيكية التي تضفي على المكان طابع النوادي الإنجليزية العريقة بلمسة عصرية.",
+        "لكن دومز كافيه أصبح أيضاً أكثر من مجرد مساحة للاسترخاء والترفيه؛ إذ بات وجهة مفضلة للمشتغلين عن بعد وأصحاب العمل الحر الباحثين عن بيئة ملهمة للعمل في الرباط. فالواي فاي السريع والمستقر يجعله واحداً من أفضل المقاهي المزودة بالإنترنت في أكدال، ومكاناً مثالياً لمن يقضي ساعات عمل طويلة دون انقطاع.",
+        "أما من جانب المطبخ، فلا مكان للبساطة المفرطة في دومز كافيه؛ أطباق التاكوس غنية ومتبلة بعناية لتشاركها بين شوطي بلياردو، بينما تحظى أطباق المعكرونة المحضرة باهتمام بإعجاب الباحثين عن وجبة مشبعة وشهية. إنه مطبخ يركز على الكرم والأصالة ودفء المذاق.",
+        "ما يميز دومز كافيه حقاً هو قدرته الفريدة على تلبية مختلف الرغبات تحت سقف واحد: طاولة طعام ممتازة، وصالة ألعاب احترافية، واتصال إنترنت موثوق لمن يرغب في تحويل استراحة القهوة إلى جلسة عمل منتجة. يفتح المقهى أبوابه يومياً ما عدا الأحد، ابتداءً من الساعة 7:30 صباحاً.",
+        "سواء كنتم تبحثون عن مقهى مع واي فاي في أكدال لعقد اجتماعاتكم عبر الإنترنت، أو ببساطة عن جلسة طعام ودية مع الأصدقاء حول طاولة بلياردو، فقد نجح دومز كافيه في ابتكار فضاء هجين لا يشبه أي مكان آخر في العاصمة."
+      ],
+      en: [
+        "There are venues that defy simple categorization, and Dom's Café, nestled at 26 Rue Jabal El Ayachi, is undeniably one of them. Here, a resolutely laid-back ambiance coexists with well-crafted comfort food, punctuated by the rhythmic clack of billiard balls against the backdrop of fast, reliable wifi—a rare blend among Rabat cafés.",
+        "Behind the golden lattice glass partition separating the dining area from the gaming room, several billiard and snooker tables await regulars. Guests come for a friendly game and stay for the cozy atmosphere, deep green and blue velvet banquettes, and vintage portraits that give the place the feel of a modernized English club.",
+        "Yet Dom's Café has also evolved into much more than a recreational spot. An increasing number of remote workers and freelancers have made it their go-to workstation in Rabat: the fast and stable wifi proudly displayed at the entrance makes it one of the finest wifi-enabled cafés in Agdal, offering hours of seamless productivity without connection hitches.",
+        "On the culinary front, Dom's Café opts for generosity over minimalism. The tacos are packed, seasoned to perfection, and designed for sharing between billiard matches, while the carefully prepared pasta satisfies those in search of a hearty meal without losing the friendly warmth of the venue.",
+        "What truly sets Dom's Café apart is its effortless ability to unite diverse cravings under one roof: dependable dining, a full-fledged gaming space, and rock-solid connectivity for turning a coffee break into a productive work session. Open every day except Sunday, starting at 7:30 AM on weekdays.",
+        "Whether you are looking for a top wifi café in Agdal to attend online meetings or simply a great table with friends around a game of billiards, Dom's Café has crafted a hybrid venue unlike any other in Rabat."
+      ]
+    },
+    heroImage: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fdoms-cafe%2F01-hero-main-lounge.webp?alt=media&token=963dab85-cdf6-4101-87e1-fddb3de2d384",
+    heroOverlapImage: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fdoms-cafe%2F02-hero-overlap-snooker.webp?alt=media&token=8d730fe2-3cca-41f4-9bea-f13b315a988d",
+    heroImageCaption: {
+      fr: "L'espace lounge feutré et chaleureux de Dom's Café au 26 Rue Jabal El Ayachi à Agdal.",
+      ar: "مساحة اللاونج الدافئة والأنيقة في دومز كافيه بشارع جبل العياشي في أكدال.",
+      en: "Warm and cozy lounge area at Dom's Café on 26 Rue Jabal El Ayachi, Agdal."
+    },
+    galleryImages: [
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fdoms-cafe%2F03-gallery-sofa.webp?alt=media&token=506c8a41-6424-4897-8f2e-3c261796ccc8",
+        caption: {
+          fr: "Banquettes confortables en velours et tables de travail avec prises et wifi rapide.",
+          ar: "أرائك مخملية مريحة وطاولات عمل مجهزة بمآخذ كهربائية وواي فاي فائق السرعة.",
+          en: "Comfortable velvet seating and workspace tables with power outlets and high-speed wifi."
+        },
+        credit: "Photo : Dom's Café / Ici Rabat"
+      },
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fdoms-cafe%2F04-gallery-tv-pool.webp?alt=media&token=a241e870-6d7a-4d7f-9a12-6bb703211d82",
+        caption: {
+          fr: "Espace jeux : tables de billard et snooker professionnelles avec écrans pour les matchs.",
+          ar: "فضاء الألعاب: طاولات بلياردو وسنوكر احترافية وشاشات لنقل المباريات الرياضية.",
+          en: "Gaming zone: professional billiard and snooker tables with screens for sports matches."
+        },
+        credit: "Photo : Dom's Café / Ici Rabat"
+      }
+    ],
+    publishedAt: '2026-08-17',
+    readTime: {
+      fr: '6 min',
+      ar: '٦ دقائق',
+      en: '6 min'
+    },
+    location: {
+      fr: 'Agdal, Rabat',
+      ar: 'أكدال، الرباط',
+      en: 'Agdal, Rabat'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop'
+    },
+    relatedBusinessName: "Dom's Café",
+    relatedBusinessUrl: 'https://domscafe.pages.dev',
+    businessDetails: {
+      name: "Dom's Café",
+      category: {
+        fr: 'Café Lounge, Coworking & Club de Billard',
+        ar: 'كافيه لاونج، مساحة عمل ونادي بلياردو',
+        en: 'Café Lounge, Coworking & Billiards Club'
+      },
+      neighborhood: {
+        fr: 'Agdal',
+        ar: 'أكدال',
+        en: 'Agdal'
+      },
+      address: '26 Rue Jabal El Ayachi, Agdal, 10090 Rabat',
+      priceLevel: '€€',
+      openingHours: {
+        fr: 'Lun - Sam : 07h30 – 23h30 (Fermé le dimanche)',
+        ar: 'الإثنين - السبت: ٠٧:٣٠ – ٢٣:٣٠ (مغلق يوم الأحد)',
+        en: 'Mon - Sat: 7:30 AM – 11:30 PM (Closed on Sunday)'
+      },
+      websiteUrl: 'https://domscafe.pages.dev',
+      servesCuisine: 'Café, Tacos, Pâtes, Snacks',
+      aggregateRating: {
+        ratingValue: 4.7,
+        reviewCount: 280,
+        bestRating: 5.0
+      },
+      specialty: {
+        fr: 'Tacos généreux, pâtes maison, wifi rapide & ambiance billard',
+        ar: 'تاكوس غني، معكرونة محضرة بعناية، واي فاي سريع وأجواء بلياردو',
+        en: 'Generous tacos, homemade pasta, fast wifi & billiards lounge'
+      }
+    },
+    isFeaturedHero: true,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Café Wifi Agdal', ar: 'مقهى واي فاي أكدال', en: 'Wifi Café Agdal' },
+      { fr: 'Billard Rabat', ar: 'بلياردو الرباط', en: 'Billiards Rabat' },
+      { fr: 'Coworking Café', ar: 'مقهى للعمل', en: 'Coworking Café' },
+      { fr: 'Tacos & Pâtes', ar: 'تاكوس ومعكرونة', en: 'Tacos & Pasta' },
+      { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' }
     ]
   }
 ];

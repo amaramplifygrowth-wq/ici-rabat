@@ -25,8 +25,16 @@ export function SEOHead({ currentView, article }: SEOHeadProps) {
       path = `${article.category}/${article.slug}`;
       const title = getLocalized(article.title);
       const excerpt = getLocalized(article.excerpt);
-      pageTitle = `${title} | Ici Rabat`;
-      pageDesc = excerpt || pageDesc;
+      
+      const customTitle = typeof article.metaTitle === 'string'
+        ? article.metaTitle
+        : (article.metaTitle ? getLocalized(article.metaTitle) : '');
+      const customDesc = typeof article.metaDescription === 'string'
+        ? article.metaDescription
+        : (article.metaDescription ? getLocalized(article.metaDescription) : '');
+
+      pageTitle = customTitle || `${title} | Ici Rabat`;
+      pageDesc = customDesc || excerpt || pageDesc;
       if (article.heroImage) {
         pageImage = article.heroImage;
       }
