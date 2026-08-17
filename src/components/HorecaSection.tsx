@@ -20,7 +20,10 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
   const { getLocalized, isRtl, t } = useLanguage();
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>('all');
 
-  const horecaArticles = articles.filter((a) => a.category === 'horeca');
+  // Sort articles chronologically descending (newest published date first)
+  const horecaArticles = [...articles]
+    .filter((a) => a.category === 'horeca')
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
   const neighborhoods = [
     { id: 'all', label: t.filterAll },

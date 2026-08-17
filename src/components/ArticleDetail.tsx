@@ -59,8 +59,9 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
     }
   };
 
-  const relatedArticles = allArticles
+  const relatedArticles = [...allArticles]
     .filter((a) => a.id !== article.id)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
     .slice(0, 3);
 
   const paragraphs = article.body[language] || article.body.fr;
