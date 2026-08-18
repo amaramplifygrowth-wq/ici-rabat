@@ -2,6 +2,130 @@ import { Article } from '../types';
 
 export const ARTICLES_DATA: Article[] = [
   {
+    id: 'art-08',
+    slug: 'ba-fares-diour-jamaa',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Petit-Déjeuner & Tradition',
+      ar: 'الفطور والتقاليد',
+      en: 'Breakfast & Tradition'
+    },
+    title: {
+      fr: 'Ba Fares : le petit-déjeuner qui fait la fierté de Diour Jamaa depuis 1957',
+      ar: 'باء فارس: الفطور الذي يفتخر به حي ديور الجامع منذ 1957',
+      en: 'Ba Fares: The Breakfast Diour Jamaa Has Been Proud of Since 1957'
+    },
+    subtitle: {
+      fr: 'Une institution rbatie où la tradition laitière et le petit-déjeuner marocain se dégustent sans artifice, table après table.',
+      ar: 'مؤسسة رباطية عريقة حيث تُقدَّم تقاليد الألبان والفطور المغربي بأصالة، مائدة تلو الأخرى.',
+      en: 'A Rabat institution where dairy tradition and Moroccan breakfast are served with no frills, table after table.'
+    },
+    excerpt: {
+      fr: 'Depuis 1957, cette crèmerie de Diour Jamaa sert le petit-déjeuner marocain dans sa version la plus authentique, entre produits laitiers maison, plateau généreux et couscous du vendredi.',
+      ar: 'منذ سنة 1957، تقدم هذه الكريمري بحي ديور الجامع الفطور المغربي بأصالته الكاملة، بين منتجات ألبان منزلية، طبق سخي وكسكس الجمعة.',
+      en: 'Since 1957, this Diour Jamaa dairy house has served Moroccan breakfast in its most authentic form, house-made dairy, a generous platter, and Friday couscous.'
+    },
+    body: {
+      fr: [
+        "Il y a des adresses à Rabat qu'on ne présente plus, et Ba Fares en fait partie. Nichée avenue Al Ghazali, dans le quartier historique de Diour Jamaa, cette crèmerie traditionnelle sert des petits-déjeuners marocains authentiques depuis 1957. Pas de filtre Instagram, pas de tendance passagère, juste un savoir-faire transmis avec sérieux, table après table.",
+        "Ce qui frappe d'abord, c'est la vitrine réfrigérée à l'entrée, un mur de pâtisseries et de produits laitiers maison qui donne le ton avant même de s'asseoir. Raib frais, yaourts artisanaux, mhalabia et cheesecake au caramel, Ba Fares a bâti sa réputation sur des produits laitiers qu'on ne trouve nulle part ailleurs en ville avec cette régularité.",
+        "Mais c'est autour de la table du petit-déjeuner que l'expérience prend tout son sens. Msemen dorés, batbout tièdes, œufs au plat noyés sous une montagne de fromage râpé, jben frais, olives noires, huile d'olive et amlou en accompagnement, le plateau Ba Fares ne fait pas les choses à moitié. Ajoutez un verre de jus d'orange pressé, un thé à la menthe généreusement servi et un lait battu bien frais, et vous comprendrez pourquoi les habitués reviennent semaine après semaine.",
+        "La maison ne s'arrête pas au petit-déjeuner traditionnel, Ba Fares propose aussi des pizzas généreusement garnies, thon, olives, poivrons, tomates cerises, pour ceux qui cherchent une pause déjeuner qui change du registre habituel. Autre rendez-vous incontournable, le couscous du vendredi, préparé selon la tradition, qui attire chaque semaine son lot d'habitués et de familles du quartier.",
+        "Côté prix, Ba Fares reste fidèle à son ADN de quartier, les formules petit-déjeuner oscillent entre 55 et 79 MAD, largement accessibles pour la qualité proposée. Les produits laitiers à emporter, eux, démarrent autour de 30 MAD le pack. Que vous soyez du quartier ou de passage, Ba Fares reste une référence pour qui cherche un vrai petit-déjeuner rbati, sans artifice, tel qu'on le sert à Rabat depuis presque sept décennies."
+      ],
+      ar: [
+        "هناك عناوين في الرباط لا تحتاج إلى تعريف، ومطعم باء فارس واحد منها. تقع هذه الكريمري التقليدية في شارع الغزالي، بحي ديور الجامع العريق، وتقدم فطوراً مغربياً أصيلاً منذ سنة 1957. لا فلاتر إنستغرام، ولا موضة عابرة، بل خبرة متوارثة تُقدَّم بجدية، مائدة تلو الأخرى.",
+        "أول ما يلفت الانتباه هو الواجهة المبردة عند المدخل، جدار من الحلويات ومنتجات الألبان المصنوعة يدوياً يعطي الطابع العام قبل حتى الجلوس. الرايب الطازج، الزبادي التقليدي، المحلبية وتشيزكيك الكراميل، بنى باء فارس سمعته على منتجات ألبان لا تجدها في أي مكان آخر بالمدينة بهذه الجودة المنتظمة.",
+        "لكن التجربة الحقيقية تتجلى حول مائدة الفطور. مسمن ذهبي، بطبوط دافئ، بيض مقلي مغطى بجبل من الجبن المبشور، جبن طري، زيتون أسود، زيت زيتون وأملو كمرافقات، طبق باء فارس لا يفعل الأشياء بنصف جهد. أضف كأس عصير برتقال طازج، شاياً بالنعناع يُقدَّم بسخاء، ولبناً بارداً منعشاً، وستفهم لماذا يعود الزبائن الدائمون أسبوعاً بعد أسبوع.",
+        "لا تتوقف المؤسسة عند الفطور التقليدي فقط، فباء فارس يقدم أيضاً بيتزا غنية بالمكونات، تونة، زيتون، فلفل، طماطم كرزية، لمن يبحث عن استراحة غداء تخرج عن المألوف. موعد آخر لا يُفوَّت هو كسكس الجمعة، المحضر وفق التقاليد، والذي يجذب أسبوعياً زبائنه الدائمين وعائلات الحي.",
+        "من ناحية الأسعار، يبقى باء فارس وفياً لهويته كمطعم حي، تتراوح أسعار وجبات الفطور بين 55 و79 درهماً، وهي في متناول الجميع مقارنة بالجودة المقدمة. أما منتجات الألبان للأخذ، فتبدأ من حوالي 30 درهماً للعلبة. سواء كنت من سكان الحي أو زائراً عابراً، يبقى باء فارس مرجعاً لمن يبحث عن فطور رباطي أصيل، بلا تكلف، كما يُقدَّم في الرباط منذ ما يقارب سبعة عقود."
+      ],
+      en: [
+        "There are addresses in Rabat that need no introduction, and Ba Fares is one of them. Tucked away on Avenue Al Ghazali in the historic Diour Jamaa district, this traditional dairy house has been serving authentic Moroccan breakfasts since 1957. No Instagram filter, no passing trend, just know-how passed down with care, table after table.",
+        "The first thing that catches the eye is the refrigerated display at the entrance, a wall of house-made pastries and dairy products that sets the tone before you even sit down. Fresh raib, artisanal yogurts, mhalabia and caramel cheesecake, Ba Fares built its reputation on dairy products you won't find anywhere else in the city with this level of consistency.",
+        "But it's around the breakfast table that the experience truly comes together. Golden msemen, warm batbout, fried eggs buried under a mountain of grated cheese, fresh jben, black olives, olive oil and amlou on the side, the Ba Fares platter doesn't do things by halves. Add a glass of fresh orange juice, a generously poured mint tea and a chilled buttermilk, and you'll understand why regulars keep coming back week after week.",
+        "The house doesn't stop at traditional breakfast, Ba Fares also serves generously topped pizzas, tuna, olives, peppers, cherry tomatoes, for those looking for a lunch break that changes things up. Another not-to-be-missed appointment is Friday couscous, prepared the traditional way, which draws its regulars and neighborhood families every single week.",
+        "As for prices, Ba Fares stays true to its neighborhood roots, breakfast formulas range between 55 and 79 MAD, well within reach given the quality on offer. Takeaway dairy products start at around 30 MAD per pack. Whether you're a local or just passing through, Ba Fares remains a benchmark for anyone looking for a genuine Rbati breakfast, no frills, served in Rabat for nearly seven decades."
+      ]
+    },
+    heroImage: "PLACEHOLDER_HERO_IMAGE_URL",
+    heroOverlapImage: "PLACEHOLDER_HERO_OVERLAP_IMAGE_URL",
+    heroImageCaption: {
+      fr: 'Le plateau petit-déjeuner signature de Ba Fares, œufs, jben, msemen et jus frais.',
+      ar: 'طبق الفطور المميز لباء فارس، بيض، جبن، مسمن وعصير طازج.',
+      en: "Ba Fares' signature breakfast platter, eggs, jben, msemen and fresh juice."
+    },
+    galleryImages: [
+      {
+        url: "PLACEHOLDER_GALLERY_PIZZA_IMAGE_URL",
+        caption: {
+          fr: "Une des pizzas généreusement garnies de la maison.",
+          ar: "إحدى بيتزات المطعم الغنية بالمكونات.",
+          en: "One of the house's generously topped pizzas."
+        },
+        credit: 'Photo : Ba Fares / Ici Rabat'
+      }
+    ],
+    publishedAt: '2026-08-18',
+    readTime: {
+      fr: '4 min',
+      ar: '٤ دقائق',
+      en: '4 min'
+    },
+    location: {
+      fr: 'Diour Jamaa, Rabat',
+      ar: 'ديور الجامع، الرباط',
+      en: 'Diour Jamaa, Rabat'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice en chef Gastronomie',
+        ar: 'رئيسة تحرير قسم المذاق وفنون الطهي',
+        en: 'Gastronomy Editor-in-Chief'
+      },
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'
+    },
+    relatedBusinessName: 'Ba Fares',
+    relatedBusinessUrl: 'https://bafares.pages.dev',
+    businessDetails: {
+      name: 'Ba Fares',
+      category: {
+        fr: 'Crèmerie & Petit-Déjeuner Traditionnel',
+        ar: 'كريمري وفطور تقليدي',
+        en: 'Dairy House & Traditional Breakfast'
+      },
+      neighborhood: {
+        fr: 'Diour Jamaa',
+        ar: 'ديور الجامع',
+        en: 'Diour Jamaa'
+      },
+      address: 'Avenue Al Ghazali, Imm. Frej, Diour Jamaa, Rabat',
+      priceLevel: '€',
+      openingHours: {
+        fr: 'Tlj : 07h30 – 22h00',
+        ar: 'يومياً: ٠٧:٠٠ – ٢٢:٠٠',
+        en: 'Daily: 7:30 AM – 10:00 PM'
+      },
+      websiteUrl: 'https://bafares.pages.dev',
+      phone: '+212 537 707 370',
+      servesCuisine: 'Marocain, Petit-déjeuner, Pizza',
+      specialty: {
+        fr: 'Plateau petit-déjeuner traditionnel, produits laitiers maison & couscous du vendredi',
+        ar: 'طبق الفطور التقليدي، منتجات الألبان المنزلية وكسكس الجمعة',
+        en: 'Traditional breakfast platter, house-made dairy & Friday couscous'
+      }
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Petit-Déjeuner Rabat', ar: 'فطور الرباط', en: 'Rabat Breakfast' },
+      { fr: 'Diour Jamaa', ar: 'ديور الجامع', en: 'Diour Jamaa' },
+      { fr: 'Produits Laitiers', ar: 'منتجات الألبان', en: 'Dairy Products' },
+      { fr: 'Couscous du Vendredi', ar: 'كسكس الجمعة', en: 'Friday Couscous' }
+    ]
+  },
+  {
     id: 'art-01',
     slug: 'dar-rbatia-renaissance-hassan',
     category: 'horeca',
