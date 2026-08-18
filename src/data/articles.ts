@@ -48,8 +48,8 @@ export const ARTICLES_DATA: Article[] = [
         "As for prices, Ba Fares stays true to its neighborhood roots, breakfast formulas range between 55 and 79 MAD, well within reach given the quality on offer. Takeaway dairy products start at around 30 MAD per pack. Whether you're a local or just passing through, Ba Fares remains a benchmark for anyone looking for a genuine Rbati breakfast, no frills, served in Rabat for nearly seven decades."
       ]
     },
-    heroImage: "PLACEHOLDER_HERO_IMAGE_URL",
-    heroOverlapImage: "PLACEHOLDER_HERO_OVERLAP_IMAGE_URL",
+    heroImage: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fba-fares%2F01-hero-main-petit-dejeuner.jpg?alt=media&token=e14416ee-b815-47ec-bf94-699533c6e0d0",
+    heroOverlapImage: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fba-fares%2F02-hero-overlap-vitrine.jpg?alt=media&token=a82d2d04-19ce-422d-9ea4-ec35adc29d37",
     heroImageCaption: {
       fr: 'Le plateau petit-déjeuner signature de Ba Fares, œufs, jben, msemen et jus frais.',
       ar: 'طبق الفطور المميز لباء فارس، بيض، جبن، مسمن وعصير طازج.',
@@ -57,7 +57,7 @@ export const ARTICLES_DATA: Article[] = [
     },
     galleryImages: [
       {
-        url: "PLACEHOLDER_GALLERY_PIZZA_IMAGE_URL",
+        url: "https://firebasestorage.googleapis.com/v0/b/gen-lang-client-0510279061.firebasestorage.app/o/ici-rabat%2Fba-fares%2F03-gallery-pizza.jpg?alt=media&token=ebaaa63a-8aa6-4f80-9fc7-e018e4509c6a",
         caption: {
           fr: "Une des pizzas généreusement garnies de la maison.",
           ar: "إحدى بيتزات المطعم الغنية بالمكونات.",
