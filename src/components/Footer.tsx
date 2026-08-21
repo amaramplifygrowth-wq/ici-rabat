@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode } from '../types';
-import { Mail, CheckCircle2, ArrowRight, Globe } from 'lucide-react';
+import { Mail, CheckCircle2, AlertCircle, ArrowRight, Globe } from 'lucide-react';
 import gazetteSticker from '../assets/images/stickers/sticker_gazette.png';
 import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
 import passionnementSticker from '../assets/images/stickers/sticker_passionnement.png';
 import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
+import { useNewsletterSubscribe } from '../hooks/useNewsletterSubscribe';
 
 interface FooterProps {
   onNavigate?: (view: ViewMode) => void;
@@ -14,15 +15,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = () => {
   const { t, language, setLanguage, isRtl } = useLanguage();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setSubscribed(true);
-    }
-  };
+  const { email, setEmail, company, setCompany, status, submit } = useNewsletterSubscribe('footer');
 
   return (
     <footer id="app-footer" className="w-full bg-[#141B33] text-[#FBF1D8] pt-12 pb-10 sm:pt-14 sm:pb-12 border-t-4 border-[#FF4B12]">
@@ -51,29 +44,47 @@ export const Footer: React.FC<FooterProps> = () => {
             </div>
 
             <div className="lg:col-span-6">
-              {subscribed ? (
+              {status === 'success' ? (
                 <div className="flex items-center gap-3 bg-[#0B3D91] border border-[#2E6FD9] p-4 rounded-none text-sm font-semibold text-white">
                   <CheckCircle2 className="w-5 h-5 text-[#6FD3FF] flex-shrink-0" />
                   <span>{t.newsletterSuccess}</span>
                 </div>
               ) : (
-                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
+                <form onSubmit={submit} className="flex flex-col sm:flex-row gap-3">
+                  {/* Honeypot — invisible to real visitors, catches simple bots */}
+                  <input
+                    type="text"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="hidden"
+                  />
                   <input
                     type="email"
                     required
                     placeholder={t.newsletterPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-grow px-4 py-3.5 bg-[#0B0F1F] border border-[#FF2D78] rounded-none text-sm text-white placeholder-[#A08F68] focus:outline-hidden focus:border-[#FF4B12]"
+                    className="flex-grow px-4 py-3.5 bg-[#0B0F1F] border border-[#FF2D78] rounded-none text-sm text-white placeholder-[#A08F68] focus:outline-hidden focus:border-[#FF4B12] disabled:opacity-60"
+                    disabled={status === 'loading'}
                   />
                   <button
                     type="submit"
-                    className="px-6 py-3.5 bg-[#FF4B12] hover:bg-[#CC2E00] text-white font-bold text-sm rounded-none transition-colors cursor-pointer flex-shrink-0 riso-shadow flex items-center justify-center gap-2"
+                    disabled={status === 'loading'}
+                    className="px-6 py-3.5 bg-[#FF4B12] hover:bg-[#CC2E00] disabled:hover:bg-[#FF4B12] disabled:opacity-70 text-white font-bold text-sm rounded-none transition-colors cursor-pointer flex-shrink-0 riso-shadow flex items-center justify-center gap-2"
                   >
-                    <span>{t.newsletterButton}</span>
+                    <span>{status === 'loading' ? t.newsletterSending : t.newsletterButton}</span>
                     <ArrowRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />
                   </button>
                 </form>
+              )}
+              {status === 'error' && (
+                <div className="mt-3 flex items-center gap-2 text-xs font-semibold text-[#FF9A9A]">
+                  <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                  <span>{t.newsletterError}</span>
+                </div>
               )}
             </div>
 

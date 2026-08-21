@@ -30,6 +30,8 @@ interface Translations {
   newsletterPlaceholder: string;
   newsletterButton: string;
   newsletterSuccess: string;
+  newsletterError: string;
+  newsletterSending: string;
   backToArticles: string;
   visitWebsite: string;
   bookTable: string;
@@ -83,6 +85,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     newsletterPlaceholder: "Votre adresse e-mail",
     newsletterButton: "S'inscrire",
     newsletterSuccess: "Merci ! Vous êtes désormais inscrit à la gazette.",
+    newsletterError: "Une erreur est survenue. Réessayez dans un instant.",
+    newsletterSending: "Inscription en cours...",
     backToArticles: "Retour aux articles",
     visitWebsite: "Visiter le site web officiel",
     bookTable: "Réserver une table",
@@ -134,6 +138,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     newsletterPlaceholder: "بريدك الإلكتروني",
     newsletterButton: "اشتراك",
     newsletterSuccess: "شكراً لك! تم تسجيل اشتراكك في النشرة بنجاح.",
+    newsletterError: "حدث خطأ ما. يرجى المحاولة مرة أخرى بعد قليل.",
+    newsletterSending: "جارٍ التسجيل...",
     backToArticles: "العودة إلى المقالات",
     visitWebsite: "زيارة الموقع الإلكتروني الرسمي",
     bookTable: "حجز طاولة",
@@ -185,6 +191,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     newsletterPlaceholder: "Your email address",
     newsletterButton: "Subscribe",
     newsletterSuccess: "Thank you! You are now subscribed to the gazette.",
+    newsletterError: "Something went wrong. Please try again in a moment.",
+    newsletterSending: "Signing you up...",
     backToArticles: "Back to stories",
     visitWebsite: "Visit Official Website",
     bookTable: "Reserve a Table",

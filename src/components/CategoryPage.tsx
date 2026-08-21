@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ViewMode, Article } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { UPCOMING_SECTIONS } from '../data/articles';
@@ -8,6 +8,7 @@ import {
   Sparkles,
   Mail,
   CheckCircle2,
+  AlertCircle,
   Compass,
   ArrowRight,
   ArrowLeft,
@@ -15,6 +16,7 @@ import {
   Bell,
   Send
 } from 'lucide-react';
+import { useNewsletterSubscribe } from '../hooks/useNewsletterSubscribe';
 
 interface CategoryPageProps {
   view: ViewMode;
@@ -32,15 +34,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   onNavigate,
 }) => {
   const { getLocalized, t, isRtl, language } = useLanguage();
-  const [email, setEmail] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) {
-      setIsSubmitted(true);
-    }
-  };
+  const { email, setEmail, company, setCompany, status, submit } = useNewsletterSubscribe(view);
 
   const handleGoHoreca = () => {
     if (onNavigate) {
@@ -247,29 +241,48 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
               : 'Inscrivez-vous pour recevoir les adresses confidentielles et les dossiers complets directement dans votre boîte mail.'}
           </p>
 
-          {isSubmitted ? (
+          {status === 'success' ? (
             <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-[#0B3D91] bg-[#DCEEFF] py-3 px-5 sm:py-3.5 sm:px-6 rounded-none border border-[#B8DBFF]">
               <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#0B3D91]" />
               <span>{t.newsletterSuccess}</span>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto">
+            <form onSubmit={submit} className="flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto">
+              {/* Honeypot — invisible to real visitors, catches simple bots */}
+              <input
+                type="text"
+                value={company}
+                onChange={(e) => setCompany(e.target.value)}
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hidden"
+              />
               <input
                 type="email"
                 required
                 placeholder={t.newsletterPlaceholder}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-grow px-4 py-3 sm:py-3.5 bg-[#FBF1D8] border-2 border-[#141B33] rounded-none text-xs sm:text-sm focus:outline-hidden focus:border-[#141B33] focus:bg-white text-[#141B33]"
+                className="flex-grow px-4 py-3 sm:py-3.5 bg-[#FBF1D8] border-2 border-[#141B33] rounded-none text-xs sm:text-sm focus:outline-hidden focus:border-[#141B33] focus:bg-white text-[#141B33] disabled:opacity-60"
+                disabled={status === 'loading'}
               />
               <button
                 type="submit"
-                className="px-5 py-3 sm:px-6 sm:py-3.5 bg-[#141B33] hover:bg-[#FF4B12] text-white text-xs sm:text-sm font-bold rounded-none transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
+                disabled={status === 'loading'}
+                className="px-5 py-3 sm:px-6 sm:py-3.5 bg-[#141B33] hover:bg-[#FF4B12] disabled:hover:bg-[#141B33] disabled:opacity-70 text-white text-xs sm:text-sm font-bold rounded-none transition-colors cursor-pointer inline-flex items-center justify-center gap-2"
               >
                 <Send className="w-4 h-4" />
-                <span>{t.notifyMe}</span>
+                <span>{status === 'loading' ? t.newsletterSending : t.notifyMe}</span>
               </button>
             </form>
+          )}
+
+          {status === 'error' && (
+            <div className="mt-3 flex items-center justify-center gap-2 text-xs font-semibold text-[#CC2E00]">
+              <AlertCircle className="w-4 h-4 flex-shrink-0" />
+              <span>{t.newsletterError}</span>
+            </div>
           )}
 
           <div className="mt-4 flex items-center justify-center gap-2 text-[10px] sm:text-[11px] text-[#7A6842]">

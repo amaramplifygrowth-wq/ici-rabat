@@ -19,7 +19,7 @@ export function SEOHead({ currentView, article }: SEOHeadProps) {
     let path = '';
     let pageTitle = 'Ici Rabat | Le Magazine Urbain & Horeca de la Capitale';
     let pageDesc = "Magazine en ligne trilingue dédié à l'art de vivre, la haute gastronomie, les cafés de spécialité et la culture de Rabat.";
-    let pageImage = 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=1600&auto=format&fit=crop';
+    let pageImage = `${origin}/og-cover.jpg`;
 
     if (currentView === 'article' && article) {
       path = `${article.category}/${article.slug}`;

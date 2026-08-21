@@ -100,7 +100,7 @@ async function runPrerender() {
   }
 
   const template = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
-  const defaultImage = 'https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=1600&auto=format&fit=crop';
+  const defaultImage = `${BASE_URL}/og-cover.jpg`;
 
   const routes: RouteMeta[] = [];
 
