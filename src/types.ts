@@ -70,6 +70,9 @@ export interface Article {
   businessDetails?: BusinessDetails;
   isFeaturedHero?: boolean;
   isEditorialPick?: boolean;
+  /** Marks a sponsored/partner feature (e.g. an Amplify client). Always show `partnerLabel` visibly — never blend partner content invisibly into organic editorial. */
+  isPartner?: boolean;
+  partnerLabel?: LocalizedString;
   tags: LocalizedString[];
 }
 

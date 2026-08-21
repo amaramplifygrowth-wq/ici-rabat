@@ -5,7 +5,6 @@ import { UPCOMING_SECTIONS } from '../data/articles';
 import { HorecaSection } from './HorecaSection';
 import { ScrollReveal } from './ScrollReveal';
 import {
-  Calendar,
   Sparkles,
   Mail,
   CheckCircle2,
@@ -14,8 +13,6 @@ import {
   ArrowLeft,
   Utensils,
   Bell,
-  Layers,
-  BookOpen,
   Send
 } from 'lucide-react';
 
@@ -200,68 +197,6 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           </div>
         </div>
       </ScrollReveal>
-
-      {/* Moodboard / Curated Upcoming Stories Preview */}
-      <div className="mb-12 sm:mb-14">
-        <div className="flex items-center justify-between mb-5 sm:mb-6 pb-2 border-b-2 border-[#141B33]">
-          <div className="flex items-center gap-2">
-            <Layers className="w-4 h-4 text-[#FF4B12]" />
-            <h2 className="text-xs uppercase tracking-[0.2em] font-bold text-[#141B33]">
-              {language === 'ar'
-                ? 'عناوين الملفات الجاري توثيقها'
-                : language === 'en'
-                ? 'IN-PROGRESS EDITORIAL STORIES'
-                : 'AVANT-PREMIÈRE DES DOSSIERS EN COURS'}
-            </h2>
-          </div>
-          <span className="text-xs text-[#7A6842] italic hidden sm:inline">
-            {language === 'ar' ? 'نصوص وصور حصرية قريباً' : 'Textes et photographies d\'auteurs'}
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {upcomingConfig.curatedTeasers.map((teaser, idx) => (
-            <ScrollReveal key={idx} direction="up" distance={20} delay={idx * 0.08}>
-              <div className="bg-white border-2 border-[#141B33] rounded-none overflow-hidden riso-shadow-sm hover:riso-shadow-magenta transition-shadow flex flex-col justify-between group h-full">
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#141B33]">
-                  <img
-                    src={teaser.image}
-                    alt={getLocalized(teaser.title)}
-                    className="w-full h-full object-cover editorial-photo group-hover:scale-105 transition-transform duration-500"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 editorial-overlay z-10" />
-                  <div className="absolute top-3 right-3 z-20 bg-[#141B33]/90 text-white text-[11px] font-semibold px-3 py-1 rounded-md border border-white/10">
-                    {getLocalized(teaser.badge)}
-                  </div>
-                </div>
-
-                <div className="p-5 sm:p-7 flex flex-col flex-grow justify-between">
-                  <div>
-                    <div className="flex items-center gap-1.5 text-xs font-bold text-[#FF4B12] uppercase tracking-wider mb-2">
-                      <Calendar className="w-3.5 h-3.5" />
-                      <span>{getLocalized(teaser.date)}</span>
-                    </div>
-                    <h3 className="font-heading font-bold text-lg sm:text-2xl text-[#141B33] leading-snug">
-                      {getLocalized(teaser.title)}
-                    </h3>
-                  </div>
-
-                  <div className="mt-5 sm:mt-6 pt-4 border-t border-[#FFE9C2] flex items-center justify-between text-xs text-[#7A6842]">
-                    <span className="inline-flex items-center gap-1 text-[#0B3D91] font-bold">
-                      <BookOpen className="w-3.5 h-3.5 text-[#0B3D91]" />
-                      {language === 'ar' ? 'تحقيق ميداني قيد التحرير' : language === 'en' ? 'Reportage in Progress' : 'Reportage en immersion'}
-                    </span>
-                    <span className="font-medium text-[#141B33]">
-                      {language === 'ar' ? 'الرباط' : 'Rabat & Salé'}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </div>
 
       {/* Editorial Slow Journalism Guarantee Quote */}
       <ScrollReveal direction="up" distance={16}>

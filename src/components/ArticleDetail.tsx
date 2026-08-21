@@ -18,7 +18,8 @@ import {
   Compass,
   Phone,
   Instagram,
-  Utensils
+  Utensils,
+  Sparkles
 } from 'lucide-react';
 
 interface ArticleDetailProps {
@@ -222,6 +223,12 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
         </button>
 
         <div className="flex items-center gap-2">
+          {article.isPartner && (
+            <div className="pop-caption inline-flex items-center gap-1.5 px-3 py-1 text-[10px] sm:text-[11px] font-normal -rotate-2">
+              <Sparkles className="w-3 h-3" />
+              <span>{article.partnerLabel ? getLocalized(article.partnerLabel) : t.partnerLabel}</span>
+            </div>
+          )}
           <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#FF4B12] bg-[#FF4B12]/10 border border-[#FF4B12]/20 px-3 py-1 rounded-full">
             {getLocalized(article.categoryLabel)}
           </span>

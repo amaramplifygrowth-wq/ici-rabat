@@ -50,6 +50,7 @@ interface Translations {
   notifyMe: string;
   aboutTitle: string;
   aboutDesc: string;
+  partnerLabel: string;
 }
 
 const UI_TRANSLATIONS: Record<Language, Translations> = {
@@ -101,7 +102,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     comingSoonDesc: "Cette rubrique est actuellement en cours de préparation éditoriale. Notre équipe prépare une immersion soignée.",
     notifyMe: "M'avertir du lancement",
     aboutTitle: "À Propos d'Ici Rabat",
-    aboutDesc: "Ici Rabat capture le pouls vibrant de la capitale impériale : entre héritage andalou, modernisme architectural et renouveau culinaire audacieux."
+    aboutDesc: "Ici Rabat capture le pouls vibrant de la capitale impériale : entre héritage andalou, modernisme architectural et renouveau culinaire audacieux.",
+    partnerLabel: "Partenaire"
   },
   ar: {
     siteTitle: "هنا الرباط",
@@ -151,7 +153,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     comingSoonDesc: "هذا القسم قيد الإعداد والتحرير حالياً. فريقنا يجهز لكم محتوى استثنائياً.",
     notifyMe: "أعلمني عند الإطلاق",
     aboutTitle: "عن مجلة هنا الرباط",
-    aboutDesc: "نرصد نبض العاصمة الإدارية والثقافية: بين الإرث الأندلسي والنهضة المعمارية والابتكارات الذوقية الواعدة."
+    aboutDesc: "نرصد نبض العاصمة الإدارية والثقافية: بين الإرث الأندلسي والنهضة المعمارية والابتكارات الذوقية الواعدة.",
+    partnerLabel: "شراكة"
   },
   en: {
     siteTitle: "ICI RABAT",
@@ -201,7 +204,8 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     comingSoonDesc: "This section is currently under editorial curation. Our team is crafting an immersive deep dive.",
     notifyMe: "Notify Me at Launch",
     aboutTitle: "About Ici Rabat",
-    aboutDesc: "Ici Rabat captures the pulse of the royal capital: poised between Andalusian heritage, modernist avenues, and daring culinary craft."
+    aboutDesc: "Ici Rabat captures the pulse of the royal capital: poised between Andalusian heritage, modernist avenues, and daring culinary craft.",
+    partnerLabel: "Partner"
   }
 };
 

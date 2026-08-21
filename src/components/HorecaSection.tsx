@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Article } from '../types';
 import { useLanguage } from '../context/LanguageContext';
-import { MapPin, Clock, ArrowUpRight, ArrowRight, UtensilsCrossed } from 'lucide-react';
+import { MapPin, Clock, ArrowUpRight, ArrowRight, UtensilsCrossed, Sparkles } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
 
 interface HorecaSectionProps {
@@ -116,6 +116,14 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                   {item.businessDetails?.priceLevel && (
                     <div className="absolute top-3 right-3 z-20 bg-[#FBF1D8]/95 text-[#141B33] font-bold text-xs px-2.5 py-1 rounded-md riso-shadow-sm border-2 border-[#141B33]">
                       {item.businessDetails.priceLevel}
+                    </div>
+                  )}
+                  {item.isPartner && (
+                    <div className="absolute top-3 left-3 z-20 -rotate-3">
+                      <div className="pop-caption inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] sm:text-[11px] font-normal">
+                        <Sparkles className="w-3 h-3" />
+                        <span>{item.partnerLabel ? getLocalized(item.partnerLabel) : t.partnerLabel}</span>
+                      </div>
                     </div>
                   )}
                 </div>

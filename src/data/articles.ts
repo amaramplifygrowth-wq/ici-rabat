@@ -458,45 +458,7 @@ export const UPCOMING_SECTIONS = {
       fr: 'Festivals d’exception, vernissages au Musée Mohammed VI et concerts intimes au Chellah.',
       ar: 'مهرجانات دولية، معارض بمتحف محمد السادس للفن المعاصر، وأمسيات موسيقية بموقع شالة الأثري.',
       en: 'Flagship festivals, exhibition openings at the Mohammed VI Modern Art Museum, and concerts at Chellah.'
-    },
-    curatedTeasers: [
-      {
-        title: {
-          fr: 'Jazz au Chellah 2026 : Le dialogue musical entre les rives',
-          ar: 'جاز في شالة 2026: حوار النغمات بين ضفتي المتوسط',
-          en: 'Jazz au Chellah 2026: Musical dialogue across Mediterranean shores'
-        },
-        date: {
-          fr: 'Septembre 2026',
-          ar: 'سبتمبر ٢٠٢٦',
-          en: 'September 2026'
-        },
-        image: 'https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800&auto=format&fit=crop',
-        badge: {
-          fr: 'Festival Phare',
-          ar: 'مهرجان بارز',
-          en: 'Flagship Festival'
-        }
-      },
-      {
-        title: {
-          fr: 'Biennale de Rabat au Musée Mohammed VI : Géométries et Lumières',
-          ar: 'بينالي الرباط بمتحف محمد السادس: هندسات وأنوار معاصرة',
-          en: 'Rabat Biennale at Mohammed VI Museum: Geometries & Contemporary Lights'
-        },
-        date: {
-          fr: 'Juin – Août 2026',
-          ar: 'يونيو – أغسطس ٢٠٢٦',
-          en: 'June – August 2026'
-        },
-        image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?q=80&w=800&auto=format&fit=crop',
-        badge: {
-          fr: 'Art Contemporain',
-          ar: 'فن معاصر',
-          en: 'Contemporary Art'
-        }
-      }
-    ]
+    }
   },
   lifestyle: {
     title: {
@@ -508,44 +470,6 @@ export const UPCOMING_SECTIONS = {
       fr: 'Boutiques de créateurs, ateliers de poterie à Salé, artisanat d’avant-garde et maisons d’hôtes confidentielles.',
       ar: 'أروقة المصممين المبدعين، ورشات الفخار بسلا، وحرف يدوية مبتكرة ودور ضيافة ساحرة.',
       en: 'Designer boutiques, ceramic master workshops in Salé, avant-garde crafts, and discreet boutique riads.'
-    },
-    curatedTeasers: [
-      {
-        title: {
-          fr: 'Le Renouveau de la Céramique de l’Oulja : Les nouveaux maîtres de l’argile',
-          ar: 'نهضة فخار الولجة: جيل جديد من صناع الخزف العصري',
-          en: 'The Oulja Ceramics Revival: The New Masters of Clay & Form'
-        },
-        date: {
-          fr: 'Guide d’Adresses',
-          ar: 'دليل عناوين',
-          en: 'Curated Guide'
-        },
-        image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=800&auto=format&fit=crop',
-        badge: {
-          fr: 'Design & Artisanat',
-          ar: 'تصميم وحرفية',
-          en: 'Design & Craft'
-        }
-      },
-      {
-        title: {
-          fr: 'Demeures Secrètes : 5 Riads d’architectes cachés dans la Médina de Rabat',
-          ar: 'قصور سرية: ٥ رياضات تاريخية بلمسات معمارية معاصرة في المدينة العتيقة',
-          en: 'Secret Sanctuaries: 5 Architect Riads Hidden Inside the Rabat Medina'
-        },
-        date: {
-          fr: 'Dossier Spécial',
-          ar: 'ملف خاص',
-          en: 'Special Feature'
-        },
-        image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop',
-        badge: {
-          fr: 'Architecture',
-          ar: 'عمارة وديكور',
-          en: 'Architecture'
-        }
-      }
-    ]
+    }
   }
 };

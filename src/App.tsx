@@ -8,7 +8,6 @@ import { PosterHero } from './components/PosterHero';
 import { HeroMosaic } from './components/HeroMosaic';
 import { WayfindingBanner } from './components/WayfindingBanner';
 import { HorecaSection } from './components/HorecaSection';
-import { CulturalHighlightsTeaser } from './components/CulturalHighlightsTeaser';
 import { ArticleDetail } from './components/ArticleDetail';
 import { CategoryPage } from './components/CategoryPage';
 import { Footer } from './components/Footer';
@@ -80,14 +79,6 @@ function HomePage() {
       <WayfindingBanner
         onExploreHoreca={() => {
           navigate('/horeca');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
-      />
-
-      {/* 4. Cultural & Lifestyle Teasers */}
-      <CulturalHighlightsTeaser
-        onNavigate={(view: ViewMode) => {
-          navigate(view === 'home' ? '/' : `/${view}`);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       />
