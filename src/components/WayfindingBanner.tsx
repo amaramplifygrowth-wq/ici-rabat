@@ -2,6 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Compass, ArrowRight, Utensils } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import dossierSticker from '../assets/images/stickers/sticker_dossier.png';
 
 interface WayfindingBannerProps {
   onExploreHoreca: () => void;
@@ -25,9 +26,11 @@ export const WayfindingBanner: React.FC<WayfindingBannerProps> = ({ onExploreHor
             {/* Wayfinding Narrative Block */}
             <div className="max-w-2xl">
               <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
-                <span className="pop-caption inline-flex items-center px-2.5 py-1 text-[10px] sm:text-xs font-normal tracking-[0.15em]">
-                  DOSSIER SPÉCIAL • ICI RABAT
-                </span>
+                <img
+                  src={dossierSticker}
+                  alt="Dossier spécial — Ici Rabat"
+                  className="h-14 sm:h-16 w-auto -rotate-2 drop-shadow-lg"
+                />
               </div>
 
               <h2 className="font-heading font-bold text-xl sm:text-3xl md:text-4xl leading-tight mb-3 sm:mb-4 text-white">

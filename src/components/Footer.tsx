@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode } from '../types';
 import { Mail, CheckCircle2, ArrowRight, Globe } from 'lucide-react';
+import gazetteSticker from '../assets/images/stickers/sticker_gazette.png';
+import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
+import passionnementSticker from '../assets/images/stickers/sticker_passionnement.png';
+import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
 
 interface FooterProps {
   onNavigate?: (view: ViewMode) => void;
@@ -25,9 +29,14 @@ export const Footer: React.FC<FooterProps> = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Newsletter Card */}
-        <div className="bg-[#1B2540] rounded-none p-8 sm:p-12 mb-16 border border-[#FF2D78]">
+        <div className="relative bg-[#1B2540] rounded-none p-8 sm:p-12 mb-16 border border-[#FF2D78]">
+          <img
+            src={gazetteSticker}
+            alt="Rejoignez la gazette"
+            className="hidden sm:block absolute -top-10 -left-6 w-32 md:w-40 h-auto -rotate-6 drop-shadow-xl pointer-events-none"
+          />
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             <div className="lg:col-span-6">
               <div className="flex items-center gap-2 text-[#FF4B12] text-xs uppercase font-bold tracking-widest mb-2">
                 <Mail className="w-4 h-4" />
@@ -76,15 +85,29 @@ export const Footer: React.FC<FooterProps> = () => {
           
           {/* Brand & Manifesto (6 cols) */}
           <div className="md:col-span-6 space-y-4">
-            <h4 className="font-heading font-bold text-3xl text-white tracking-tight">
-              {t.siteTitle}
-            </h4>
-            <p className="text-xs uppercase tracking-[0.2em] text-[#FF4B12] font-semibold">
-              {t.tagline}
-            </p>
+            <div className="flex items-center gap-4">
+              <img
+                src={illustratedLogo}
+                alt="Ici Rabat Magazine"
+                className="w-16 h-16 sm:w-20 sm:h-20 rounded-full riso-shadow-sm flex-shrink-0"
+              />
+              <div>
+                <h4 className="font-heading font-bold text-3xl text-white tracking-tight">
+                  {t.siteTitle}
+                </h4>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#FF4B12] font-semibold">
+                  {t.tagline}
+                </p>
+              </div>
+            </div>
             <p className="text-sm text-[#D9C9A0] leading-relaxed max-w-md font-normal">
               {t.footerManifesto}
             </p>
+            <img
+              src={passionnementSticker}
+              alt="Passionnément authentique"
+              className="w-40 sm:w-48 h-auto -rotate-3 drop-shadow-lg"
+            />
           </div>
 
           {/* Rubriques (3 cols) */}
@@ -119,9 +142,11 @@ export const Footer: React.FC<FooterProps> = () => {
                 >
                   {t.navEvents}
                 </Link>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-[#FF2D78] text-[#8FCBFF]">
-                  {t.comingSoonBadge}
-                </span>
+                <img
+                  src={bientotSticker}
+                  alt={t.comingSoonBadge}
+                  className="h-5 w-auto -rotate-6"
+                />
               </li>
               <li className="flex items-center gap-2">
                 <Link
@@ -131,9 +156,11 @@ export const Footer: React.FC<FooterProps> = () => {
                 >
                   {t.navLifestyle}
                 </Link>
-                <span className="text-[10px] px-2 py-0.5 rounded bg-[#FF2D78] text-[#8FCBFF]">
-                  {t.comingSoonBadge}
-                </span>
+                <img
+                  src={bientotSticker}
+                  alt={t.comingSoonBadge}
+                  className="h-5 w-auto -rotate-6"
+                />
               </li>
               <li>
                 <Link

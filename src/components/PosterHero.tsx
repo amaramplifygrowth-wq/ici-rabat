@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import heroPoster from '../assets/images/hero_poster.jpg';
+import badge100Rabat from '../assets/images/stickers/sticker_100rabat.png';
 
 interface PosterHeroProps {
   onExplore?: () => void;
@@ -25,6 +26,13 @@ export const PosterHero: React.FC<PosterHeroProps> = ({ onExplore }) => {
         {/* Decorative halftone corner accents, echoing the illustration's own dot-screen */}
         <div className="hidden sm:block absolute -top-4 -right-4 w-20 h-20 text-[#FF2D78] halftone-dots-lg pointer-events-none -z-10" />
         <div className="hidden sm:block absolute -bottom-4 -left-4 w-20 h-20 text-[#0B3D91] halftone-dots-lg pointer-events-none -z-10" />
+
+        {/* Seal badge, stamped onto the frame corner */}
+        <img
+          src={badge100Rabat}
+          alt="100% Rabat"
+          className="absolute -top-6 -right-4 sm:-top-8 sm:-right-8 w-20 sm:w-28 h-auto rotate-12 drop-shadow-xl"
+        />
 
         {/* Scroll cue */}
         {onExplore && (

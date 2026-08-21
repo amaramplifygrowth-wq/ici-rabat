@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode, Language } from '../types';
 import { Menu, X, Compass, Globe, Clock, ChevronRight } from 'lucide-react';
+import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
 
 interface HeaderProps {
   currentView?: ViewMode;
@@ -169,9 +170,11 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                 >
                   <span>{item.label}</span>
                   {item.badge && (
-                    <span className="text-[10px] uppercase tracking-normal px-2 py-0.5 rounded-full bg-[#E3CE93] text-[#7A6842] font-medium border-2 border-[#141B33]">
-                      {item.badge}
-                    </span>
+                    <img
+                      src={bientotSticker}
+                      alt={item.badge}
+                      className="h-6 w-auto -rotate-6 drop-shadow-sm"
+                    />
                   )}
                   {isActive && (
                     <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF4B12] rounded-full" />
@@ -236,11 +239,11 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                 </div>
                 <div className="flex items-center gap-2">
                   {item.badge && (
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
-                      isActive ? 'bg-[#FF2D78] text-white' : 'bg-[#E3CE93] text-[#7A6842]'
-                    }`}>
-                      {item.badge}
-                    </span>
+                    <img
+                      src={bientotSticker}
+                      alt={item.badge}
+                      className="h-5 w-auto -rotate-6"
+                    />
                   )}
                   <ChevronRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />
                 </div>
