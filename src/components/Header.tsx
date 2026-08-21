@@ -4,6 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { ViewMode, Language } from '../types';
 import { Menu, X, Compass, Globe, Clock, ChevronRight } from 'lucide-react';
 import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
+import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
 
 interface HeaderProps {
   currentView?: ViewMode;
@@ -48,10 +49,10 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
         month: 'short',
         year: 'numeric'
       };
-      
+
       const timeStr = new Intl.DateTimeFormat(language === 'ar' ? 'ar-MA' : language === 'fr' ? 'fr-FR' : 'en-GB', options).format(now);
       const dateStr = new Intl.DateTimeFormat(language === 'ar' ? 'ar-MA' : language === 'fr' ? 'fr-FR' : 'en-GB', dateOptions).format(now);
-      
+
       setCurrentTime(`${dateStr} • ${timeStr} GMT+1`);
     };
 
@@ -76,182 +77,185 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
 
   const languages: { code: Language; label: string; flagLabel: string }[] = [
     { code: 'fr', label: 'FR', flagLabel: 'Français' },
-    { code: 'ar', label: 'العربية', flagLabel: 'العربية' },
+    { code: 'ar', label: 'ع', flagLabel: 'العربية' },
     { code: 'en', label: 'EN', flagLabel: 'English' }
   ];
 
   return (
-    <header id="app-header" className="w-full bg-[#FBF1D8] border-b-2 border-[#141B33] sticky top-0 z-50 transition-colors">
-      {/* Top Utility Bar: Live Rabat Time & Language Switcher */}
-      <div className="border-b-2 border-[#141B33] bg-[#F6E6B8] text-[13px] tracking-wide text-[#4A3F2E]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <span className="font-medium text-[#141B33] tracking-widest text-xs uppercase flex items-center gap-1.5">
-              <span className="inline-block w-2 h-2 rounded-full bg-[#FF4B12] animate-pulse"></span>
-              {t.locationHeader}
-            </span>
-            <span className="hidden sm:inline-block text-[#9C8B5C]">•</span>
-            <span className="hidden sm:flex items-center gap-1.5 font-normal text-xs text-[#4A3F2E]">
-              <Clock className="w-3.5 h-3.5 text-[#7A6842]" />
-              {currentTime}
-            </span>
-          </div>
+    <header id="app-header" className="w-full sticky top-0 z-50 transition-colors">
+      <div className="bg-[#141B33] relative overflow-hidden">
+        {/* Halftone texture wash so the header reads as part of the same
+            riso-print system as the hero/banners below it, not a plain bar */}
+        <div className="absolute inset-0 text-[#FF2D78] halftone-dots pointer-events-none opacity-20" />
 
-          {/* Language Switcher */}
-          <div className="flex items-center gap-1" id="language-switcher">
-            <Globe className="w-3.5 h-3.5 text-[#7A6842] me-1" />
-            <div className="flex items-center bg-[#E3CE93] p-0.5 rounded-full">
-              {languages.map((lang) => {
-                const isActive = language === lang.code;
-                return (
-                  <button
-                    key={lang.code}
-                    id={`lang-btn-${lang.code}`}
-                    onClick={() => setLanguage(lang.code)}
-                    className={`px-2.5 py-0.5 text-xs font-semibold rounded-full transition-all duration-150 cursor-pointer ${
-                      isActive
-                        ? 'bg-[#141B33] text-white riso-shadow-sm'
-                        : 'text-[#4A3F2E] hover:text-[#141B33]'
-                    }`}
-                    title={lang.flagLabel}
-                  >
-                    {lang.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Branding & Navigation Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 sm:py-5">
-        <div className="flex flex-col items-center text-center">
-          {/* Logo - Refined mobile scale (30-40% smaller on mobile for optimal visual balance) */}
-          <Link
-            to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            id="brand-logo-btn"
-            className="group cursor-pointer focus:outline-hidden mb-1 sm:mb-2"
-          >
-            <div
-              className="flex flex-col items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full"
-              style={{
-                background: 'conic-gradient(from 220deg, #FF2D78, #FFD400, #FF4B12, #0B3D91, #FF2D78)',
-                padding: '3px',
-              }}
-            >
-              <div className="flex flex-col items-center bg-[#FBF1D8] rounded-full px-4 py-2 sm:px-6 sm:py-3">
-                <span className="font-heading font-bold text-[22px] sm:text-4xl md:text-5xl tracking-tight text-[#141B33] group-hover:text-[#FF4B12] transition-colors duration-200">
-                  {t.siteTitle}
-                </span>
-                <span className="text-[9.5px] sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.25em] text-[#7A6842] uppercase mt-0.5 sm:mt-1">
-                  {t.tagline}
-                </span>
-              </div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 mt-5 pt-3 border-t-2 border-[#141B33] w-full justify-center">
-            {navItems.map((item) => {
-              const isActive = (item.id === 'home' && currentPath === '/') || (item.id !== 'home' && currentPath.startsWith(item.path));
-              return (
-                <Link
-                  key={item.id}
-                  to={item.path}
-                  id={`nav-link-${item.id}`}
-                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                  className={`group relative text-sm tracking-wider uppercase font-semibold transition-all py-1 px-1 flex items-center gap-2 ${
-                    isActive
-                      ? 'text-[#FF4B12]'
-                      : 'text-[#141B33] hover:text-[#FF4B12]'
-                  }`}
-                >
-                  <span>{item.label}</span>
-                  {item.badge && (
-                    <img
-                      src={bientotSticker}
-                      alt={item.badge}
-                      className="h-6 w-auto -rotate-6 drop-shadow-sm"
-                    />
-                  )}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FF4B12] rounded-full" />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Mobile Main Bar: Visible Color Accent & Prominent Menu Toggle */}
-          <div className="flex md:hidden w-full justify-between items-center mt-2.5 pt-2 border-t-2 border-[#141B33]">
-            {/* Visible Active Accent Badge */}
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FF4B12]/10 text-[#FF4B12] border border-[#FF4B12]/25 font-bold text-[11px] tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF4B12]" />
-              <span>
-                {navItems.find((i) => (i.id === 'home' && currentPath === '/') || (i.id !== 'home' && currentPath.startsWith(i.path)))?.label || t.siteTitle}
+        {/* Top Utility Bar: Live Rabat Time & Language Switcher */}
+        <div className="relative border-b border-[#FF2D78]/40 text-[13px] tracking-wide text-[#D9C9A0]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <span className="font-medium text-white tracking-widest text-xs uppercase flex items-center gap-1.5">
+                <span className="inline-block w-2 h-2 rounded-full bg-[#FF4B12] animate-pulse"></span>
+                {t.locationHeader}
+              </span>
+              <span className="hidden sm:inline-block text-[#FF2D78]">•</span>
+              <span className="hidden sm:flex items-center gap-1.5 font-normal text-xs text-[#D9C9A0]">
+                <Clock className="w-3.5 h-3.5 text-[#FFD400]" />
+                {currentTime}
               </span>
             </div>
 
-            {/* Prominent High-Contrast Hamburger Button */}
-            <button
-              id="mobile-menu-toggle"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#141B33] hover:bg-[#FF4B12] text-white rounded-none text-xs font-bold riso-shadow-sm active:scale-95 transition-all cursor-pointer"
-              aria-label="Toggle navigation menu"
-            >
-              {mobileMenuOpen ? (
-                <>
-                  <X className="w-4 h-4" />
-                  <span>FERMER</span>
-                </>
-              ) : (
-                <>
-                  <Menu className="w-4 h-4" />
-                  <span>MENU</span>
-                </>
-              )}
-            </button>
+            {/* Language Switcher — stamped comic buttons, not soft pills */}
+            <div className="flex items-center gap-1.5" id="language-switcher">
+              <Globe className="w-3.5 h-3.5 text-[#D9C9A0] me-1 hidden sm:block" />
+              <div className="flex items-center gap-1">
+                {languages.map((lang) => {
+                  const isActive = language === lang.code;
+                  return (
+                    <button
+                      key={lang.code}
+                      id={`lang-btn-${lang.code}`}
+                      onClick={() => setLanguage(lang.code)}
+                      className={`px-2.5 py-1 text-xs font-bold rounded-none border-2 transition-all duration-150 cursor-pointer ${
+                        isActive
+                          ? 'bg-[#FFD400] text-[#141B33] border-[#141B33] riso-shadow-sm'
+                          : 'bg-transparent text-[#D9C9A0] border-[#D9C9A0]/40 hover:border-[#FFD400] hover:text-[#FFD400]'
+                      }`}
+                      title={lang.flagLabel}
+                    >
+                      {lang.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Main Branding & Navigation Area */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
+          <div className="flex flex-col items-center text-center">
+            {/* Logo — the full illustrated brand mark, not just a text wordmark */}
+            <Link
+              to="/"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              id="brand-logo-btn"
+              className="group cursor-pointer focus:outline-hidden mb-2 flex items-center gap-3 sm:gap-4"
+            >
+              <img
+                src={illustratedLogo}
+                alt="Ici Rabat"
+                className="w-14 h-14 sm:w-20 sm:h-20 rounded-full riso-shadow-orange group-hover:rotate-6 transition-transform duration-300 flex-shrink-0"
+              />
+              <div className="flex flex-col items-start">
+                <span className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl tracking-tight text-white group-hover:text-[#FFD400] transition-colors duration-200 leading-none">
+                  {t.siteTitle}
+                </span>
+                <span className="text-[9.5px] sm:text-xs font-medium tracking-[0.2em] sm:tracking-[0.25em] text-[#FF9A6B] uppercase mt-1">
+                  {t.tagline}
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation Links — comic tabs, not underlined text */}
+            <nav className="hidden md:flex items-center gap-3 mt-5 w-full justify-center flex-wrap">
+              {navItems.map((item) => {
+                const isActive = (item.id === 'home' && currentPath === '/') || (item.id !== 'home' && currentPath.startsWith(item.path));
+                return (
+                  <Link
+                    key={item.id}
+                    to={item.path}
+                    id={`nav-link-${item.id}`}
+                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                    className={`group relative text-sm tracking-wider uppercase font-bold transition-all px-4 py-2 flex items-center gap-2 border-2 ${
+                      isActive
+                        ? 'bg-[#FF4B12] text-white border-[#141B33] riso-shadow-sm'
+                        : 'bg-[#FBF1D8]/5 text-[#FBF1D8] border-[#FBF1D8]/25 hover:bg-[#FBF1D8] hover:text-[#141B33] hover:border-[#141B33]'
+                    }`}
+                  >
+                    <span>{item.label}</span>
+                    {item.badge && (
+                      <img
+                        src={bientotSticker}
+                        alt={item.badge}
+                        className="h-6 w-auto -rotate-6 drop-shadow-sm"
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Mobile Main Bar: Visible Color Accent & Prominent Menu Toggle */}
+            <div className="flex md:hidden w-full justify-between items-center mt-4">
+              {/* Visible Active Accent Badge */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF4B12] text-white border-2 border-[#141B33] font-bold text-[11px] tracking-wider uppercase riso-shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-white" />
+                <span>
+                  {navItems.find((i) => (i.id === 'home' && currentPath === '/') || (i.id !== 'home' && currentPath.startsWith(i.path)))?.label || t.siteTitle}
+                </span>
+              </div>
+
+              {/* Prominent High-Contrast Hamburger Button */}
+              <button
+                id="mobile-menu-toggle"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FFD400] hover:bg-[#FF4B12] hover:text-white text-[#141B33] border-2 border-[#141B33] text-xs font-bold riso-shadow-sm active:scale-95 transition-all cursor-pointer"
+                aria-label="Toggle navigation menu"
+              >
+                {mobileMenuOpen ? (
+                  <>
+                    <X className="w-4 h-4" />
+                    <span>FERMER</span>
+                  </>
+                ) : (
+                  <>
+                    <Menu className="w-4 h-4" />
+                    <span>MENU</span>
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Dropdown Menu with Rich Accent Lines */}
+        {mobileMenuOpen && (
+          <div className="relative md:hidden border-t-2 border-[#FFD400] bg-[#1B2540] px-4 py-4 space-y-2 riso-shadow transition-all animate-fadeIn">
+            {navItems.map((item) => {
+              const isActive = (item.id === 'home' && currentPath === '/') || (item.id !== 'home' && currentPath.startsWith(item.path));
+              return (
+                <button
+                  key={item.id}
+                  id={`mobile-nav-link-${item.id}`}
+                  onClick={() => handleNavClick(item.path)}
+                  className={`w-full flex items-center justify-between px-3.5 py-3 rounded-none text-sm font-semibold transition-all cursor-pointer ${
+                    isActive
+                      ? 'bg-[#FF4B12] text-white border-s-4 border-[#FFD400] riso-shadow-sm'
+                      : 'text-[#FBF1D8] hover:bg-[#FBF1D8]/10 bg-transparent border-2 border-[#FBF1D8]/25'
+                  }`}
+                >
+                  <div className="flex items-center gap-2">
+                    {isActive && <span className="w-2 h-2 rounded-full bg-[#FFD400]" />}
+                    <span>{item.label}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {item.badge && (
+                      <img
+                        src={bientotSticker}
+                        alt={item.badge}
+                        className="h-5 w-auto -rotate-6"
+                      />
+                    )}
+                    <ChevronRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      {/* Mobile Dropdown Menu with Rich Accent Lines */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-t-2 border-[#FF4B12] bg-[#F6E6B8] px-4 py-4 space-y-2 riso-shadow transition-all animate-fadeIn">
-          {navItems.map((item) => {
-            const isActive = (item.id === 'home' && currentPath === '/') || (item.id !== 'home' && currentPath.startsWith(item.path));
-            return (
-              <button
-                key={item.id}
-                id={`mobile-nav-link-${item.id}`}
-                onClick={() => handleNavClick(item.path)}
-                className={`w-full flex items-center justify-between px-3.5 py-3 rounded-none text-sm font-semibold transition-all cursor-pointer ${
-                  isActive
-                    ? 'bg-[#141B33] text-white border-s-4 border-[#FF4B12] riso-shadow-sm'
-                    : 'text-[#141B33] hover:bg-[#E3CE93] bg-white/60 border-2 border-[#141B33]'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  {isActive && <span className="w-2 h-2 rounded-full bg-[#FF4B12]" />}
-                  <span>{item.label}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  {item.badge && (
-                    <img
-                      src={bientotSticker}
-                      alt={item.badge}
-                      className="h-5 w-auto -rotate-6"
-                    />
-                  )}
-                  <ChevronRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      )}
+      {/* Torn-paper transition into the cream page below */}
+      <div className="zigzag-edge-bottom" />
     </header>
   );
 };
