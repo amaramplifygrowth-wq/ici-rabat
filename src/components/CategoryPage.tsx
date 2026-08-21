@@ -17,6 +17,11 @@ import {
   Send
 } from 'lucide-react';
 import { useNewsletterSubscribe } from '../hooks/useNewsletterSubscribe';
+import bannerEvenements from '../assets/images/banners/banner_evenements.jpg';
+import bannerLifestyle from '../assets/images/banners/banner_lifestyle.jpg';
+import bannerAbout from '../assets/images/banners/banner_about.jpg';
+import illustrationNewsletter from '../assets/images/illustrations/illustration_newsletter.jpg';
+import textureTile from '../assets/images/illustrations/texture_tile.jpg';
 
 interface CategoryPageProps {
   view: ViewMode;
@@ -61,6 +66,16 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   if (view === 'about') {
     return (
       <div id="about-page" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <ScrollReveal direction="up" distance={16}>
+          <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-10 sm:mb-12">
+            <img
+              src={bannerAbout}
+              alt=""
+              className="w-full h-auto object-cover editorial-photo"
+            />
+          </div>
+        </ScrollReveal>
+
         <ScrollReveal direction="up" distance={20}>
           <div className="text-center mb-8 sm:mb-12">
             <span className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-bold text-[#FF4B12]">
@@ -136,6 +151,17 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
         </span>
       </div>
 
+      {/* Category Banner */}
+      <ScrollReveal direction="up" distance={16}>
+        <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-8 sm:mb-10">
+          <img
+            src={isEvents ? bannerEvenements : bannerLifestyle}
+            alt=""
+            className="w-full h-auto object-cover editorial-photo"
+          />
+        </div>
+      </ScrollReveal>
+
       {/* Editorial Hero Header */}
       <ScrollReveal direction="up" distance={20}>
         <div className="bg-white border-2 border-[#141B33] rounded-none p-6 sm:p-12 riso-shadow-sm text-center mb-10 sm:mb-12 relative overflow-hidden">
@@ -194,11 +220,17 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
 
       {/* Editorial Slow Journalism Guarantee Quote */}
       <ScrollReveal direction="up" distance={16}>
-        <div className="mb-12 sm:mb-14 p-5 sm:p-8 bg-[#FBF1D8] border-2 border-[#141B33] rounded-none flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-          <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0B3D91] text-white flex-shrink-0 flex items-center justify-center riso-shadow-sm">
+        <div
+          className="relative overflow-hidden mb-12 sm:mb-14 p-5 sm:p-8 bg-[#FBF1D8] border-2 border-[#141B33] rounded-none flex flex-col sm:flex-row items-center gap-4 sm:gap-6"
+        >
+          <div
+            className="absolute inset-0 opacity-[0.08] pointer-events-none"
+            style={{ backgroundImage: `url(${textureTile})`, backgroundSize: '220px 220px', backgroundRepeat: 'repeat' }}
+          />
+          <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0B3D91] text-white flex-shrink-0 flex items-center justify-center riso-shadow-sm">
             <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
-          <div className="text-center sm:text-start flex-grow">
+          <div className="relative text-center sm:text-start flex-grow">
             <h4 className="font-heading font-bold text-base sm:text-lg text-[#141B33] mb-1">
               {language === 'ar'
                 ? 'ميثاق الجودة والتمهل التحريري'
@@ -223,6 +255,11 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           id="newsletter-notification"
           className="bg-white border-2 border-[#E3CE93] rounded-none p-6 sm:p-10 text-center max-w-2xl mx-auto riso-shadow-sm relative"
         >
+          <img
+            src={illustrationNewsletter}
+            alt=""
+            className="w-24 h-24 sm:w-28 sm:h-28 comic-border rounded-full object-cover riso-shadow-sm mx-auto mb-4 sm:mb-5 -rotate-3"
+          />
           <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#FFE0C7] border border-[#FFC79E] flex items-center justify-center text-[#FF4B12] mx-auto mb-3 sm:mb-4">
             <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>

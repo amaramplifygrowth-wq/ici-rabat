@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Article } from '../types';
 import { useLanguage } from '../context/LanguageContext';
-import { MapPin, Clock, ArrowUpRight, ArrowRight, UtensilsCrossed, Sparkles } from 'lucide-react';
+import { MapPin, Clock, ArrowUpRight, ArrowRight, UtensilsCrossed, Sparkles, SearchX } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
+import bannerHoreca from '../assets/images/banners/banner_horeca.jpg';
+import illustrationEmptyState from '../assets/images/illustrations/illustration_empty_state.jpg';
 
 interface HorecaSectionProps {
   articles: Article[];
@@ -17,7 +19,7 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
   onViewAllHoreca,
   showAll = false,
 }) => {
-  const { getLocalized, isRtl, t } = useLanguage();
+  const { getLocalized, isRtl, t, language } = useLanguage();
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>('all');
 
   // Sort articles chronologically descending (newest published date first)
@@ -45,6 +47,17 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
 
   return (
     <section id="horeca-guide-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 sm:pt-14 sm:pb-8">
+      {showAll && (
+        <ScrollReveal direction="up" distance={16}>
+          <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-8 sm:mb-10">
+            <img
+              src={bannerHoreca}
+              alt=""
+              className="w-full h-auto object-cover editorial-photo"
+            />
+          </div>
+        </ScrollReveal>
+      )}
       <ScrollReveal direction="up" distance={16}>
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b-2 border-[#141B33]">
@@ -85,6 +98,32 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
           })}
         </div>
       </ScrollReveal>
+
+      {/* Empty state — no results for the selected neighborhood */}
+      {displayList.length === 0 && (
+        <ScrollReveal direction="up" distance={16}>
+          <div className="flex flex-col items-center text-center py-10 sm:py-14">
+            <img
+              src={illustrationEmptyState}
+              alt=""
+              className="w-32 h-32 sm:w-40 sm:h-40 comic-border rounded-full object-cover riso-shadow-sm mb-5 sm:mb-6"
+            />
+            <div className="flex items-center gap-2 text-[#FF4B12] mb-2">
+              <SearchX className="w-4 h-4" />
+              <span className="text-xs uppercase tracking-[0.2em] font-bold">
+                {language === 'ar' ? 'لا توجد نتائج' : language === 'en' ? 'No results' : 'Aucun résultat'}
+              </span>
+            </div>
+            <p className="text-sm sm:text-base text-[#4A3F2E] max-w-sm">
+              {language === 'ar'
+                ? 'لا توجد عناوين في هذا الحي بعد. جرّب حياً آخر أو اطّلع على الدليل الكامل.'
+                : language === 'en'
+                ? "No addresses in this neighborhood yet. Try another one, or browse the full guide."
+                : "Aucune adresse dans ce quartier pour l'instant. Essayez un autre quartier, ou explorez le guide complet."}
+            </p>
+          </div>
+        </ScrollReveal>
+      )}
 
       {/* Articles Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

@@ -127,7 +127,7 @@ async function runPrerender() {
           '@id': `${BASE_URL}/#organization`,
           name: 'Ici Rabat',
           url: `${BASE_URL}/`,
-          logo: `${BASE_URL}/icon.svg`
+          logo: `${BASE_URL}/icon-512.png`
         }
       ]
     }

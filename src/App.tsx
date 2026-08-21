@@ -12,6 +12,7 @@ import { ArticleDetail } from './components/ArticleDetail';
 import { CategoryPage } from './components/CategoryPage';
 import { Footer } from './components/Footer';
 import { SEOHead } from './components/SEOHead';
+import { NotFoundPage } from './components/NotFoundPage';
 
 // 1. Helper component to auto-redirect legacy hash URLs to clean path-based URLs
 function LegacyHashRedirectHandler() {
@@ -127,22 +128,7 @@ function ArticleDetailRouteWrapper() {
   }, [slug]);
 
   if (!article) {
-    return (
-      <div className="max-w-4xl mx-auto px-4 py-24 text-center">
-        <h2 className="font-heading font-bold text-3xl text-[#141B33] mb-4">
-          Article non trouvé
-        </h2>
-        <p className="text-[#4A3F2E] mb-8">
-          L'article demandé n'existe pas ou l'adresse a été modifiée.
-        </p>
-        <button
-          onClick={() => navigate('/horeca')}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#141B33] text-white font-bold text-sm rounded-none hover:bg-[#FF2D78] transition-colors cursor-pointer"
-        >
-          Retour au guide Horeca
-        </button>
-      </div>
-    );
+    return <NotFoundPage />;
   }
 
   return (
@@ -173,8 +159,9 @@ function RootSlugFallback() {
     return <Navigate to={`/${matched.category}/${matched.slug}`} replace />;
   }
 
-  // Not an article or valid category -> redirect to home
-  return <Navigate to="/" replace />;
+  // Not an article or valid category -> show the illustrated 404 instead of
+  // silently bouncing back to home (a broken link should say so).
+  return <NotFoundPage />;
 }
 
 // Main App Layout
@@ -206,7 +193,7 @@ function AppLayout() {
           <Route path="/:slug" element={<RootSlugFallback />} />
 
           {/* 5. Wildcard fallback */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
 

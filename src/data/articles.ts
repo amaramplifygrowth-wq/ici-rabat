@@ -1,5 +1,11 @@
 import { Article } from '../types';
 
+// Illustrated author avatars live in /public (not imported as ES modules)
+// because this data file is also loaded directly by scripts/prerender.ts
+// via tsx/Node, which — unlike Vite — cannot resolve binary asset imports.
+const avatarNadia = '/avatars/nadia.png';
+const avatarYassine = '/avatars/yassine.png';
+
 export const ARTICLES_DATA: Article[] = [
   {
     id: 'art-08',
@@ -84,7 +90,7 @@ export const ARTICLES_DATA: Article[] = [
         ar: 'رئيسة تحرير قسم المذاق وفنون الطهي',
         en: 'Gastronomy Editor-in-Chief'
       },
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'
+      avatar: avatarNadia
     },
     relatedBusinessName: 'Ba Fares',
     relatedBusinessUrl: 'https://bafares.pages.dev',
@@ -118,6 +124,12 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: false,
     isEditorialPick: true,
+    isPartner: true,
+    partnerLabel: {
+      fr: 'Partenaire Amplify',
+      ar: 'شريك Amplify',
+      en: 'Amplify Partner'
+    },
     tags: [
       { fr: 'Petit-Déjeuner Rabat', ar: 'فطور الرباط', en: 'Rabat Breakfast' },
       { fr: 'Diour Jamaa', ar: 'ديور الجامع', en: 'Diour Jamaa' },
@@ -245,7 +257,7 @@ export const ARTICLES_DATA: Article[] = [
         ar: 'رئيسة تحرير قسم المذاق',
         en: 'Gastronomy Editor-in-Chief'
       },
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format&fit=crop'
+      avatar: avatarNadia
     },
     relatedBusinessName: 'Indian Flavors',
     relatedBusinessUrl: 'https://indianflavor.pages.dev',
@@ -286,6 +298,12 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: true,
     isEditorialPick: true,
+    isPartner: true,
+    partnerLabel: {
+      fr: 'Partenaire Amplify',
+      ar: 'شريك Amplify',
+      en: 'Amplify Partner'
+    },
     tags: [
       { fr: 'Cuisine Indienne', ar: 'مطبخ هندي', en: 'Indian Cuisine' },
       { fr: 'Butter Chicken', ar: 'بتر تشيكن', en: 'Butter Chicken' },
@@ -399,7 +417,7 @@ export const ARTICLES_DATA: Article[] = [
         ar: 'ناقد حضري وأسلوب حياة',
         en: 'Urban & Lifestyle Critic'
       },
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop'
+      avatar: avatarYassine
     },
     relatedBusinessName: "Dom's Café",
     relatedBusinessUrl: 'https://domscafe.pages.dev',
@@ -437,6 +455,12 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: true,
     isEditorialPick: true,
+    isPartner: true,
+    partnerLabel: {
+      fr: 'Partenaire Amplify',
+      ar: 'شريك Amplify',
+      en: 'Amplify Partner'
+    },
     tags: [
       { fr: 'Café Wifi Agdal', ar: 'مقهى واي فاي أكدال', en: 'Wifi Café Agdal' },
       { fr: 'Billard Rabat', ar: 'بلياردو الرباط', en: 'Billiards Rabat' },
