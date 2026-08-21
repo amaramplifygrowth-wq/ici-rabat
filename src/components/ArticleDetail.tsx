@@ -203,26 +203,26 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
         Sticky Reading Progress Indicator Bar 
         Measures exact reading progress and renders a vibrant terracotta accent bar at the top of the viewport
       */}
-      <div className="fixed top-0 left-0 right-0 h-[3.5px] bg-[#EAE2D8]/80 z-[70] pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 h-[3.5px] bg-[#E3CE93]/80 z-[70] pointer-events-none">
         <div
-          className="h-full bg-gradient-to-r from-[#D95D39] via-[#E07A5F] to-[#D95D39] transition-[width] duration-100 ease-out shadow-[0_0_8px_rgba(217,93,57,0.5)]"
+          className="h-full bg-gradient-to-r from-[#FF4B12] via-[#FF7A45] to-[#FF4B12] transition-[width] duration-100 ease-out shadow-[0_0_8px_rgba(217,93,57,0.5)]"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
 
       {/* Top Navigation Bar & Breadcrumb */}
-      <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 border-b border-[#E5DFD5]">
+      <div className="flex items-center justify-between mb-6 sm:mb-8 pb-4 border-b-2 border-[#141B33]">
         <button
           id="article-back-btn"
           onClick={onBack}
-          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#182338] hover:text-[#D95D39] transition-colors cursor-pointer group"
+          className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#141B33] hover:text-[#FF4B12] transition-colors cursor-pointer group"
         >
           <ArrowLeft className={`w-4 h-4 transform group-hover:-translate-x-1 transition-transform ${isRtl ? 'rotate-180 group-hover:translate-x-1' : ''}`} />
           <span>{t.backToArticles}</span>
         </button>
 
         <div className="flex items-center gap-2">
-          <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#D95D39] bg-[#D95D39]/10 border border-[#D95D39]/20 px-3 py-1 rounded-full">
+          <span className="text-[11px] sm:text-xs uppercase tracking-wider font-bold text-[#FF4B12] bg-[#FF4B12]/10 border border-[#FF4B12]/20 px-3 py-1 rounded-full">
             {getLocalized(article.categoryLabel)}
           </span>
         </div>
@@ -230,19 +230,19 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
       {/* Article Header: Meta tags & Confident Fraunces Headline */}
       <header className="mb-8 sm:mb-10 text-center max-w-4xl mx-auto">
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-xs font-semibold text-[#6F645A] mb-3 sm:mb-4">
-          <span className="inline-flex items-center gap-1 text-[#D95D39] font-bold">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] sm:text-xs font-semibold text-[#4A3F2E] mb-3 sm:mb-4">
+          <span className="inline-flex items-center gap-1 text-[#FF4B12] font-bold">
             <MapPin className="w-3.5 h-3.5" />
             {getLocalized(article.location)}
           </span>
           <span>•</span>
           <span className="inline-flex items-center gap-1">
-            <Calendar className="w-3.5 h-3.5 text-[#8E7E73]" />
+            <Calendar className="w-3.5 h-3.5 text-[#7A6842]" />
             {article.publishedAt}
           </span>
           <span>•</span>
           <span className="inline-flex items-center gap-1">
-            <Clock className="w-3.5 h-3.5 text-[#8E7E73]" />
+            <Clock className="w-3.5 h-3.5 text-[#7A6842]" />
             {getLocalized(article.readTime)} {t.minRead}
           </span>
         </div>
@@ -251,29 +251,29 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
           IMPORTANT RULE: Headline is placed CLEANLY ABOVE photo with generous margin (mb-6). 
           Balanced mobile scale: text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem]
         */}
-        <h1 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-[#182338] leading-[1.2] sm:leading-[1.18] tracking-tight mb-4 sm:mb-6">
+        <h1 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl lg:text-[3.25rem] text-[#141B33] leading-[1.2] sm:leading-[1.18] tracking-tight mb-4 sm:mb-6">
           {getLocalized(article.title)}
         </h1>
 
         {article.subtitle && (
-          <p className="text-base sm:text-xl text-[#55657E] font-normal leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
+          <p className="text-base sm:text-xl text-[#4A3F2E] font-normal leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
             {getLocalized(article.subtitle)}
           </p>
         )}
 
         {/* Author Byline Box */}
-        <div className="inline-flex items-center gap-3 bg-[#F4EFEA] border border-[#E8E1D7] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full">
+        <div className="inline-flex items-center gap-3 bg-[#F6E6B8] border-2 border-[#141B33] px-4 py-2 sm:px-5 sm:py-2.5 rounded-full">
           <img
             src={article.author.avatar}
             alt={article.author.name}
-            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border border-[#D5CBC0]"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-[#141B33]"
             referrerPolicy="no-referrer"
           />
           <div className="text-start">
-            <p className="text-xs sm:text-sm font-bold text-[#182338]">
+            <p className="text-xs sm:text-sm font-bold text-[#141B33]">
               {article.author.name}
             </p>
-            <p className="text-[10px] sm:text-[11px] text-[#8E7E73] font-medium">
+            <p className="text-[10px] sm:text-[11px] text-[#7A6842] font-medium">
               {getLocalized(article.author.role)}
             </p>
           </div>
@@ -285,7 +285,7 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
         NO text overlaid! Caption clearly below.
       */}
       <div className="mb-14">
-        <div className="relative rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#EAE2D8] aspect-[16/10] sm:aspect-[21/10]">
+        <div className="relative rounded-none overflow-hidden riso-shadow border-4 border-white bg-[#E3CE93] aspect-[16/10] sm:aspect-[21/10]">
           <img
             src={article.heroImage}
             alt={getLocalized(article.title)}
@@ -294,7 +294,7 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
           />
           <div className="absolute inset-0 editorial-overlay z-10" />
         </div>
-        <p className="text-xs sm:text-sm text-[#8E7E73] italic mt-3 text-center sm:text-start px-2">
+        <p className="text-xs sm:text-sm text-[#7A6842] italic mt-3 text-center sm:text-start px-2">
           {getLocalized(article.heroImageCaption)}
         </p>
       </div>
@@ -314,8 +314,8 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                 <p
                   className={
                     isFirst
-                      ? "drop-cap text-lg sm:text-xl text-[#222E42] leading-[1.8] font-normal"
-                      : "text-base sm:text-lg text-[#334155] leading-[1.85] font-normal"
+                      ? "drop-cap text-lg sm:text-xl text-[#141B33] leading-[1.8] font-normal"
+                      : "text-base sm:text-lg text-[#141B33] leading-[1.85] font-normal"
                   }
                 >
                   {p}
@@ -341,21 +341,21 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
         {/* Business Practical Info Sidebar Box (Takes 4 cols) */}
         <div className="lg:col-span-4">
-          <div className="sticky top-28 bg-[#FFFFFF] border-2 border-[#E5DFD5] rounded-2xl p-6 shadow-md">
-            <div className="flex items-center gap-2 mb-4 pb-3 border-b border-[#EBE4DA]">
-              <Utensils className="w-5 h-5 text-[#D95D39]" />
-              <h3 className="font-heading font-bold text-lg text-[#182338]">
+          <div className="sticky top-28 bg-[#FFFFFF] border-2 border-[#E3CE93] rounded-none p-6 riso-shadow">
+            <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-[#141B33]">
+              <Utensils className="w-5 h-5 text-[#FF4B12]" />
+              <h3 className="font-heading font-bold text-lg text-[#141B33]">
                 {t.businessInformation}
               </h3>
             </div>
 
             <div className="space-y-4 text-xs sm:text-sm">
               <div>
-                <span className="font-bold text-[#182338] block mb-0.5">
+                <span className="font-bold text-[#141B33] block mb-0.5">
                   {article.relatedBusinessName}
                 </span>
                 {article.businessDetails?.category && (
-                  <span className="text-[#8E7E73] text-xs">
+                  <span className="text-[#7A6842] text-xs">
                     {getLocalized(article.businessDetails.category)}
                   </span>
                 )}
@@ -363,10 +363,10 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
               {article.businessDetails?.address && (
                 <div>
-                  <span className="text-[11px] uppercase font-bold text-[#8E7E73] tracking-wider block">
+                  <span className="text-[11px] uppercase font-bold text-[#7A6842] tracking-wider block">
                     {t.addressLabel}
                   </span>
-                  <p className="text-[#445065] mt-0.5 leading-snug">
+                  <p className="text-[#4A3F2E] mt-0.5 leading-snug">
                     {article.businessDetails.address}
                   </p>
                 </div>
@@ -374,10 +374,10 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
               {article.businessDetails?.openingHours && (
                 <div>
-                  <span className="text-[11px] uppercase font-bold text-[#8E7E73] tracking-wider block">
+                  <span className="text-[11px] uppercase font-bold text-[#7A6842] tracking-wider block">
                     {t.hoursLabel}
                   </span>
-                  <p className="text-[#445065] mt-0.5 leading-snug">
+                  <p className="text-[#4A3F2E] mt-0.5 leading-snug">
                     {getLocalized(article.businessDetails.openingHours)}
                   </p>
                 </div>
@@ -385,10 +385,10 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
               {article.businessDetails?.priceLevel && (
                 <div>
-                  <span className="text-[11px] uppercase font-bold text-[#8E7E73] tracking-wider block">
+                  <span className="text-[11px] uppercase font-bold text-[#7A6842] tracking-wider block">
                     {t.priceLabel}
                   </span>
-                  <p className="font-bold text-[#182338] mt-0.5">
+                  <p className="font-bold text-[#141B33] mt-0.5">
                     {article.businessDetails.priceLevel}
                   </p>
                 </div>
@@ -396,23 +396,23 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
               {article.businessDetails?.specialty && (
                 <div>
-                  <span className="text-[11px] uppercase font-bold text-[#8E7E73] tracking-wider block">
+                  <span className="text-[11px] uppercase font-bold text-[#7A6842] tracking-wider block">
                     {t.specialtyLabel}
                   </span>
-                  <p className="text-[#445065] mt-0.5 leading-snug">
+                  <p className="text-[#4A3F2E] mt-0.5 leading-snug">
                     {getLocalized(article.businessDetails.specialty)}
                   </p>
                 </div>
               )}
 
               {/* Direct Link CTA Button to Business Website */}
-              <div className="pt-3 border-t border-[#EBE4DA] space-y-2">
+              <div className="pt-3 border-t-2 border-[#141B33] space-y-2">
                 <a
                   href={article.relatedBusinessUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="business-website-cta"
-                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#D95D39] hover:bg-[#C04B28] text-white font-bold text-xs uppercase tracking-wider rounded-lg shadow-sm hover:shadow-md transition-all duration-200"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#FF4B12] hover:bg-[#CC2E00] text-white font-bold text-xs uppercase tracking-wider rounded-none riso-shadow-sm hover:riso-shadow-magenta transition-all duration-200"
                 >
                   <span>{t.visitWebsite}</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -421,9 +421,9 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                 {article.businessDetails?.phone && (
                   <a
                     href={`tel:${article.businessDetails.phone}`}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#F4EFEA] hover:bg-[#EAE2D8] text-[#182338] font-bold text-xs rounded-lg transition-colors"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-[#F6E6B8] hover:bg-[#E3CE93] text-[#141B33] font-bold text-xs rounded-none transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 text-[#D95D39]" />
+                    <Phone className="w-3.5 h-3.5 text-[#FF4B12]" />
                     <span>{article.businessDetails.phone}</span>
                   </a>
                 )}
@@ -438,13 +438,13 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
         Horizontally Scrolling Photo Strip Gallery (when multiple images are present) 
       */}
       {article.galleryImages && article.galleryImages.length > 0 && (
-        <section className="mb-20 pt-10 border-t border-[#E5DFD5]">
+        <section className="mb-20 pt-10 border-t-2 border-[#141B33]">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <span className="text-xs uppercase tracking-widest font-bold text-[#D95D39]">
+              <span className="text-xs uppercase tracking-widest font-bold text-[#FF4B12]">
                 PORTFOLIO PHOTOGRAPHIQUE
               </span>
-              <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#182338]">
+              <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#141B33]">
                 {t.photoGallery}
               </h3>
             </div>
@@ -453,14 +453,14 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => scrollGallery('left')}
-                className="p-2 rounded-full bg-[#EAE2D8] hover:bg-[#182338] hover:text-white text-[#182338] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-[#E3CE93] hover:bg-[#141B33] hover:text-white text-[#141B33] transition-colors cursor-pointer"
                 aria-label="Scroll left"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 onClick={() => scrollGallery('right')}
-                className="p-2 rounded-full bg-[#EAE2D8] hover:bg-[#182338] hover:text-white text-[#182338] transition-colors cursor-pointer"
+                className="p-2 rounded-full bg-[#E3CE93] hover:bg-[#141B33] hover:text-white text-[#141B33] transition-colors cursor-pointer"
                 aria-label="Scroll right"
               >
                 <ChevronRight className="w-5 h-5" />
@@ -476,9 +476,9 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
             {article.galleryImages.map((img, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-80 sm:w-96 snap-start bg-white border border-[#E8E1D7] rounded-xl overflow-hidden shadow-md"
+                className="flex-shrink-0 w-80 sm:w-96 snap-start bg-white border-2 border-[#141B33] rounded-none overflow-hidden riso-shadow"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#182338]">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#141B33]">
                   <img
                     src={img.url}
                     alt={getLocalized(img.caption)}
@@ -487,12 +487,12 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                   />
                   <div className="absolute inset-0 editorial-overlay z-10" />
                 </div>
-                <div className="p-4 bg-[#FAF8F5]">
-                  <p className="text-xs text-[#182338] font-semibold leading-snug">
+                <div className="p-4 bg-[#FBF1D8]">
+                  <p className="text-xs text-[#141B33] font-semibold leading-snug">
                     {getLocalized(img.caption)}
                   </p>
                   {img.credit && (
-                    <p className="text-[10px] text-[#8E7E73] mt-1">
+                    <p className="text-[10px] text-[#7A6842] mt-1">
                       {img.credit}
                     </p>
                   )}
@@ -505,12 +505,12 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
 
       {/* Related Stories Section */}
       {relatedArticles.length > 0 && (
-        <section className="pt-12 border-t border-[#E5DFD5]">
+        <section className="pt-12 border-t-2 border-[#141B33]">
           <div className="mb-8">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#D95D39]">
+            <span className="text-xs uppercase tracking-widest font-bold text-[#FF4B12]">
               DANS LE MÊME ESPRIT
             </span>
-            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#182338]">
+            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#141B33]">
               {t.relatedStories}
             </h3>
           </div>
@@ -523,9 +523,9 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                   onSelectArticle(rel);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="group bg-white border border-[#E8E1D7] rounded-xl overflow-hidden shadow-xs hover:shadow-lg transition-all cursor-pointer flex flex-col justify-between"
+                className="group bg-white border-2 border-[#141B33] rounded-none overflow-hidden riso-shadow-sm hover:riso-shadow-magenta transition-all cursor-pointer flex flex-col justify-between"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#EAE2D8]">
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#E3CE93]">
                   <img
                     src={rel.heroImage}
                     alt={getLocalized(rel.title)}
@@ -536,14 +536,14 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                 </div>
                 <div className="p-4 flex flex-col flex-grow justify-between">
                   <div>
-                    <span className="text-[11px] font-bold text-[#D95D39] block mb-1">
+                    <span className="text-[11px] font-bold text-[#FF4B12] block mb-1">
                       {getLocalized(rel.location)}
                     </span>
-                    <h4 className="font-heading font-bold text-base text-[#182338] group-hover:text-[#D95D39] transition-colors leading-snug line-clamp-2">
+                    <h4 className="font-heading font-bold text-base text-[#141B33] group-hover:text-[#FF4B12] transition-colors leading-snug line-clamp-2">
                       {getLocalized(rel.title)}
                     </h4>
                   </div>
-                  <div className="mt-3 pt-2 border-t border-[#F0EAE1] flex items-center justify-between text-xs font-semibold text-[#8E7E73]">
+                  <div className="mt-3 pt-2 border-t border-[#FFE9C2] flex items-center justify-between text-xs font-semibold text-[#7A6842]">
                     <span>{getLocalized(rel.readTime)}</span>
                     <ArrowRight className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`} />
                   </div>

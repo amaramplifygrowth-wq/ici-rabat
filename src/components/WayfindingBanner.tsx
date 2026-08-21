@@ -13,17 +13,19 @@ export const WayfindingBanner: React.FC<WayfindingBannerProps> = ({ onExploreHor
   return (
     <section
       id="wayfinding-separator"
-      className="w-full bg-[#234238] text-[#FAF8F5] my-10 sm:my-12 py-10 sm:py-16 relative overflow-hidden"
+      className="w-full bg-[#0B3D91] text-[#FBF1D8] my-10 sm:my-12 py-10 sm:py-16 relative overflow-hidden border-y-4 border-[#141B33]"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Halftone dot decoration, comic-panel style corner accents */}
+      <div className="absolute -top-6 -right-6 w-40 h-40 sm:w-56 sm:h-56 text-[#FFD400] halftone-dots-lg pointer-events-none" />
+      <div className="absolute -bottom-10 -left-10 w-40 h-40 sm:w-56 sm:h-56 text-[#FF2D78] halftone-dots-lg pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <ScrollReveal direction="up" distance={20}>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 sm:gap-8">
-            
+
             {/* Wayfinding Narrative Block */}
             <div className="max-w-2xl">
-              <div className="flex items-center gap-2.5 mb-2.5 sm:mb-3">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#D95D39]" />
-                <span className="text-[11px] sm:text-xs uppercase tracking-[0.2em] font-semibold text-[#D3DECE]">
+              <div className="flex items-center gap-2.5 mb-3 sm:mb-4">
+                <span className="pop-caption inline-flex items-center px-2.5 py-1 text-[10px] sm:text-xs font-normal tracking-[0.15em]">
                   DOSSIER SPÉCIAL • ICI RABAT
                 </span>
               </div>
@@ -32,7 +34,7 @@ export const WayfindingBanner: React.FC<WayfindingBannerProps> = ({ onExploreHor
                 {t.wayfindingHighlightTitle}
               </h2>
 
-              <p className="text-[#C4D4BF] text-xs sm:text-base leading-relaxed font-normal">
+              <p className="text-[#8FCBFF] text-xs sm:text-base leading-relaxed font-normal">
                 {t.wayfindingHighlightDesc}
               </p>
             </div>
@@ -42,9 +44,9 @@ export const WayfindingBanner: React.FC<WayfindingBannerProps> = ({ onExploreHor
               <button
                 id="wayfinding-explore-btn"
                 onClick={onExploreHoreca}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-7 sm:py-4 bg-[#FAF8F5] text-[#234238] hover:bg-[#D95D39] hover:text-white font-bold text-xs sm:text-sm rounded-lg shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer group"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:px-7 sm:py-4 bg-[#FBF1D8] text-[#0B3D91] hover:bg-[#FF4B12] hover:text-white font-bold text-xs sm:text-sm rounded-none riso-shadow hover:riso-shadow-magenta transition-all duration-200 cursor-pointer group"
               >
-                <Utensils className="w-4 h-4 text-[#D95D39] group-hover:text-white transition-colors" />
+                <Utensils className="w-4 h-4 text-[#FF4B12] group-hover:text-white transition-colors" />
                 <span>{t.wayfindingCta}</span>
                 <ArrowRight
                   className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${

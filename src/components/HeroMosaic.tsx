@@ -27,43 +27,43 @@ export const HeroMosaic: React.FC<HeroMosaicProps> = ({ article, onSelectArticle
           <ScrollReveal direction="up" distance={20}>
             {/* Category Tag & Meta Header */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-[#D95D39]/10 text-[#D95D39] border border-[#D95D39]/20 rounded-full">
+              <span className="pop-caption inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-normal tracking-wider">
                 {getLocalized(article.categoryLabel)}
               </span>
-              <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#6F645A] font-medium">
-                <MapPin className="w-3.5 h-3.5 text-[#D95D39]" />
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#4A3F2E] font-medium">
+                <MapPin className="w-3.5 h-3.5 text-[#FF4B12]" />
                 {getLocalized(article.location)}
               </span>
-              <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#6F645A] font-medium">
-                <Clock className="w-3.5 h-3.5 text-[#8E7E73]" />
+              <span className="inline-flex items-center gap-1 text-[11px] sm:text-xs text-[#4A3F2E] font-medium">
+                <Clock className="w-3.5 h-3.5 text-[#7A6842]" />
                 {getLocalized(article.readTime)} {t.minRead}
               </span>
             </div>
 
             {/* Balanced Editorial Title (30-40% smaller on mobile for harmonious balance with content) */}
-            <h1 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl tracking-tight text-[#182338] leading-[1.2] sm:leading-[1.15] mb-3.5 sm:mb-5">
+            <h1 className="font-heading font-bold text-2xl sm:text-4xl md:text-5xl tracking-tight text-[#141B33] leading-[1.2] sm:leading-[1.15] mb-3.5 sm:mb-5">
               {getLocalized(article.title)}
             </h1>
 
             {/* Editorial Subtitle / Excerpt */}
-            <p className="text-sm sm:text-lg text-[#445065] leading-relaxed mb-5 sm:mb-6 font-normal">
+            <p className="text-sm sm:text-lg text-[#4A3F2E] leading-relaxed mb-5 sm:mb-6 font-normal">
               {getLocalized(article.excerpt)}
             </p>
 
             {/* Author Byline & Call to Action */}
-            <div className="pt-4 border-t border-[#E8E1D7] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="pt-4 border-t-2 border-[#141B33] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div className="flex items-center gap-3">
                 <img
                   src={article.author.avatar}
                   alt={article.author.name}
-                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-[#E5DFD5] shadow-xs"
+                  className="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover border-2 border-[#E3CE93] riso-shadow-sm"
                   referrerPolicy="no-referrer"
                 />
                 <div>
-                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#8E7E73] font-medium">
+                  <p className="text-[10px] sm:text-xs uppercase tracking-wider text-[#7A6842] font-medium">
                     {t.writtenBy}
                   </p>
-                  <p className="text-xs sm:text-sm font-bold text-[#182338]">
+                  <p className="text-xs sm:text-sm font-bold text-[#141B33]">
                     {article.author.name}
                   </p>
                 </div>
@@ -73,7 +73,7 @@ export const HeroMosaic: React.FC<HeroMosaicProps> = ({ article, onSelectArticle
               <button
                 id="hero-read-btn"
                 onClick={() => onSelectArticle(article)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 bg-[#182338] hover:bg-[#D95D39] text-white text-xs sm:text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer group"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 sm:px-6 sm:py-3.5 bg-[#141B33] hover:bg-[#FF4B12] text-white text-xs sm:text-sm font-semibold rounded-none riso-shadow-sm hover:riso-shadow-magenta transition-all duration-200 cursor-pointer group"
               >
                 <span>{t.readArticle}</span>
                 <ArrowRight

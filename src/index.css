@@ -2,9 +2,18 @@
 
 @layer base {
   :root {
-    --font-heading: 'Fraunces', Georgia, serif;
-    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    /* Pop Art x Risograph type system */
+    --font-heading: 'Archivo Black', 'Arial Black', sans-serif;
+    --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
     --font-arabic: 'Cairo', 'Amiri', system-ui, sans-serif;
+
+    /* Riso ink palette (reference tokens, mirrors the hardcoded utility colors) */
+    --ink: #141B33;
+    --paper: #FBF1D8;
+    --riso-orange: #FF4B12;
+    --riso-magenta: #FF2D78;
+    --riso-blue: #0B3D91;
+    --riso-yellow: #FFD400;
   }
 
   [dir="rtl"] {
@@ -18,10 +27,12 @@
 
 .font-heading {
   font-family: var(--font-heading);
+  letter-spacing: -0.01em;
 }
 
 [dir="rtl"] .font-heading {
   font-family: var(--font-arabic);
+  letter-spacing: 0;
 }
 
 .font-body {
@@ -32,17 +43,18 @@
   font-family: var(--font-arabic);
 }
 
-/* Drop-cap for editorial layout */
+/* Drop-cap for editorial layout — bold poster-style */
 .drop-cap::first-letter {
   float: left;
   font-family: var(--font-heading);
   font-size: 4.25rem;
-  line-height: 0.82;
+  line-height: 0.78;
   padding-top: 4px;
   padding-right: 14px;
   padding-bottom: 2px;
-  color: #D95D39;
-  font-weight: 700;
+  color: var(--riso-magenta);
+  font-weight: 400;
+  -webkit-text-stroke: 1.5px var(--ink);
 }
 
 [dir="rtl"] .drop-cap::first-letter {
@@ -52,12 +64,13 @@
   font-family: 'Amiri', serif;
   font-size: 3.5rem;
   line-height: 0.9;
+  -webkit-text-stroke: 0;
 }
 
-/* Custom Branded Scrollbar (WebKit & Firefox) */
+/* Custom Branded Scrollbar (WebKit & Firefox) — bold riso ink */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #C47A65 #FAF8F5;
+  scrollbar-color: var(--riso-orange) var(--paper);
 }
 
 ::-webkit-scrollbar {
@@ -66,22 +79,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
-  border-left: 1px solid #EAE3D9;
+  background: var(--paper);
+  border-left: 2px solid var(--ink);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #C47A65;
-  border-radius: 9999px;
-  border: 2px solid #FAF8F5;
+  background-color: var(--riso-orange);
+  border-radius: 0;
+  border: 2px solid var(--paper);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #D95D39;
+  background-color: var(--riso-magenta);
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #B84A28;
+  background-color: var(--ink);
 }
 
 /* Hide scrollbar for photo strip and chip carousels */
@@ -93,38 +106,119 @@ html {
   scrollbar-width: none;
 }
 
-/* Editorial Photo Warm Color Grading & Visual Tone Harmony (8-10% warmth) */
+/* ============================================================
+   POP ART x RISOGRAPH — texture & print-effect system
+   ============================================================ */
+
+/* Editorial photos get a punchy, slightly posterized riso treatment */
 .editorial-photo {
-  filter: contrast(1.04) saturate(1.08) sepia(0.12) brightness(0.98);
+  filter: contrast(1.28) saturate(1.65) brightness(0.98);
 }
 
+/* Halftone comic-dot overlay, layered on top of photos/panels. */
 .editorial-overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(217, 93, 57, 0.095) 0%,
-    rgba(196, 128, 58, 0.09) 50%,
-    rgba(35, 66, 56, 0.05) 100%
-  );
+  background-image:
+    radial-gradient(rgba(20, 27, 51, 0.35) 1.4px, transparent 1.5px);
+  background-size: 7px 7px;
   mix-blend-mode: multiply;
+  opacity: 0.5;
   pointer-events: none;
 }
 
-/* Subtle Editorial Paper Grain Texture for Light Cream Backgrounds */
+/* Big halftone dot field — use on section backgrounds or as a
+   decorative corner accent. Color via `color` (currentColor dots). */
+.halftone-dots {
+  background-image: radial-gradient(currentColor 1.6px, transparent 1.7px);
+  background-size: 10px 10px;
+  opacity: 0.35;
+}
+
+.halftone-dots-lg {
+  background-image: radial-gradient(currentColor 2.4px, transparent 2.5px);
+  background-size: 16px 16px;
+  opacity: 0.28;
+}
+
+/* Thick comic-panel ink border, used instead of soft 1px dividers
+   on hero cards / images / buttons to sell the pop-art panel look. */
+.comic-border {
+  border: 3px solid var(--ink);
+}
+
+.comic-border-lg {
+  border: 4px solid var(--ink);
+}
+
+/* Hard-edge offset "sticker" shadow (no blur) — the signature
+   pop-art / riso-print registration-offset shadow. */
+.riso-shadow {
+  box-shadow: 6px 6px 0 0 var(--ink);
+}
+
+.riso-shadow-sm {
+  box-shadow: 4px 4px 0 0 var(--ink);
+}
+
+.riso-shadow-orange {
+  box-shadow: 6px 6px 0 0 var(--riso-orange);
+}
+
+.riso-shadow-magenta {
+  box-shadow: 6px 6px 0 0 var(--riso-magenta);
+}
+
+.riso-shadow-blue {
+  box-shadow: 6px 6px 0 0 var(--riso-blue);
+}
+
+/* Comic caption box — yellow ink block with heavy black border,
+   the exact device used across the @icirabatmagazine Instagram grid. */
+.pop-caption {
+  background: var(--riso-yellow);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 0 var(--ink);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+}
+
+/* Riso print misregistration text effect — duplicate ink layers
+   slightly offset in magenta + cyan behind the black text. */
+.riso-misprint {
+  position: relative;
+  color: var(--ink);
+}
+.riso-misprint::before,
+.riso-misprint::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.riso-misprint::before {
+  color: var(--riso-magenta);
+  transform: translate(2.5px, 2.5px);
+}
+.riso-misprint::after {
+  color: #00AEEF;
+  transform: translate(-2.5px, -2.5px);
+}
+
+/* Subtle Editorial Paper Grain Texture — warm riso paper-stock grain */
 .cream-grain-bg {
-  background-color: #FAF8F5;
-  background-image: 
-    radial-gradient(rgba(217, 93, 57, 0.02) 1px, transparent 0),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(rgba(255, 75, 18, 0.05) 1px, transparent 0),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.09'/%3E%3C/svg%3E");
   background-size: 24px 24px, 180px 180px;
   background-repeat: repeat;
 }
 
 @media (max-width: 640px) {
   .cream-grain-bg {
-    background-image: 
-      radial-gradient(rgba(217, 93, 57, 0.035) 1px, transparent 0),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.075'/%3E%3C/svg%3E");
+    background-image:
+      radial-gradient(rgba(255, 75, 18, 0.07) 1px, transparent 0),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
   }
 }
-
-

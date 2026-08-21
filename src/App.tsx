@@ -4,6 +4,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import { ViewMode, Article } from './types';
 import { ARTICLES_DATA } from './data/articles';
 import { Header } from './components/Header';
+import { PosterHero } from './components/PosterHero';
 import { HeroMosaic } from './components/HeroMosaic';
 import { WayfindingBanner } from './components/WayfindingBanner';
 import { HorecaSection } from './components/HorecaSection';
@@ -51,7 +52,14 @@ function HomePage() {
     <>
       <SEOHead currentView="home" />
 
-      {/* 1. Asymmetric Photo Collage Hero */}
+      {/* 1. Full-bleed Pop Art / Riso Cover Poster */}
+      <PosterHero
+        onExplore={() => {
+          document.getElementById('horeca-guide-section')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      />
+
+      {/* 2. Asymmetric Photo Collage Hero */}
       <HeroMosaic
         article={heroArticle}
         onSelectArticle={handleSelectArticle}
@@ -130,15 +138,15 @@ function ArticleDetailRouteWrapper() {
   if (!article) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-24 text-center">
-        <h2 className="font-heading font-bold text-3xl text-[#182338] mb-4">
+        <h2 className="font-heading font-bold text-3xl text-[#141B33] mb-4">
           Article non trouvé
         </h2>
-        <p className="text-[#55657E] mb-8">
+        <p className="text-[#4A3F2E] mb-8">
           L'article demandé n'existe pas ou l'adresse a été modifiée.
         </p>
         <button
           onClick={() => navigate('/horeca')}
-          className="inline-flex items-center gap-2 px-6 py-3 bg-[#182338] text-white font-bold text-sm rounded-lg hover:bg-[#2E3C56] transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-[#141B33] text-white font-bold text-sm rounded-none hover:bg-[#FF2D78] transition-colors cursor-pointer"
         >
           Retour au guide Horeca
         </button>
@@ -181,7 +189,7 @@ function RootSlugFallback() {
 // Main App Layout
 function AppLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF8F5] cream-grain-bg text-[#182338] selection:bg-[#D95D39] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#FBF1D8] cream-grain-bg text-[#141B33] selection:bg-[#FF4B12] selection:text-white">
       {/* Legacy hash listener */}
       <LegacyHashRedirectHandler />
 

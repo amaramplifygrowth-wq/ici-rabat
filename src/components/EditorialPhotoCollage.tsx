@@ -54,7 +54,7 @@ export const EditorialPhotoCollage: React.FC<EditorialPhotoCollageProps> = ({
       {/* Collage Container with Standardized Geometry & Padding for overlap */}
       <div className={`relative ${isRtl ? 'pl-8 sm:pl-10' : 'pr-8 sm:pr-10'}`}>
         {/* 1. Main Primary Photo (Fixed 4:3 Aspect Ratio) */}
-        <div className="relative z-10 w-[84%] sm:w-[82%] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[#EAE2D8] aspect-[4/3]">
+        <div className="relative z-10 w-[84%] sm:w-[82%] rounded-none overflow-hidden riso-shadow border-4 border-white bg-[#E3CE93] aspect-[4/3]">
           <img
             src={mainImage}
             alt={mainAlt}
@@ -69,7 +69,7 @@ export const EditorialPhotoCollage: React.FC<EditorialPhotoCollageProps> = ({
           <div
             className={`absolute -bottom-6 sm:-bottom-8 ${
               isRtl ? 'left-0 sm:left-2' : 'right-0 sm:right-2'
-            } z-20 w-[46%] sm:w-[44%] rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-[#EAE2D8] aspect-[1/1] transform hover:-translate-y-1 transition-transform duration-300`}
+            } z-20 w-[46%] sm:w-[44%] rounded-none overflow-hidden riso-shadow border-4 border-white bg-[#E3CE93] aspect-[1/1] transform hover:-translate-y-1 transition-transform duration-300`}
           >
             <img
               src={overlayImage}
@@ -86,7 +86,7 @@ export const EditorialPhotoCollage: React.FC<EditorialPhotoCollageProps> = ({
           <div
             className={`absolute -top-3 ${
               isRtl ? '-left-2 sm:left-0' : '-right-2 sm:right-0'
-            } z-15 w-[36%] sm:w-[34%] rounded-xl overflow-hidden shadow-lg border-4 border-white bg-[#EAE2D8] aspect-[4/3] hidden sm:block`}
+            } z-15 w-[36%] sm:w-[34%] rounded-none overflow-hidden riso-shadow border-4 border-white bg-[#E3CE93] aspect-[4/3] hidden sm:block`}
           >
             <img
               src={tertiaryImage}
@@ -102,18 +102,18 @@ export const EditorialPhotoCollage: React.FC<EditorialPhotoCollageProps> = ({
         <div
           className={`absolute -top-3 ${
             isRtl ? '-right-3' : '-left-3'
-          } w-24 h-24 border-2 border-[#D95D39]/30 rounded-2xl -z-10`}
+          } w-24 h-24 border-2 border-[#FF4B12]/30 rounded-none -z-10`}
         />
         <div
           className={`absolute -bottom-3 ${
             isRtl ? 'right-10' : 'left-10'
-          } w-32 h-32 bg-[#EBE4DA] rounded-2xl -z-10`}
+          } w-32 h-32 bg-[#E3CE93] rounded-none -z-10`}
         />
       </div>
 
       {/* Clean Sub-caption below the collage (Never overlaid over photos) */}
       {captionText && (
-        <p className="text-[12px] text-[#8E7E73] italic text-center lg:text-start mt-8 sm:mt-10 px-1">
+        <p className="text-[12px] text-[#7A6842] italic text-center lg:text-start mt-8 sm:mt-10 px-1">
           {captionText}
         </p>
       )}

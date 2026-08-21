@@ -47,19 +47,19 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
     <section id="horeca-guide-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 sm:pt-14 sm:pb-8">
       <ScrollReveal direction="up" distance={16}>
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b border-[#E5DFD5]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b-2 border-[#141B33]">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <UtensilsCrossed className="w-4 h-4 text-[#D95D39]" />
-              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#D95D39]">
+              <UtensilsCrossed className="w-4 h-4 text-[#FF4B12]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#FF4B12]">
                 {t.navHoreca}
               </span>
             </div>
-            <h2 className="font-heading font-bold text-2xl sm:text-4xl text-[#182338]">
+            <h2 className="font-heading font-bold text-2xl sm:text-4xl text-[#141B33]">
               {t.horecaSectionTitle}
             </h2>
           </div>
-          <p className="text-xs sm:text-base text-[#6F645A] max-w-md mt-2 md:mt-0 font-normal">
+          <p className="text-xs sm:text-base text-[#4A3F2E] max-w-md mt-2 md:mt-0 font-normal">
             {t.horecaSectionSubtitle}
           </p>
         </div>
@@ -75,8 +75,8 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                 onClick={() => setSelectedNeighborhood(n.id)}
                 className={`px-3.5 py-1.5 text-xs sm:text-sm font-semibold rounded-full transition-all cursor-pointer ${
                   isActive
-                    ? 'bg-[#182338] text-white shadow-xs'
-                    : 'bg-[#EAE2D8] text-[#55657E] hover:bg-[#DDD4C7] hover:text-[#182338]'
+                    ? 'bg-[#141B33] text-white riso-shadow-sm'
+                    : 'bg-[#E3CE93] text-[#4A3F2E] hover:bg-[#E3CE93] hover:text-[#141B33]'
                 }`}
               >
                 {n.label}
@@ -98,11 +98,11 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
             >
               <div
                 id={`horeca-card-${item.id}`}
-                className="bg-[#FFFFFF] border border-[#E8E1D7] rounded-xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group h-full"
+                className="bg-[#FFFFFF] border-2 border-[#141B33] rounded-none overflow-hidden riso-shadow-sm hover:riso-shadow-magenta transition-all duration-300 flex flex-col justify-between group h-full"
               >
                 {/* Photo Area with no overlapping text */}
                 <div
-                  className="relative aspect-[16/10] overflow-hidden bg-[#EAE2D8] cursor-pointer"
+                  className="relative aspect-[16/10] overflow-hidden bg-[#E3CE93] cursor-pointer"
                   onClick={() => onSelectArticle(item)}
                 >
                   <img
@@ -114,7 +114,7 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                   {/* Warm Editorial Color-Grading Overlay (8-10% intensity) */}
                   <div className="absolute inset-0 editorial-overlay z-10" />
                   {item.businessDetails?.priceLevel && (
-                    <div className="absolute top-3 right-3 z-20 bg-[#FAF8F5]/95 text-[#182338] font-bold text-xs px-2.5 py-1 rounded-md shadow-xs border border-[#E0D8CE]">
+                    <div className="absolute top-3 right-3 z-20 bg-[#FBF1D8]/95 text-[#141B33] font-bold text-xs px-2.5 py-1 rounded-md riso-shadow-sm border-2 border-[#141B33]">
                       {item.businessDetails.priceLevel}
                     </div>
                   )}
@@ -123,8 +123,8 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                 {/* Text Body */}
                 <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                   <div>
-                    <div className="flex items-center justify-between text-xs text-[#8E7E73] font-medium mb-2.5 sm:mb-3">
-                      <span className="flex items-center gap-1 text-[#D95D39] font-bold">
+                    <div className="flex items-center justify-between text-xs text-[#7A6842] font-medium mb-2.5 sm:mb-3">
+                      <span className="flex items-center gap-1 text-[#FF4B12] font-bold">
                         <MapPin className="w-3.5 h-3.5" />
                         {getLocalized(item.location)}
                       </span>
@@ -136,19 +136,19 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
 
                     <h3
                       onClick={() => onSelectArticle(item)}
-                      className="font-heading font-bold text-lg sm:text-xl text-[#182338] group-hover:text-[#D95D39] transition-colors leading-snug mb-2.5 sm:mb-3 cursor-pointer"
+                      className="font-heading font-bold text-lg sm:text-xl text-[#141B33] group-hover:text-[#FF4B12] transition-colors leading-snug mb-2.5 sm:mb-3 cursor-pointer"
                     >
                       {getLocalized(item.title)}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#55657E] leading-relaxed line-clamp-3 mb-4 font-normal">
+                    <p className="text-xs sm:text-sm text-[#4A3F2E] leading-relaxed line-clamp-3 mb-4 font-normal">
                       {getLocalized(item.excerpt)}
                     </p>
 
                     {/* Business Specialty Tag */}
                     {item.businessDetails?.specialty && (
-                      <div className="bg-[#FAF8F5] border border-[#EBE4DA] rounded-md p-2.5 mb-4 text-xs text-[#6F645A]">
-                        <span className="font-bold text-[#182338] block mb-0.5">
+                      <div className="bg-[#FBF1D8] border-2 border-[#141B33] rounded-md p-2.5 mb-4 text-xs text-[#4A3F2E]">
+                        <span className="font-bold text-[#141B33] block mb-0.5">
                           {t.specialtyLabel} :
                         </span>
                         <span className="line-clamp-2">
@@ -159,10 +159,10 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                   </div>
 
                   {/* Footer Buttons */}
-                  <div className="pt-4 border-t border-[#F0EAE1] flex items-center justify-between">
+                  <div className="pt-4 border-t border-[#FFE9C2] flex items-center justify-between">
                     <button
                       onClick={() => onSelectArticle(item)}
-                      className="text-xs font-bold text-[#182338] hover:text-[#D95D39] flex items-center gap-1.5 transition-colors cursor-pointer"
+                      className="text-xs font-bold text-[#141B33] hover:text-[#FF4B12] flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
                       <span>{t.readArticle}</span>
                       <ArrowRight className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`} />
@@ -173,7 +173,7 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
                         href={item.relatedBusinessUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-semibold text-[#8E7E73] hover:text-[#182338] flex items-center gap-1"
+                        className="text-xs font-semibold text-[#7A6842] hover:text-[#141B33] flex items-center gap-1"
                         title={t.visitWebsite}
                       >
                         <span>Web</span>
@@ -194,7 +194,7 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
           <button
             id="view-all-horeca-btn"
             onClick={onViewAllHoreca}
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-[#182338] text-[#182338] hover:bg-[#182338] hover:text-white font-bold text-xs sm:text-sm rounded-lg transition-all duration-200 cursor-pointer shadow-xs"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-[#141B33] text-[#141B33] hover:bg-[#141B33] hover:text-white font-bold text-xs sm:text-sm rounded-none transition-all duration-200 cursor-pointer riso-shadow-sm"
           >
             <span>{t.viewAllHoreca}</span>
             <ArrowRight className={`w-4 h-4 ${isRtl ? 'rotate-180' : ''}`} />
