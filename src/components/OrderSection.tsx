@@ -28,11 +28,16 @@ export const OrderSection: React.FC<OrderSectionProps> = ({ articles, onSelectAr
 
   // Only restaurants that already run their own direct-order channel — this
   // directory never lists a place that can't actually take the order.
+  // Amplify partners always sort to the top of the list, newest partner first,
+  // then everyone else by publish date.
   const orderableArticles = useMemo(
     () =>
       [...articles]
         .filter((a) => a.category === 'horeca' && a.businessDetails?.directOrderEnabled)
-        .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()),
+        .sort((a, b) => {
+          if (!!a.isPartner !== !!b.isPartner) return a.isPartner ? -1 : 1;
+          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
+        }),
     [articles]
   );
 
@@ -204,11 +209,17 @@ export const OrderSection: React.FC<OrderSectionProps> = ({ articles, onSelectAr
                         {biz.priceLevel}
                       </div>
                     )}
-                    <div className="absolute top-3 left-3 z-20 -rotate-3">
-                      <div className="pop-caption inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] sm:text-[11px] font-normal">
+                    <div className="absolute top-3 left-3 z-20 flex flex-col items-start gap-1.5">
+                      <div className="pop-caption inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] sm:text-[11px] font-normal -rotate-3">
                         <ShoppingBag className="w-3 h-3" />
                         <span>{t.navOrder}</span>
                       </div>
+                      {item.isPartner && (
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-wide bg-[#FFD400] text-[#141B33] border-2 border-[#141B33] rounded-none riso-shadow-sm">
+                          <Sparkles className="w-3 h-3" />
+                          <span>{item.partnerLabel ? getLocalized(item.partnerLabel) : t.partnerLabel}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
 
