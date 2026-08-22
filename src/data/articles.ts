@@ -587,11 +587,11 @@ export const ARTICLES_DATA: Article[] = [
         "Unlike an address only reachable through a third-party delivery app, Panda To Go lets customers build and confirm an order directly with them, ahead of delivery or pickup in Hay Riad."
       ]
     },
-    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImage: '/commander/panda-to-go.webp',
     heroImageCaption: {
-      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
-      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
-      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+      fr: 'Illustration éditoriale — plateau de sushi et wok fumant au comptoir.',
+      ar: 'رسم توضيحي تحريري — طبق سوشي وووك متصاعد الدخان على الطاولة.',
+      en: 'Editorial illustration — a sushi platter and a smoking wok at the counter.'
     },
     galleryImages: [],
     publishedAt: '2026-08-22',
@@ -684,11 +684,11 @@ export const ARTICLES_DATA: Article[] = [
         "The restaurant runs its own online ordering at instafoodma.com, alongside its presence on Glovo, Yassir, Done and Kooul — a direct option for anyone who'd rather skip a third-party app's commission."
       ]
     },
-    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImage: '/commander/instafood.webp',
     heroImageCaption: {
-      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
-      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
-      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+      fr: 'Illustration éditoriale — tacos français et burger gourmet au comptoir.',
+      ar: 'رسم توضيحي تحريري — تاكوس فرنسي وبرغر راقي على الطاولة.',
+      en: 'Editorial illustration — French tacos and a gourmet burger at the counter.'
     },
     galleryImages: [],
     publishedAt: '2026-08-22',
@@ -781,11 +781,11 @@ export const ARTICLES_DATA: Article[] = [
         "Rather than relying solely on a third-party app, the restaurant built its own ordering platform, commander.yokasushi.com, plus a mobile app — a direct route to order with no middleman."
       ]
     },
-    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImage: '/commander/yoka-sushi.webp',
     heroImageCaption: {
-      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
-      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
-      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+      fr: 'Illustration éditoriale — découpe de sashimi et plateau-bateau en salle.',
+      ar: 'رسم توضيحي تحريري — تقطيع السشيمي وطبق القارب بالصالة.',
+      en: 'Editorial illustration — sashimi being sliced and a boat platter in the dining room.'
     },
     galleryImages: [],
     publishedAt: '2026-08-22',
@@ -878,11 +878,11 @@ export const ARTICLES_DATA: Article[] = [
         "The restaurant set up dedicated online ordering at order.greenchili.ma, separate from its showcase site — its own system for delivering straight from Mahaj Riad, without going through a third-party platform."
       ]
     },
-    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImage: '/commander/greenchili.webp',
     heroImageCaption: {
-      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
-      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
-      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+      fr: 'Illustration éditoriale — montage d’un burger fait maison, bol végétarien en salle.',
+      ar: 'رسم توضيحي تحريري — تركيب برغر منزلي وطبق نباتي بجانبه.',
+      en: 'Editorial illustration — a homemade burger being assembled next to a vegetarian bowl.'
     },
     galleryImages: [],
     publishedAt: '2026-08-22',
@@ -975,11 +975,11 @@ export const ARTICLES_DATA: Article[] = [
         "Each outlet displays its own \"Order on WhatsApp\" button on the brand's site, primoschicken.com — a direct order, neighborhood by neighborhood, with no third-party app in between."
       ]
     },
-    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImage: '/commander/primos-chicken.webp',
     heroImageCaption: {
-      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
-      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
-      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+      fr: 'Illustration éditoriale — plateau de poulet frit, burger et tacos au comptoir.',
+      ar: 'رسم توضيحي تحريري — طبق دجاج مقلي وبرغر وتاكوس على الطاولة.',
+      en: 'Editorial illustration — a tray of fried chicken, a burger and a tacos at the counter.'
     },
     galleryImages: [],
     publishedAt: '2026-08-22',
