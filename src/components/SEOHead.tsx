@@ -50,6 +50,18 @@ export function SEOHead({ currentView, article }: SEOHeadProps) {
         : language === 'en'
         ? 'Explore the finest dining establishments, specialty coffee bars, and authentic culinary benchmarks in Rabat.'
         : 'Découvrez les meilleures tables, restaurants d’auteurs et cafés de spécialité à Rabat (Agdal, Hassan, Souissi, Oudayas).';
+    } else if (currentView === 'commander') {
+      path = 'commander';
+      pageTitle = language === 'ar'
+        ? 'اطلب مباشرة من المطاعم | هنا الرباط'
+        : language === 'en'
+        ? 'Order Directly from Rabat Restaurants | Ici Rabat'
+        : 'Commander Directement dans les Restaurants de Rabat | Ici Rabat';
+      pageDesc = language === 'ar'
+        ? 'اطلبوا مباشرة من مطاعم الرباط التي تدير طلباتها بأنفسها، دون عمولة تطبيقات التوصيل.'
+        : language === 'en'
+        ? 'Order straight from Rabat restaurants that handle their own delivery, no third-party app commission.'
+        : "Commandez directement auprès des restaurants de Rabat qui gèrent eux-mêmes leurs livraisons, sans commission d'application tierce.";
     } else if (currentView === 'evenements') {
       path = 'evenements';
       pageTitle = language === 'ar'

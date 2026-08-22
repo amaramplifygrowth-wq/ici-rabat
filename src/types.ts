@@ -36,6 +36,15 @@ export interface BusinessDetails {
     bestRating?: number;
   };
   whatsapp?: string;
+  /**
+   * Set to true only for restaurants that already run their own direct-order
+   * channel (a WhatsApp catalog, their own ordering site, etc.). Drives
+   * inclusion in the "Commander" directory — we never list a restaurant
+   * there that can't actually take an order yet.
+   */
+  directOrderEnabled?: boolean;
+  /** Where the "Commander" CTA sends the customer. Falls back to whatsapp/websiteUrl if omitted. */
+  directOrderUrl?: string;
 }
 
 export interface Article {
@@ -77,4 +86,4 @@ export interface Article {
   tags: LocalizedString[];
 }
 
-export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about';
+export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about' | 'commander';

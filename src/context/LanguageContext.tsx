@@ -53,6 +53,19 @@ interface Translations {
   aboutTitle: string;
   aboutDesc: string;
   partnerLabel: string;
+  navOrder: string;
+  orderPageTitle: string;
+  orderPageSubtitle: string;
+  orderSearchPlaceholder: string;
+  orderCuisineAll: string;
+  orderNowCta: string;
+  orderDetailsCta: string;
+  orderDisclaimer: string;
+  orderEmptyTitle: string;
+  orderEmptyDesc: string;
+  orderPartnerCtaTitle: string;
+  orderPartnerCtaDesc: string;
+  orderPartnerCtaButton: string;
 }
 
 const UI_TRANSLATIONS: Record<Language, Translations> = {
@@ -107,7 +120,20 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     notifyMe: "M'avertir du lancement",
     aboutTitle: "À Propos d'Ici Rabat",
     aboutDesc: "Ici Rabat capture le pouls vibrant de la capitale impériale : entre héritage andalou, modernisme architectural et renouveau culinaire audacieux.",
-    partnerLabel: "Partenaire"
+    partnerLabel: "Partenaire",
+    navOrder: "Commander",
+    orderPageTitle: "Commander directement",
+    orderPageSubtitle: "Les tables rbaties qui prennent vos commandes en direct, sans passer par une appli tierce. Moins cher pour vous, mieux pour eux.",
+    orderSearchPlaceholder: "Rechercher un restaurant, une cuisine...",
+    orderCuisineAll: "Toutes les cuisines",
+    orderNowCta: "Commander maintenant",
+    orderDetailsCta: "Voir la fiche",
+    orderDisclaimer: "Vous commandez et payez directement auprès du restaurant, en dehors d'Ici Rabat. Nous ne prenons aucune commission et ne gérons ni votre commande ni la livraison.",
+    orderEmptyTitle: "Aucun résultat",
+    orderEmptyDesc: "Aucun restaurant ne correspond à cette recherche pour l'instant. Essayez un autre mot-clé ou explorez toutes les cuisines.",
+    orderPartnerCtaTitle: "Vous tenez un restaurant à Rabat ?",
+    orderPartnerCtaDesc: "Si vous prenez déjà vos commandes vous-même (WhatsApp, site perso...), on peut vous ajouter ici gratuitement — et vous mettre en avant si vous le souhaitez.",
+    orderPartnerCtaButton: "Devenir partenaire"
   },
   ar: {
     siteTitle: "هنا الرباط",
@@ -160,7 +186,20 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     notifyMe: "أعلمني عند الإطلاق",
     aboutTitle: "عن مجلة هنا الرباط",
     aboutDesc: "نرصد نبض العاصمة الإدارية والثقافية: بين الإرث الأندلسي والنهضة المعمارية والابتكارات الذوقية الواعدة.",
-    partnerLabel: "شراكة"
+    partnerLabel: "شراكة",
+    navOrder: "اطلب الآن",
+    orderPageTitle: "اطلب مباشرة من المطعم",
+    orderPageSubtitle: "المطاعم الرباطية التي تستقبل طلباتكم مباشرة، دون تطبيق وسيط. أرخص لكم، وأفضل لهم.",
+    orderSearchPlaceholder: "ابحث عن مطعم أو نوع مطبخ...",
+    orderCuisineAll: "جميع أنواع المطابخ",
+    orderNowCta: "اطلب الآن",
+    orderDetailsCta: "عرض التفاصيل",
+    orderDisclaimer: "تقومون بالطلب والدفع مباشرة لدى المطعم، خارج منصة هنا الرباط. نحن لا نأخذ أي عمولة ولا ندير طلبكم أو عملية التوصيل.",
+    orderEmptyTitle: "لا توجد نتائج",
+    orderEmptyDesc: "لا يوجد مطعم يطابق بحثكم حالياً. جرّبوا كلمة أخرى أو تصفحوا جميع أنواع المطابخ.",
+    orderPartnerCtaTitle: "هل تملكون مطعماً بالرباط؟",
+    orderPartnerCtaDesc: "إذا كنتم تستقبلون طلباتكم بأنفسكم بالفعل (واتساب، موقع خاص...)، يمكننا إضافتكم هنا مجاناً — وإبرازكم إذا رغبتم.",
+    orderPartnerCtaButton: "كونوا شركاء معنا"
   },
   en: {
     siteTitle: "ICI RABAT",
@@ -213,7 +252,20 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     notifyMe: "Notify Me at Launch",
     aboutTitle: "About Ici Rabat",
     aboutDesc: "Ici Rabat captures the pulse of the royal capital: poised between Andalusian heritage, modernist avenues, and daring culinary craft.",
-    partnerLabel: "Partner"
+    partnerLabel: "Partner",
+    navOrder: "Order Now",
+    orderPageTitle: "Order Directly",
+    orderPageSubtitle: "Rabat's tables that take your order straight, no third-party app in between. Cheaper for you, better for them.",
+    orderSearchPlaceholder: "Search a restaurant, a cuisine...",
+    orderCuisineAll: "All cuisines",
+    orderNowCta: "Order Now",
+    orderDetailsCta: "View Details",
+    orderDisclaimer: "You order and pay directly with the restaurant, outside Ici Rabat. We take no commission and don't handle your order or delivery.",
+    orderEmptyTitle: "No results",
+    orderEmptyDesc: "No restaurant matches this search yet. Try another keyword or browse all cuisines.",
+    orderPartnerCtaTitle: "Do you run a restaurant in Rabat?",
+    orderPartnerCtaDesc: "If you already take your own orders (WhatsApp, your own site...), we can add you here for free — and feature you if you'd like.",
+    orderPartnerCtaButton: "Become a Partner"
   }
 };
 

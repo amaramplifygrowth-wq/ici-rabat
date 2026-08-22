@@ -8,6 +8,7 @@ import { PosterHero } from './components/PosterHero';
 import { HeroMosaic } from './components/HeroMosaic';
 import { WayfindingBanner } from './components/WayfindingBanner';
 import { HorecaSection } from './components/HorecaSection';
+import { OrderSection } from './components/OrderSection';
 import { ArticleDetail } from './components/ArticleDetail';
 import { CategoryPage } from './components/CategoryPage';
 import { Footer } from './components/Footer';
@@ -23,7 +24,7 @@ function LegacyHashRedirectHandler() {
     if (typeof window !== 'undefined' && window.location.hash) {
       const rawHash = window.location.hash.replace('#', '').split('?')[0];
       if (rawHash) {
-        if (['horeca', 'evenements', 'lifestyle', 'about'].includes(rawHash)) {
+        if (['horeca', 'commander', 'evenements', 'lifestyle', 'about'].includes(rawHash)) {
           navigate(`/${rawHash}`, { replace: true });
         } else {
           const matchedArticle = ARTICLES_DATA.find((a) => a.slug === rawHash);
@@ -116,6 +117,23 @@ function CategoryRouteWrapper({ view }: { view: ViewMode }) {
   );
 }
 
+// 3b. "Commander" Direct-Order Directory Route Component
+function OrderRouteWrapper() {
+  const navigate = useNavigate();
+
+  const handleSelectArticle = (article: Article) => {
+    navigate(`/${article.category}/${article.slug}`);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <SEOHead currentView="commander" />
+      <OrderSection articles={ARTICLES_DATA} onSelectArticle={handleSelectArticle} />
+    </>
+  );
+}
+
 // 4. Article Detail Route Component
 function ArticleDetailRouteWrapper() {
   const { category, slug } = useParams<{ category: string; slug: string }>();
@@ -182,6 +200,7 @@ function AppLayout() {
 
           {/* 2. Categories */}
           <Route path="/horeca" element={<CategoryRouteWrapper view="horeca" />} />
+          <Route path="/commander" element={<OrderRouteWrapper />} />
           <Route path="/evenements" element={<CategoryRouteWrapper view="evenements" />} />
           <Route path="/lifestyle" element={<CategoryRouteWrapper view="lifestyle" />} />
           <Route path="/about" element={<CategoryRouteWrapper view="about" />} />

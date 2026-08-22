@@ -143,6 +143,14 @@ async function runPrerender() {
   });
 
   routes.push({
+    path: 'commander',
+    title: 'Commander Directement dans les Restaurants de Rabat | Ici Rabat',
+    description: "Commandez directement auprès des restaurants de Rabat qui gèrent eux-mêmes leurs livraisons, sans commission d'application tierce.",
+    image: defaultImage,
+    type: 'website'
+  });
+
+  routes.push({
     path: 'evenements',
     title: 'Événements & Agenda Culturel à Rabat | Ici Rabat',
     description: 'Festivals d’exception, biennales d’art contemporain et soirées musicales dans les lieux historiques de la capitale.',

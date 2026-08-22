@@ -284,6 +284,8 @@ export const ARTICLES_DATA: Article[] = [
       instagramUrl: 'https://instagram.com/indianflavors_rabat',
       phone: '+212 5 37 77 00 00',
       whatsapp: '+212 6 00 00 00 00',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://indianflavor.pages.dev',
       servesCuisine: 'Indian',
       aggregateRating: {
         ratingValue: 4.8,

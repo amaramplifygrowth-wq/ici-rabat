@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode, Language } from '../types';
-import { Menu, X, Compass, Globe, Clock, ChevronRight } from 'lucide-react';
+import { Menu, X, Compass, Globe, Clock, ChevronRight, ShoppingBag } from 'lucide-react';
 import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
 import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
 
@@ -23,6 +23,8 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
   let activeView: ViewMode = 'home';
   if (currentPath === '/horeca' || currentPath.startsWith('/horeca/')) {
     activeView = currentPath === '/horeca' ? 'horeca' : 'article';
+  } else if (currentPath === '/commander') {
+    activeView = 'commander';
   } else if (currentPath === '/evenements') {
     activeView = 'evenements';
   } else if (currentPath === '/lifestyle') {
@@ -61,9 +63,10 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
     return () => clearInterval(interval);
   }, [language]);
 
-  const navItems: { id: ViewMode; path: string; label: string; badge?: string }[] = [
+  const navItems: { id: ViewMode; path: string; label: string; badge?: string; accent?: boolean }[] = [
     { id: 'home', path: '/', label: t.navHome },
     { id: 'horeca', path: '/horeca', label: t.navHoreca },
+    { id: 'commander', path: '/commander', label: t.navOrder, accent: true },
     { id: 'evenements', path: '/evenements', label: t.navEvents, badge: t.comingSoonBadge },
     { id: 'lifestyle', path: '/lifestyle', label: t.navLifestyle },
     { id: 'about', path: '/about', label: t.navAbout },
@@ -168,9 +171,12 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                     className={`group relative text-sm tracking-wider uppercase font-bold transition-all px-4 py-2 flex items-center gap-2 border-2 ${
                       isActive
                         ? 'bg-[#FF4B12] text-white border-[#141B33] riso-shadow-sm'
+                        : item.accent
+                        ? 'bg-[#FFD400] text-[#141B33] border-[#141B33] riso-shadow-sm hover:bg-[#FF4B12] hover:text-white'
                         : 'bg-[#FBF1D8]/5 text-[#FBF1D8] border-[#FBF1D8]/25 hover:bg-[#FBF1D8] hover:text-[#141B33] hover:border-[#141B33]'
                     }`}
                   >
+                    {item.accent && <ShoppingBag className="w-4 h-4" />}
                     <span>{item.label}</span>
                     {item.badge && (
                       <img
@@ -230,11 +236,14 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                   className={`w-full flex items-center justify-between px-3.5 py-3 rounded-none text-sm font-semibold transition-all cursor-pointer ${
                     isActive
                       ? 'bg-[#FF4B12] text-white border-s-4 border-[#FFD400] riso-shadow-sm'
+                      : item.accent
+                      ? 'bg-[#FFD400] text-[#141B33] border-2 border-[#141B33] riso-shadow-sm'
                       : 'text-[#FBF1D8] hover:bg-[#FBF1D8]/10 bg-transparent border-2 border-[#FBF1D8]/25'
                   }`}
                 >
                   <div className="flex items-center gap-2">
                     {isActive && <span className="w-2 h-2 rounded-full bg-[#FFD400]" />}
+                    {item.accent && !isActive && <ShoppingBag className="w-4 h-4" />}
                     <span>{item.label}</span>
                   </div>
                   <div className="flex items-center gap-2">
