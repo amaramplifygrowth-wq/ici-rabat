@@ -22,6 +22,7 @@ import bannerLifestyle from '../assets/images/banners/banner_lifestyle.jpg';
 import bannerAbout from '../assets/images/banners/banner_about.jpg';
 import illustrationNewsletter from '../assets/images/illustrations/illustration_newsletter.jpg';
 import textureTile from '../assets/images/illustrations/texture_tile.jpg';
+import mastheadTeam from '../assets/images/illustrations/masthead_team.png';
 
 interface CategoryPageProps {
   view: ViewMode;
@@ -66,6 +67,14 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
   if (view === 'about') {
     return (
       <div id="about-page" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+        <ScrollReveal direction="up" distance={12}>
+          <img
+            src={mastheadTeam}
+            alt="L'équipe Ici Rabat — la ville, ses gens, nos histoires"
+            className="w-full h-auto riso-shadow-orange mb-6 sm:mb-8 -rotate-1"
+          />
+        </ScrollReveal>
+
         <ScrollReveal direction="up" distance={16}>
           <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-10 sm:mb-12">
             <img
