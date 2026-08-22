@@ -1,20 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useParams, Navigate, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import { ViewMode, Article } from './types';
 import { ARTICLES_DATA } from './data/articles';
 import { Header } from './components/Header';
-import { PosterHero } from './components/PosterHero';
-import { HeroMosaic } from './components/HeroMosaic';
-import { WayfindingBanner } from './components/WayfindingBanner';
-import { HorecaSection } from './components/HorecaSection';
-import { OrderSection } from './components/OrderSection';
-import { ArticleDetail } from './components/ArticleDetail';
-import { CategoryPage } from './components/CategoryPage';
 import { Footer } from './components/Footer';
 import { SEOHead } from './components/SEOHead';
-import { NotFoundPage } from './components/NotFoundPage';
 import { InstallPrompt } from './components/InstallPrompt';
+
+// Route-level code splitting: each of these is only needed on the routes
+// that render it, so it ships as its own chunk instead of bloating the
+// single main bundle every visitor downloads regardless of which page
+// they land on (most real-world entries are a single article page from a
+// Google search, not the homepage — this keeps that first load lean).
+const PosterHero = lazy(() => import('./components/PosterHero').then((m) => ({ default: m.PosterHero })));
+const HeroMosaic = lazy(() => import('./components/HeroMosaic').then((m) => ({ default: m.HeroMosaic })));
+const WayfindingBanner = lazy(() => import('./components/WayfindingBanner').then((m) => ({ default: m.WayfindingBanner })));
+const HorecaSection = lazy(() => import('./components/HorecaSection').then((m) => ({ default: m.HorecaSection })));
+const OrderSection = lazy(() => import('./components/OrderSection').then((m) => ({ default: m.OrderSection })));
+const ArticleDetail = lazy(() => import('./components/ArticleDetail').then((m) => ({ default: m.ArticleDetail })));
+const CategoryPage = lazy(() => import('./components/CategoryPage').then((m) => ({ default: m.CategoryPage })));
+const NotFoundPage = lazy(() => import('./components/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
 
 // 1. Helper component to auto-redirect legacy hash URLs to clean path-based URLs
 function LegacyHashRedirectHandler() {
@@ -195,26 +201,28 @@ function AppLayout() {
 
       {/* Main Content Area */}
       <main className="flex-grow">
-        <Routes>
-          {/* 1. Homepage */}
-          <Route path="/" element={<HomePage />} />
+        <Suspense fallback={null}>
+          <Routes>
+            {/* 1. Homepage */}
+            <Route path="/" element={<HomePage />} />
 
-          {/* 2. Categories */}
-          <Route path="/horeca" element={<CategoryRouteWrapper view="horeca" />} />
-          <Route path="/commander" element={<OrderRouteWrapper />} />
-          <Route path="/evenements" element={<CategoryRouteWrapper view="evenements" />} />
-          <Route path="/lifestyle" element={<CategoryRouteWrapper view="lifestyle" />} />
-          <Route path="/about" element={<CategoryRouteWrapper view="about" />} />
+            {/* 2. Categories */}
+            <Route path="/horeca" element={<CategoryRouteWrapper view="horeca" />} />
+            <Route path="/commander" element={<OrderRouteWrapper />} />
+            <Route path="/evenements" element={<CategoryRouteWrapper view="evenements" />} />
+            <Route path="/lifestyle" element={<CategoryRouteWrapper view="lifestyle" />} />
+            <Route path="/about" element={<CategoryRouteWrapper view="about" />} />
 
-          {/* 3. Category + Article Slug (Clean SEO Paths) */}
-          <Route path="/:category/:slug" element={<ArticleDetailRouteWrapper />} />
+            {/* 3. Category + Article Slug (Clean SEO Paths) */}
+            <Route path="/:category/:slug" element={<ArticleDetailRouteWrapper />} />
 
-          {/* 4. Single segment fallback (legacy slugs or 404s) */}
-          <Route path="/:slug" element={<RootSlugFallback />} />
+            {/* 4. Single segment fallback (legacy slugs or 404s) */}
+            <Route path="/:slug" element={<RootSlugFallback />} />
 
-          {/* 5. Wildcard fallback */}
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+            {/* 5. Wildcard fallback */}
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </main>
 
       {/* Footer */}

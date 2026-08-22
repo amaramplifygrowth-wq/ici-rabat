@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode } from '../types';
 import { Mail, CheckCircle2, AlertCircle, ArrowRight, Globe } from 'lucide-react';
-import gazetteSticker from '../assets/images/stickers/sticker_gazette.png';
-import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
-import passionnementSticker from '../assets/images/stickers/sticker_passionnement.png';
-import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
+import gazetteSticker from '../assets/images/stickers/sticker_gazette.webp';
+import illustratedLogo from '../assets/images/stickers/logo_illustrated.webp';
+import passionnementSticker from '../assets/images/stickers/sticker_passionnement.webp';
+import bientotSticker from '../assets/images/stickers/sticker_bientot.webp';
 import { useNewsletterSubscribe } from '../hooks/useNewsletterSubscribe';
 
 interface FooterProps {

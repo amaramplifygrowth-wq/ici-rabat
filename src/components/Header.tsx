@@ -3,8 +3,8 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode, Language } from '../types';
 import { Menu, X, Compass, Globe, Clock, ChevronRight, ShoppingBag } from 'lucide-react';
-import bientotSticker from '../assets/images/stickers/sticker_bientot.png';
-import illustratedLogo from '../assets/images/stickers/logo_illustrated.png';
+import bientotSticker from '../assets/images/stickers/sticker_bientot.webp';
+import illustratedLogo from '../assets/images/stickers/logo_illustrated.webp';
 
 interface HeaderProps {
   currentView?: ViewMode;

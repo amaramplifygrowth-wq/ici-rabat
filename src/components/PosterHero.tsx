@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowDown } from 'lucide-react';
 import heroPoster from '../assets/images/hero_poster.jpg';
-import badge100Rabat from '../assets/images/stickers/sticker_100rabat.png';
+import badge100Rabat from '../assets/images/stickers/sticker_100rabat.webp';
 
 interface PosterHeroProps {
   onExplore?: () => void;
