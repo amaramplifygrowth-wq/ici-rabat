@@ -553,6 +553,491 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Université Mohammed V', ar: 'جامعة محمد الخامس', en: 'Université Mohammed V' },
       { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' }
     ]
+  },
+  {
+    id: 'art-12',
+    slug: 'panda-to-go-hay-riad',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Cuisine Asiatique & Sushi',
+      ar: 'المطبخ الآسيوي والسوشي',
+      en: 'Asian Cuisine & Sushi'
+    },
+    title: {
+      fr: 'Panda To Go : sushi et wok à Hay Riad, commande directe sans détour',
+      ar: 'باندا تو غو: سوشي وووك بحي الرياض، اطلب مباشرة دون وسيط',
+      en: 'Panda To Go: Sushi & Wok in Hay Riad, Order Direct'
+    },
+    excerpt: {
+      fr: "Sushi, maki et plats au wok avenue Annakhil, à Hay Riad. Panda To Go prend ses commandes via son propre site, pandatogo.ma, en plus de sa présence sur les applis tierces.",
+      ar: 'سوشي وماكي وأطباق ووك في شارع النخيل بحي الرياض. تستقبل باندا تو غو طلباتها عبر موقعها الخاص pandatogo.ma، إلى جانب حضورها على التطبيقات الوسيطة.',
+      en: "Sushi, maki and wok dishes on Avenue Annakhil in Hay Riad. Panda To Go takes orders through its own site, pandatogo.ma, alongside its presence on third-party apps."
+    },
+    body: {
+      fr: [
+        "Sur l'avenue Annakhil, à Hay Riad, Panda To Go propose une carte asiatique construite autour du sushi, des makis et des plats au wok. La maison s'est équipée d'un système de commande en ligne qui lui est propre, accessible sur pandatogo.ma, ainsi que d'une application dédiée.",
+        "Contrairement à une adresse qui ne serait joignable que via une appli de livraison tierce, Panda To Go permet ici de composer et de valider sa commande directement chez eux, avant une livraison ou un retrait sur place à Hay Riad."
+      ],
+      ar: [
+        "في شارع النخيل بحي الرياض، تقدم باندا تو غو قائمة آسيوية مبنية على السوشي والماكي وأطباق الووك. زودت المؤسسة نفسها بنظام طلب خاص بها، متاح عبر pandatogo.ma، إضافة إلى تطبيق مخصص.",
+        "على عكس عنوان لا يمكن الوصول إليه إلا عبر تطبيق توصيل خارجي، تتيح باندا تو غو هنا تركيب وتأكيد الطلب مباشرة لديها، قبل التوصيل أو الاستلام من المحل بحي الرياض."
+      ],
+      en: [
+        "On Avenue Annakhil in Hay Riad, Panda To Go serves an Asian menu built around sushi, maki and wok dishes. The restaurant runs its own ordering system at pandatogo.ma, alongside a dedicated app.",
+        "Unlike an address only reachable through a third-party delivery app, Panda To Go lets customers build and confirm an order directly with them, ahead of delivery or pickup in Hay Riad."
+      ]
+    },
+    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImageCaption: {
+      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
+      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
+      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '2 min',
+      ar: 'دقيقتان',
+      en: '2 min'
+    },
+    location: {
+      fr: 'Hay Riad, Rabat',
+      ar: 'حي الرياض، الرباط',
+      en: 'Hay Riad, Rabat'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    relatedBusinessName: 'Panda To Go',
+    relatedBusinessUrl: 'https://pandatogo.ma',
+    businessDetails: {
+      name: 'Panda To Go',
+      category: {
+        fr: 'Sushi & Wok Asiatique',
+        ar: 'سوشي وووك آسيوي',
+        en: 'Asian Sushi & Wok'
+      },
+      neighborhood: {
+        fr: 'Hay Riad',
+        ar: 'حي الرياض',
+        en: 'Hay Riad'
+      },
+      address: 'Avenue Annakhil, Hay Riad, Rabat',
+      priceLevel: '€€',
+      openingHours: {
+        fr: 'Commande en ligne via pandatogo.ma',
+        ar: 'الطلب عبر الموقع pandatogo.ma',
+        en: 'Order online via pandatogo.ma'
+      },
+      websiteUrl: 'https://pandatogo.ma',
+      servesCuisine: 'Asian',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://pandatogo.ma',
+      specialty: {
+        fr: 'Sushi, maki et plats au wok',
+        ar: 'سوشي، ماكي وأطباق ووك',
+        en: 'Sushi, maki and wok dishes'
+      }
+    },
+    tags: [
+      { fr: 'Sushi', ar: 'سوشي', en: 'Sushi' },
+      { fr: 'Hay Riad', ar: 'حي الرياض', en: 'Hay Riad' },
+      { fr: 'Commande directe', ar: 'طلب مباشر', en: 'Direct Order' }
+    ]
+  },
+  {
+    id: 'art-13',
+    slug: 'instafood-souissi',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Fast-Food Gourmet',
+      ar: 'وجبات سريعة راقية',
+      en: 'Gourmet Fast Food'
+    },
+    title: {
+      fr: 'Instafood : tacos français et burgers gourmets à Souissi',
+      ar: 'إنستافود: تاكوس فرنسي وبرغر راقي بالسويسي',
+      en: 'Instafood: French Tacos & Gourmet Burgers in Souissi'
+    },
+    excerpt: {
+      fr: "Installé au Centre Commercial Al Mougar à Souissi depuis 2016, Instafood sert tacos français, burgers gourmets et Tasty Crousty, avec commande directe sur instafoodma.com.",
+      ar: 'يقع إنستافود بالمركز التجاري المغار بالسويسي منذ 2016، ويقدم التاكوس الفرنسي والبرغر الراقي وتايستي كروستي، مع إمكانية الطلب المباشر عبر instafoodma.com.',
+      en: "Based at Centre Commercial Al Mougar in Souissi since 2016, Instafood serves French tacos, gourmet burgers and Tasty Crousty, with direct ordering at instafoodma.com."
+    },
+    body: {
+      fr: [
+        "Au deuxième étage du Centre Commercial Al Mougar, avenue Mehdi Ben Barka à Souissi, Instafood s'est fait une place depuis 2016 sur le créneau du fast-food gourmet : tacos français, burgers, Tasty Crousty et pâtes crémeuses préparés à la commande.",
+        "La maison gère sa propre commande en ligne sur instafoodma.com, en parallèle de sa présence sur Glovo, Yassir, Done et Kooul — de quoi commander en direct pour qui préfère éviter la commission d'une appli tierce."
+      ],
+      ar: [
+        "في الطابق الثاني من المركز التجاري المغار، بشارع المهدي بن بركة بالسويسي، شقّ إنستافود طريقه منذ 2016 في مجال الوجبات السريعة الراقية: تاكوس فرنسي، برغر، تايستي كروستي، وباستا كريمية تُحضّر عند الطلب.",
+        "تدير المؤسسة نظام طلب خاص بها عبر instafoodma.com، إلى جانب حضورها على Glovo وYassir وDone وKooul — خيار للطلب المباشر لمن يفضل تجنب عمولة التطبيقات الوسيطة."
+      ],
+      en: [
+        "On the second floor of Centre Commercial Al Mougar, avenue Mehdi Ben Barka in Souissi, Instafood has carved out a spot since 2016 in the gourmet fast-food space: French tacos, burgers, Tasty Crousty and creamy pasta made to order.",
+        "The restaurant runs its own online ordering at instafoodma.com, alongside its presence on Glovo, Yassir, Done and Kooul — a direct option for anyone who'd rather skip a third-party app's commission."
+      ]
+    },
+    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImageCaption: {
+      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
+      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
+      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '2 min',
+      ar: 'دقيقتان',
+      en: '2 min'
+    },
+    location: {
+      fr: 'Souissi, Rabat',
+      ar: 'السويسي، الرباط',
+      en: 'Souissi, Rabat'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice en chef Gastronomie',
+        ar: 'رئيسة تحرير قسم المذاق',
+        en: 'Gastronomy Editor-in-Chief'
+      },
+      avatar: avatarNadia
+    },
+    relatedBusinessName: 'Instafood Rabat',
+    relatedBusinessUrl: 'https://instafoodma.com',
+    businessDetails: {
+      name: 'Instafood Rabat',
+      category: {
+        fr: 'Tacos Français & Burgers Gourmets',
+        ar: 'تاكوس فرنسي وبرغر راقي',
+        en: 'French Tacos & Gourmet Burgers'
+      },
+      neighborhood: {
+        fr: 'Souissi',
+        ar: 'السويسي',
+        en: 'Souissi'
+      },
+      address: 'Centre Commercial Al Mougar, 2e étage, 90 Avenue Mehdi Ben Barka, Souissi, Rabat',
+      priceLevel: '€€',
+      openingHours: {
+        fr: 'Commande en ligne via instafoodma.com',
+        ar: 'الطلب عبر الموقع instafoodma.com',
+        en: 'Order online via instafoodma.com'
+      },
+      websiteUrl: 'https://instafoodma.com',
+      servesCuisine: 'French Tacos & Burgers',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://instafoodma.com',
+      specialty: {
+        fr: 'Tacos français, burgers gourmets et Tasty Crousty',
+        ar: 'تاكوس فرنسي، برغر راقي وتايستي كروستي',
+        en: 'French tacos, gourmet burgers and Tasty Crousty'
+      }
+    },
+    tags: [
+      { fr: 'Tacos', ar: 'تاكوس', en: 'Tacos' },
+      { fr: 'Souissi', ar: 'السويسي', en: 'Souissi' },
+      { fr: 'Commande directe', ar: 'طلب مباشر', en: 'Direct Order' }
+    ]
+  },
+  {
+    id: 'art-14',
+    slug: 'yoka-sushi-agdal',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Cuisine Japonaise',
+      ar: 'المطبخ الياباني',
+      en: 'Japanese Cuisine'
+    },
+    title: {
+      fr: 'Yoka Sushi : la table japonaise de référence à Agdal depuis 2010',
+      ar: 'يوكا سوشي: العنوان الياباني المرجعي بأكدال منذ 2010',
+      en: 'Yoka Sushi: The Reference Japanese Table in Agdal Since 2010'
+    },
+    excerpt: {
+      fr: "Repère japonais au Maroc depuis 2010, Yoka Sushi est présent à Agdal et prend ses commandes sur sa propre plateforme, commander.yokasushi.com, en plus de son application.",
+      ar: 'علامة يابانية راسخة بالمغرب منذ 2010، يوكا سوشي حاضر بأكدال ويستقبل طلباته عبر منصته الخاصة commander.yokasushi.com، إلى جانب تطبيقه.',
+      en: "A Japanese landmark in Morocco since 2010, Yoka Sushi is present in Agdal and takes orders on its own platform, commander.yokasushi.com, alongside its app."
+    },
+    body: {
+      fr: [
+        "Groupe japonais installé au Maroc depuis 2010, Yoka Sushi tient une adresse à Agdal et livre plus largement Rabat, Témara et Kénitra. La carte s'organise autour des sushis, makis et plats chauds japonais, préparés midi et soir tous les jours jusqu'à 23h.",
+        "Plutôt que de dépendre uniquement d'une appli tierce, la maison a développé sa propre plateforme de commande, commander.yokasushi.com, ainsi qu'une application mobile — de quoi commander en direct, sans intermédiaire."
+      ],
+      ar: [
+        "مجموعة يابانية حاضرة بالمغرب منذ 2010، يمتلك يوكا سوشي عنواناً بأكدال ويوصل طلباته إلى الرباط وتمارة والقنيطرة. تتمحور القائمة حول السوشي والماكي والأطباق اليابانية الساخنة، تُحضّر ظهراً ومساءً يومياً حتى الساعة 23:00.",
+        "بدل الاعتماد فقط على تطبيق وسيط، طوّرت المؤسسة منصة طلب خاصة بها، commander.yokasushi.com، إضافة إلى تطبيق للهاتف — خيار للطلب المباشر دون وسيط."
+      ],
+      en: [
+        "A Japanese group established in Morocco since 2010, Yoka Sushi runs a location in Agdal and delivers more broadly across Rabat, Témara and Kénitra. The menu centers on sushi, maki and hot Japanese dishes, served daily at lunch and dinner until 11 PM.",
+        "Rather than relying solely on a third-party app, the restaurant built its own ordering platform, commander.yokasushi.com, plus a mobile app — a direct route to order with no middleman."
+      ]
+    },
+    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImageCaption: {
+      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
+      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
+      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '2 min',
+      ar: 'دقيقتان',
+      en: '2 min'
+    },
+    location: {
+      fr: 'Agdal, Rabat',
+      ar: 'أكدال، الرباط',
+      en: 'Agdal, Rabat'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    relatedBusinessName: 'Yoka Sushi',
+    relatedBusinessUrl: 'https://yokasushi.com',
+    businessDetails: {
+      name: 'Yoka Sushi',
+      category: {
+        fr: 'Restaurant Japonais',
+        ar: 'مطعم ياباني',
+        en: 'Japanese Restaurant'
+      },
+      neighborhood: {
+        fr: 'Agdal',
+        ar: 'أكدال',
+        en: 'Agdal'
+      },
+      address: 'Agdal, Rabat',
+      priceLevel: '€€',
+      openingHours: {
+        fr: 'Tous les jours, de midi à 23h (commande sur commander.yokasushi.com)',
+        ar: 'يومياً من الظهر حتى 23:00 (الطلب عبر commander.yokasushi.com)',
+        en: 'Daily, noon to 11 PM (order via commander.yokasushi.com)'
+      },
+      websiteUrl: 'https://yokasushi.com',
+      servesCuisine: 'Japanese',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://commander.yokasushi.com',
+      specialty: {
+        fr: 'Sushi, maki et plats chauds japonais',
+        ar: 'سوشي، ماكي وأطباق يابانية ساخنة',
+        en: 'Sushi, maki and hot Japanese dishes'
+      }
+    },
+    tags: [
+      { fr: 'Japonais', ar: 'ياباني', en: 'Japanese' },
+      { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
+      { fr: 'Commande directe', ar: 'طلب مباشر', en: 'Direct Order' }
+    ]
+  },
+  {
+    id: 'art-15',
+    slug: 'greenchili-mahaj-riad',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Burgers Faits Maison',
+      ar: 'برغر منزلي الصنع',
+      en: 'Homemade Burgers'
+    },
+    title: {
+      fr: 'GreenChili : burgers faits maison à Mahaj Riad',
+      ar: 'غرين تشيلي: برغر منزلي الصنع بمحج الرياض',
+      en: 'GreenChili: Homemade Burgers in Mahaj Riad'
+    },
+    excerpt: {
+      fr: "À Mahaj Riad, GreenChili prépare des burgers faits maison et des plats végétariens, avec une commande en ligne dédiée sur order.greenchili.ma.",
+      ar: 'بمحج الرياض، يُحضّر غرين تشيلي برغر منزلي الصنع وأطباقاً نباتية، مع نظام طلب مخصص عبر order.greenchili.ma.',
+      en: "In Mahaj Riad, GreenChili makes homemade burgers and vegetarian dishes, with dedicated online ordering at order.greenchili.ma."
+    },
+    body: {
+      fr: [
+        "GreenChili tient adresse à Mahaj Riad autour d'une promesse simple : du fait maison, burgers en tête, avec une place assumée pour les options végétariennes sur la carte.",
+        "La maison a mis en place une commande en ligne dédiée, order.greenchili.ma, distincte de son site vitrine — un système propre pour livrer directement depuis Mahaj Riad, sans passer par une plateforme tierce."
+      ],
+      ar: [
+        "يتواجد غرين تشيلي بمحج الرياض حول وعد بسيط: طعام منزلي الصنع، وعلى رأسه البرغر، مع حضور واضح للخيارات النباتية في القائمة.",
+        "أنشأت المؤسسة نظام طلب خاص عبر order.greenchili.ma، منفصلاً عن موقعها التعريفي — نظام خاص للتوصيل مباشرة من محج الرياض، دون المرور عبر منصة وسيطة."
+      ],
+      en: [
+        "GreenChili holds down an address in Mahaj Riad built on a simple promise: homemade food, burgers first, with a real place for vegetarian options on the menu.",
+        "The restaurant set up dedicated online ordering at order.greenchili.ma, separate from its showcase site — its own system for delivering straight from Mahaj Riad, without going through a third-party platform."
+      ]
+    },
+    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImageCaption: {
+      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
+      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
+      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '2 min',
+      ar: 'دقيقتان',
+      en: '2 min'
+    },
+    location: {
+      fr: 'Mahaj Riad, Rabat',
+      ar: 'محج الرياض، الرباط',
+      en: 'Mahaj Riad, Rabat'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice en chef Gastronomie',
+        ar: 'رئيسة تحرير قسم المذاق',
+        en: 'Gastronomy Editor-in-Chief'
+      },
+      avatar: avatarNadia
+    },
+    relatedBusinessName: 'GreenChili',
+    relatedBusinessUrl: 'https://www.greenchili.ma',
+    businessDetails: {
+      name: 'GreenChili',
+      category: {
+        fr: 'Burgers Faits Maison & Végétarien',
+        ar: 'برغر منزلي ومطبخ نباتي',
+        en: 'Homemade Burgers & Vegetarian'
+      },
+      neighborhood: {
+        fr: 'Mahaj Riad',
+        ar: 'محج الرياض',
+        en: 'Mahaj Riad'
+      },
+      address: 'Mahaj Riad, Rabat',
+      priceLevel: '€€',
+      openingHours: {
+        fr: 'Commande en ligne via order.greenchili.ma',
+        ar: 'الطلب عبر order.greenchili.ma',
+        en: 'Order online via order.greenchili.ma'
+      },
+      websiteUrl: 'https://www.greenchili.ma',
+      servesCuisine: 'Burgers & Vegetarian',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://order.greenchili.ma',
+      specialty: {
+        fr: 'Burgers faits maison et plats végétariens',
+        ar: 'برغر منزلي وأطباق نباتية',
+        en: 'Homemade burgers and vegetarian dishes'
+      }
+    },
+    tags: [
+      { fr: 'Burgers', ar: 'برغر', en: 'Burgers' },
+      { fr: 'Mahaj Riad', ar: 'محج الرياض', en: 'Mahaj Riad' },
+      { fr: 'Commande directe', ar: 'طلب مباشر', en: 'Direct Order' }
+    ]
+  },
+  {
+    id: 'art-16',
+    slug: 'primos-chicken-agdal',
+    category: 'horeca',
+    categoryLabel: {
+      fr: 'Poulet & Fast-Food',
+      ar: 'دجاج ووجبات سريعة',
+      en: 'Chicken & Fast Food'
+    },
+    title: {
+      fr: 'Primos Chicken : poulet, tacos et burgers, commande WhatsApp par quartier',
+      ar: 'بريموس تشيكن: دجاج وتاكوس وبرغر، الطلب عبر واتساب حسب الحي',
+      en: 'Primos Chicken: Chicken, Tacos & Burgers, WhatsApp Order by Neighborhood'
+    },
+    excerpt: {
+      fr: "Poulet, bocas, tacos et burgers : Primos Chicken tient plusieurs adresses à Rabat (Agdal, Rabat Ville, L'Océan) et prend ses commandes directement sur WhatsApp, quartier par quartier.",
+      ar: 'دجاج وبوكاس وتاكوس وبرغر: يتوفر بريموس تشيكن على عدة عناوين بالرباط (أكدال، الرباط المدينة، المحيط) ويستقبل طلباته مباشرة عبر واتساب حسب كل حي.',
+      en: "Chicken, bocas, tacos and burgers: Primos Chicken runs several Rabat locations (Agdal, Rabat Ville, L'Océan) and takes orders directly on WhatsApp, neighborhood by neighborhood."
+    },
+    body: {
+      fr: [
+        "Primos Chicken décline sa carte, poulet, bocas, tacos, paninis et burgers, sur plusieurs adresses à Rabat, dont Agdal, Rabat Ville et L'Océan, ainsi qu'à Salé, Témara et Kénitra.",
+        "Chaque point de vente affiche son propre bouton « Commander sur WhatsApp » sur le site de l'enseigne, primoschicken.com — une commande directe, quartier par quartier, sans dépendre d'une appli tierce."
+      ],
+      ar: [
+        "يوزع بريموس تشيكن قائمته، دجاج وبوكاس وتاكوس وبانيني وبرغر، على عدة عناوين بالرباط منها أكدال والرباط المدينة والمحيط، إضافة إلى سلا وتمارة والقنيطرة.",
+        "تعرض كل نقطة بيع زر «الطلب عبر واتساب» الخاص بها على موقع العلامة، primoschicken.com — طلب مباشر حسب كل حي، دون الاعتماد على تطبيق وسيط."
+      ],
+      en: [
+        "Primos Chicken spreads its menu, chicken, bocas, tacos, paninis and burgers, across several Rabat locations including Agdal, Rabat Ville and L'Océan, plus Salé, Témara and Kénitra.",
+        "Each outlet displays its own \"Order on WhatsApp\" button on the brand's site, primoschicken.com — a direct order, neighborhood by neighborhood, with no third-party app in between."
+      ]
+    },
+    heroImage: '/banners/banner_horeca_placeholder.jpg',
+    heroImageCaption: {
+      fr: 'Ambiance des adresses horeca de Rabat — photo illustrative en attendant les visuels de l’enseigne.',
+      ar: 'أجواء عناوين المطاعم بالرباط — صورة توضيحية في انتظار صور العلامة.',
+      en: "Rabat's horeca scene — illustrative photo pending the restaurant's own visuals."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '2 min',
+      ar: 'دقيقتان',
+      en: '2 min'
+    },
+    location: {
+      fr: 'Agdal, Rabat',
+      ar: 'أكدال، الرباط',
+      en: 'Agdal, Rabat'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    relatedBusinessName: 'Primos Chicken',
+    relatedBusinessUrl: 'https://primoschicken.com',
+    businessDetails: {
+      name: 'Primos Chicken',
+      category: {
+        fr: 'Poulet, Tacos & Burgers',
+        ar: 'دجاج، تاكوس وبرغر',
+        en: 'Chicken, Tacos & Burgers'
+      },
+      neighborhood: {
+        fr: 'Agdal',
+        ar: 'أكدال',
+        en: 'Agdal'
+      },
+      address: 'Agdal, Rabat (plusieurs adresses : Rabat Ville, L\'Océan, Salé, Témara, Kénitra)',
+      priceLevel: '€',
+      openingHours: {
+        fr: 'Commande directe sur WhatsApp, par quartier — voir primoschicken.com/notre-menu',
+        ar: 'الطلب مباشرة عبر واتساب حسب الحي — راجع primoschicken.com/notre-menu',
+        en: 'Direct WhatsApp order by neighborhood — see primoschicken.com/notre-menu'
+      },
+      websiteUrl: 'https://primoschicken.com/notre-menu',
+      servesCuisine: 'Chicken & Fast Food',
+      directOrderEnabled: true,
+      directOrderUrl: 'https://primoschicken.com/notre-menu',
+      specialty: {
+        fr: 'Poulet, bocas, tacos, paninis et burgers',
+        ar: 'دجاج، بوكاس، تاكوس، بانيني وبرغر',
+        en: 'Chicken, bocas, tacos, paninis and burgers'
+      }
+    },
+    tags: [
+      { fr: 'Poulet', ar: 'دجاج', en: 'Chicken' },
+      { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
+      { fr: 'Commande WhatsApp', ar: 'طلب عبر واتساب', en: 'WhatsApp Order' }
+    ]
   }
 ];
 
