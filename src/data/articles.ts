@@ -1038,6 +1038,92 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Commande WhatsApp', ar: 'طلب عبر واتساب', en: 'WhatsApp Order' }
     ]
+  },
+  {
+    id: 'art-17',
+    slug: 'guide-etudiant-rabat-logement-forfaits',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Vie Étudiante',
+      ar: 'حياة الطلبة',
+      en: 'Student Life'
+    },
+    title: {
+      fr: "Guide étudiant, épisode 2 : se loger et rester connecté à Rabat",
+      ar: 'دليل الطلبة، الحلقة 2: السكن والاتصال بالإنترنت في الرباط',
+      en: 'Student Guide, Episode 2: Housing and Staying Connected in Rabat'
+    },
+    subtitle: {
+      fr: "La suite promise du guide Vie Étudiante : cités universitaires, résidences privées, marché locatif à Agdal et forfaits mobiles, sans bon plan inventé.",
+      ar: 'تكملة دليل الحياة الطلابية كما وعدنا: الأحياء الجامعية، السكنات الخاصة، سوق الكراء بأكدال وباقات الهاتف، دون أي نصيحة مختلقة.',
+      en: "The follow-up we promised to the Student Life guide: university residences, private housing, the Agdal rental market and mobile plans, no invented tips."
+    },
+    excerpt: {
+      fr: "Logement subventionné, résidences privées, prix réels du marché à Agdal, et le meilleur forfait mobile pour un budget étudiant : la suite vérifiée du guide.",
+      ar: 'السكن المدعوم، السكنات الخاصة، الأسعار الحقيقية بسوق أكدال، وأفضل باقة هاتف لميزانية طالب: تكملة الدليل الموثقة.',
+      en: "Subsidized housing, private residences, real market prices in Agdal, and the best mobile plan for a student budget: the verified follow-up to the guide."
+    },
+    body: {
+      fr: [
+        "Dans notre premier guide Vie Étudiante, nous avions promis de compléter logement et forfaits mobiles dès que ces informations seraient vérifiées sur le terrain, jamais avant. Voici cette suite.",
+        "Pour le logement subventionné, l'ONOUSC (Office National des Œuvres Universitaires Sociales et Culturelles) gère quatre cités universitaires publiques à Rabat : la Cité Moulay Ismaïl (avenue de la Résistance), la Cité Agdal (avenue des Nations-Unies, tél. 05 37 77 19 47), et les Cités Souissi I et II (Campus Universitaire Allal El Fassi). L'accès y est réservé aux étudiants inscrits dans l'enseignement supérieur, originaires d'une autre ville et issus d'une famille à revenu modeste ; les tarifs ne sont pas publiés en ligne et s'obtiennent uniquement en déposant un dossier auprès de l'ONOUSC, lié au statut de bourse de l'étudiant.",
+        "Pour celles et ceux qui ne remplissent pas ces critères, deux résidences étudiantes privées existent à Rabat : Résidence Ryad Souissi (avenue Bani Wrayine, Hay Riad) et Bayt Al Maarifa (avenue Allal Al Fassi, Madinat Al Irfane). Leurs tarifs varient selon le type de chambre et ne sont pas communiqués publiquement ; la demande y dépasse chaque année l'offre disponible, mieux vaut donc candidater tôt plutôt qu'à la rentrée.",
+        "Sur le marché locatif libre, les annonces actuelles à Agdal donnent une fourchette claire pour un studio : entre 3 300 DH pour un petit studio non meublé sans ascenseur, et 8 000 DH pour un studio meublé haut standing, la majorité des studios meublés se situant entre 5 500 et 6 700 DH par mois. Partager un studio à deux reste, dans les faits, la méthode la plus courante pour ramener ce budget à un niveau tenable.",
+        "Côté forfait mobile, trois options se distinguent clairement par leurs tarifs publics : chez inwi, 49 DH pour 5 Go, 99 DH pour 25 Go, 199 DH pour 100 Go ou 349 DH en illimité ; chez Maroc Telecom, 165 DH pour 14 Go d'internet avec 14h d'appels, ou 349 DH pour 45 à 55 Go selon les offres en cours ; chez Orange, les forfaits s'échelonnent de 69 à 299 DH sans détail de volume de données publiquement communiqué au moment de la rédaction. Pour un usage étudiant classique (cours, cartes, réseaux sociaux), le palier autour de 100 DH pour 25 Go suffit dans la grande majorité des cas.",
+        "Ce guide reste, comme le premier, volontairement incomplet : transport, jobs étudiants et couverture santé suivront dans une prochaine édition, uniquement une fois confirmés sur le terrain."
+      ],
+      ar: [
+        "في دليلنا الأول للحياة الطلابية، وعدنا بإكمال معلومات السكن وباقات الهاتف فور التحقق منها ميدانياً، وليس قبل ذلك. وها هي التكملة.",
+        "بخصوص السكن المدعوم، يدير المكتب الوطني للأعمال الجامعية الاجتماعية والثقافية (ONOUSC) أربع أحياء جامعية عمومية بالرباط: حي مولاي إسماعيل (شارع المقاومة)، حي أكدال (شارع الأمم المتحدة، هاتف: 05 37 77 19 47)، وحيا السويسي 1 و2 (الحرم الجامعي علال الفاسي). يقتصر الولوج إليها على الطلبة المسجلين بالتعليم العالي، القادمين من مدينة أخرى، والمنحدرين من أسر ذات دخل محدود؛ ولا تُنشر الأسعار عبر الإنترنت وتُحدد فقط بإيداع ملف لدى المكتب الوطني، مرتبط بوضعية المنحة الدراسية للطالب.",
+        "لمن لا تنطبق عليهم هذه الشروط، توجد سكنيتان طلابيتان خاصتان بالرباط: إقامة رياض السويسي (شارع بني ورايين، حي الرياض) وبيت المعرفة (شارع علال الفاسي، مدينة العرفان). تختلف أسعارهما حسب نوع الغرفة ولا تُعلن للعموم؛ ويفوق الطلب فيهما العرض المتاح كل سنة، لذا يُفضل التقديم مبكراً بدل انتظار الدخول الجامعي.",
+        "أما في سوق الكراء الحر، فتُظهر الإعلانات الحالية بأكدال هامشاً واضحاً لثمن الاستوديو: بين 3300 درهم لاستوديو صغير غير مفروش بدون مصعد، و8000 درهم لاستوديو مفروش راقٍ، مع تمركز أغلب الاستوديوهات المفروشة بين 5500 و6700 درهم شهرياً. ويبقى تقاسم استوديو بين طالبين، في الواقع، الطريقة الأكثر شيوعاً لجعل هذه الميزانية معقولة.",
+        "أما بخصوص باقات الهاتف، فتتميز ثلاثة خيارات بأسعارها المعلنة بوضوح: لدى Inwi، 49 درهماً مقابل 5 جيغا، 99 درهماً مقابل 25 جيغا، 199 درهماً مقابل 100 جيغا، أو 349 درهماً بلا حدود؛ ولدى اتصالات المغرب، 165 درهماً مقابل 14 جيغا مع 14 ساعة اتصال، أو 349 درهماً مقابل 45 إلى 55 جيغا حسب العروض الجارية؛ ولدى Orange، تتراوح الباقات بين 69 و299 درهماً دون تفاصيل حجم البيانات معلنة للعموم وقت كتابة هذا المقال. وبالنسبة لاستخدام طلابي عادي (الدروس، الخرائط، الشبكات الاجتماعية)، تكفي في الغالب الفئة المقاربة لـ100 درهم مقابل 25 جيغا.",
+        "يبقى هذا الدليل، كسابقه، غير مكتمل عمداً: النقل، فرص العمل الطلابية والتغطية الصحية ستُضاف في إصدار قادم، فقط بعد التحقق منها ميدانياً."
+      ],
+      en: [
+        "In our first Student Life guide, we promised to complete the housing and mobile plan information once it was verified on the ground, never before. Here is that follow-up.",
+        "For subsidized housing, ONOUSC (the National Office for Social and Cultural University Works) runs four public university residences in Rabat: Cité Moulay Ismaïl (avenue de la Résistance), Cité Agdal (avenue des Nations-Unies, tel. 05 37 77 19 47), and Cités Souissi I and II (Allal El Fassi University Campus). Access is limited to students enrolled in higher education, from outside the city, and from lower-income families; rates aren't published online and are only available by filing an application with ONOUSC, tied to the student's scholarship status.",
+        "For those who don't meet those criteria, two private student residences exist in Rabat: Résidence Ryad Souissi (avenue Bani Wrayine, Hay Riad) and Bayt Al Maarifa (avenue Allal Al Fassi, Madinat Al Irfane). Their rates vary by room type and aren't publicly listed; demand exceeds available spots every year, so applying early beats waiting for the start of term.",
+        "On the open rental market, current listings in Agdal show a clear range for a studio: from 3,300 DH for a small unfurnished studio with no elevator, up to 8,000 DH for a high-standing furnished one, with most furnished studios clustering between 5,500 and 6,700 DH a month. Splitting a studio between two students remains, in practice, the most common way to bring that down to a manageable budget.",
+        "On mobile plans, three options stand out with clearly published rates: at inwi, 49 DH for 5 GB, 99 DH for 25 GB, 199 DH for 100 GB, or 349 DH unlimited; at Maroc Telecom, 165 DH for 14 GB with 14 hours of calls, or 349 DH for 45 to 55 GB depending on current offers; at Orange, plans range from 69 to 299 DH with no data volume publicly detailed per tier at the time of writing. For typical student use (classes, maps, social media), the tier around 100 DH for 25 GB covers most needs.",
+        "Like the first one, this guide stays deliberately incomplete: transport, student jobs and health coverage will follow in a future edition, only once confirmed on the ground."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle.jpg',
+    heroImageCaption: {
+      fr: "Studios et cités universitaires autour d'Agdal, entre budget étudiant et vie de quartier.",
+      ar: 'استوديوهات وأحياء جامعية حول أكدال، بين ميزانية الطالب وحياة الحي.',
+      en: 'Studios and university residences around Agdal, between a student budget and neighborhood life.'
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '4 min',
+      ar: '٤ دقائق',
+      en: '4 min'
+    },
+    location: {
+      fr: 'Agdal & Souissi, Rabat',
+      ar: 'أكدال والسويسي، الرباط',
+      en: 'Agdal & Souissi, Rabat'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice en chef Gastronomie',
+        ar: 'رئيسة تحرير قسم الطبخ',
+        en: 'Editor-in-Chief, Gastronomy'
+      },
+      avatar: avatarNadia
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Vie Étudiante', ar: 'حياة الطلبة', en: 'Student Life' },
+      { fr: 'Logement Étudiant', ar: 'سكن الطلبة', en: 'Student Housing' },
+      { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
+      { fr: 'Forfait Mobile', ar: 'باقة الهاتف', en: 'Mobile Plan' }
+    ]
   }
 ];
 
