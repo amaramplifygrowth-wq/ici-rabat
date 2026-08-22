@@ -74,6 +74,11 @@ interface Translations {
   reactionVibeGood: string;
   reactionVibeMeh: string;
   reactionNoVotesYet: string;
+  pwaInstallTitle: string;
+  pwaInstallDesc: string;
+  pwaInstallButton: string;
+  pwaIosInstruction: string;
+  pwaInstallDismiss: string;
 }
 
 const UI_TRANSLATIONS: Record<Language, Translations> = {
@@ -149,7 +154,12 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     reactionWouldOrderAgain: "recommanderaient",
     reactionVibeGood: "Top",
     reactionVibeMeh: "Pas top",
-    reactionNoVotesYet: "Soyez le premier à donner votre avis"
+    reactionNoVotesYet: "Soyez le premier à donner votre avis",
+    pwaInstallTitle: "Installez Ici Rabat sur votre téléphone",
+    pwaInstallDesc: "Accès plus rapide, en un seul appui depuis votre écran d'accueil.",
+    pwaInstallButton: "Installer",
+    pwaIosInstruction: "Appuyez sur Partager, puis « Sur l'écran d'accueil »",
+    pwaInstallDismiss: "Fermer"
   },
   ar: {
     siteTitle: "هنا الرباط",
@@ -223,7 +233,12 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     reactionWouldOrderAgain: "سيطلبون مجددا",
     reactionVibeGood: "ممتاز",
     reactionVibeMeh: "ليس رائعا",
-    reactionNoVotesYet: "كونوا أول من يشارك رأيه"
+    reactionNoVotesYet: "كونوا أول من يشارك رأيه",
+    pwaInstallTitle: "ثبّتوا هنا الرباط على هاتفكم",
+    pwaInstallDesc: "وصول أسرع، بلمسة واحدة من شاشتكم الرئيسية.",
+    pwaInstallButton: "تثبيت",
+    pwaIosInstruction: "اضغطوا على مشاركة، ثم «إضافة إلى الشاشة الرئيسية»",
+    pwaInstallDismiss: "إغلاق"
   },
   en: {
     siteTitle: "ICI RABAT",
@@ -297,7 +312,12 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     reactionWouldOrderAgain: "would order again",
     reactionVibeGood: "Top",
     reactionVibeMeh: "Not great",
-    reactionNoVotesYet: "Be the first to share your take"
+    reactionNoVotesYet: "Be the first to share your take",
+    pwaInstallTitle: "Install Ici Rabat on your phone",
+    pwaInstallDesc: "Faster access, one tap from your home screen.",
+    pwaInstallButton: "Install",
+    pwaIosInstruction: "Tap Share, then \"Add to Home Screen\"",
+    pwaInstallDismiss: "Close"
   }
 };
 

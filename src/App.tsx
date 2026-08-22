@@ -14,6 +14,7 @@ import { CategoryPage } from './components/CategoryPage';
 import { Footer } from './components/Footer';
 import { SEOHead } from './components/SEOHead';
 import { NotFoundPage } from './components/NotFoundPage';
+import { InstallPrompt } from './components/InstallPrompt';
 
 // 1. Helper component to auto-redirect legacy hash URLs to clean path-based URLs
 function LegacyHashRedirectHandler() {
@@ -218,6 +219,9 @@ function AppLayout() {
 
       {/* Footer */}
       <Footer />
+
+      {/* "Add to Home Screen" banner — Android gets a real 1-tap install prompt, iOS gets instructions */}
+      <InstallPrompt />
     </div>
   );
 }

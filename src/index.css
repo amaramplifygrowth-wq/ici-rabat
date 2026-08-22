@@ -234,3 +234,15 @@ html {
   background-repeat: repeat-x;
   background-size: 24px 16px;
 }
+
+/* Slide-up entrance for the "install as app" banner */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
