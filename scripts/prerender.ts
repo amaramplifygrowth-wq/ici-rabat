@@ -299,6 +299,67 @@ async function runPrerender() {
   }
 
   console.log(`\n✨ Static pre-rendering completed successfully! Generated ${generatedCount} static routes.`);
+
+  // 5. Sitemap — generated from this same `routes` list so it can never go
+  // stale again (it used to be a hand-maintained public/sitemap.xml that
+  // silently fell behind every time a new page was added).
+  generateSitemap(routes);
+}
+
+function priorityFor(route: RouteMeta): { priority: string; changefreq: string } {
+  if (route.path === '') return { priority: '1.0', changefreq: 'daily' };
+  if (route.path === 'horeca' || route.path === 'commander') {
+    return { priority: '0.9', changefreq: 'daily' };
+  }
+  if (route.path === 'evenements' || route.path === 'lifestyle') {
+    return { priority: '0.8', changefreq: 'weekly' };
+  }
+  if (route.path === 'about') return { priority: '0.5', changefreq: 'monthly' };
+  if (route.type === 'article' && route.path.startsWith('horeca/')) {
+    return { priority: '0.9', changefreq: 'weekly' };
+  }
+  if (route.type === 'article') return { priority: '0.7', changefreq: 'monthly' };
+  return { priority: '0.6', changefreq: 'monthly' };
+}
+
+function generateSitemap(routes: RouteMeta[]): void {
+  const today = new Date().toISOString().slice(0, 10);
+
+  const urlEntries = routes
+    .map((route) => {
+      const loc = route.path === '' ? `${BASE_URL}/` : `${BASE_URL}/${route.path}`;
+      const { priority, changefreq } = priorityFor(route);
+      const lastmod = route.modifiedTime || route.publishedTime || today;
+
+      const hreflangs = ['fr', 'ar', 'en']
+        .map((lang) => {
+          const href = route.path === '' ? `${BASE_URL}/?lang=${lang}` : `${BASE_URL}/${route.path}?lang=${lang}`;
+          return `    <xhtml:link rel="alternate" hreflang="${lang}" href="${href}"/>`;
+        })
+        .join('\n');
+
+      return `  <url>
+    <loc>${loc}</loc>
+${hreflangs}
+    <xhtml:link rel="alternate" hreflang="x-default" href="${loc}"/>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+    })
+    .join('\n\n');
+
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+${urlEntries}
+
+</urlset>
+`;
+
+  fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemap, 'utf-8');
+  console.log(`  ✓ Generated sitemap.xml with ${routes.length} URLs`);
 }
 
 runPrerender().catch((err) => {
