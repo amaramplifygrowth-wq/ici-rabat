@@ -135,7 +135,8 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Diour Jamaa', ar: 'ديور الجامع', en: 'Diour Jamaa' },
       { fr: 'Produits Laitiers', ar: 'منتجات الألبان', en: 'Dairy Products' },
       { fr: 'Couscous du Vendredi', ar: 'كسكس الجمعة', en: 'Friday Couscous' }
-    ]
+    ],
+    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits', 'doms-cafe-agdal']
   },
 
 {
@@ -469,7 +470,8 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Coworking Café', ar: 'مقهى للعمل', en: 'Coworking Café' },
       { fr: 'Tacos & Pâtes', ar: 'تاكوس ومعكرونة', en: 'Tacos & Pasta' },
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' }
-    ]
+    ],
+    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits', 'ba-fares-diour-jamaa']
   },
   {
     id: 'art-11',
