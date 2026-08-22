@@ -66,6 +66,14 @@ interface Translations {
   orderPartnerCtaTitle: string;
   orderPartnerCtaDesc: string;
   orderPartnerCtaButton: string;
+  reactionTitle: string;
+  reactionUp: string;
+  reactionDown: string;
+  reactionThanks: string;
+  reactionWouldOrderAgain: string;
+  reactionVibeGood: string;
+  reactionVibeMeh: string;
+  reactionNoVotesYet: string;
 }
 
 const UI_TRANSLATIONS: Record<Language, Translations> = {
@@ -133,7 +141,15 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     orderEmptyDesc: "Aucun restaurant ne correspond à cette recherche pour l'instant. Essayez un autre mot-clé ou explorez toutes les cuisines.",
     orderPartnerCtaTitle: "Vous tenez un restaurant à Rabat ?",
     orderPartnerCtaDesc: "Si vous prenez déjà vos commandes vous-même (WhatsApp, site perso...), on peut vous ajouter ici gratuitement — et vous mettre en avant si vous le souhaitez.",
-    orderPartnerCtaButton: "Devenir partenaire"
+    orderPartnerCtaButton: "Devenir partenaire",
+    reactionTitle: "Vous avez commandé ici ?",
+    reactionUp: "Top",
+    reactionDown: "Pas top",
+    reactionThanks: "Merci pour votre retour !",
+    reactionWouldOrderAgain: "recommanderaient",
+    reactionVibeGood: "Top",
+    reactionVibeMeh: "Pas top",
+    reactionNoVotesYet: "Soyez le premier à donner votre avis"
   },
   ar: {
     siteTitle: "هنا الرباط",
@@ -199,7 +215,15 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     orderEmptyDesc: "لا يوجد مطعم يطابق بحثكم حالياً. جرّبوا كلمة أخرى أو تصفحوا جميع أنواع المطابخ.",
     orderPartnerCtaTitle: "هل تملكون مطعماً بالرباط؟",
     orderPartnerCtaDesc: "إذا كنتم تستقبلون طلباتكم بأنفسكم بالفعل (واتساب، موقع خاص...)، يمكننا إضافتكم هنا مجاناً — وإبرازكم إذا رغبتم.",
-    orderPartnerCtaButton: "كونوا شركاء معنا"
+    orderPartnerCtaButton: "كونوا شركاء معنا",
+    reactionTitle: "طلبتم من هنا من قبل؟",
+    reactionUp: "ممتاز",
+    reactionDown: "ليس رائعا",
+    reactionThanks: "شكرا على رأيكم!",
+    reactionWouldOrderAgain: "سيطلبون مجددا",
+    reactionVibeGood: "ممتاز",
+    reactionVibeMeh: "ليس رائعا",
+    reactionNoVotesYet: "كونوا أول من يشارك رأيه"
   },
   en: {
     siteTitle: "ICI RABAT",
@@ -265,7 +289,15 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     orderEmptyDesc: "No restaurant matches this search yet. Try another keyword or browse all cuisines.",
     orderPartnerCtaTitle: "Do you run a restaurant in Rabat?",
     orderPartnerCtaDesc: "If you already take your own orders (WhatsApp, your own site...), we can add you here for free — and feature you if you'd like.",
-    orderPartnerCtaButton: "Become a Partner"
+    orderPartnerCtaButton: "Become a Partner",
+    reactionTitle: "Ordered here before?",
+    reactionUp: "Top",
+    reactionDown: "Not great",
+    reactionThanks: "Thanks for your feedback!",
+    reactionWouldOrderAgain: "would order again",
+    reactionVibeGood: "Top",
+    reactionVibeMeh: "Not great",
+    reactionNoVotesYet: "Be the first to share your take"
   }
 };
 

@@ -3,6 +3,7 @@ import { Article } from '../types';
 import { useLanguage } from '../context/LanguageContext';
 import { PullQuote } from './PullQuote';
 import { ScrollReveal } from './ScrollReveal';
+import { ReactionStamp } from './ReactionStamp';
 import {
   ArrowLeft,
   ArrowRight,
@@ -435,6 +436,11 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
                     <span>{article.businessDetails.phone}</span>
                   </a>
                 )}
+              </div>
+
+              {/* Reader reaction — one tap, shown back as a vibe ratio + "would order again" % */}
+              <div className="pt-1">
+                <ReactionStamp slug={article.slug} />
               </div>
             </div>
           </div>
