@@ -84,6 +84,15 @@ export interface Article {
   isPartner?: boolean;
   partnerLabel?: LocalizedString;
   tags: LocalizedString[];
+  /**
+   * Slugs of specific articles to feature in "related stories" instead of
+   * just whatever was published most recently — lets us deliberately link
+   * topically-related pieces to each other (e.g. the two student-guide
+   * episodes, or a guide linking to the restaurants it names) for SEO
+   * internal-linking and reader relevance. Falls back to most-recent when
+   * omitted or when a slug can't be found.
+   */
+  relatedSlugs?: string[];
 }
 
 export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about' | 'commander';

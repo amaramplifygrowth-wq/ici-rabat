@@ -61,10 +61,19 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
     }
   };
 
-  const relatedArticles = [...allArticles]
-    .filter((a) => a.id !== article.id)
-    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-    .slice(0, 3);
+  // Prefer deliberately curated related stories (better for readers and for
+  // internal-linking SEO) over "whatever's most recent"; fill any remaining
+  // slots with recent articles so the section is never sparse.
+  const curatedRelated = (article.relatedSlugs || [])
+    .map((slug) => allArticles.find((a) => a.slug === slug))
+    .filter((a): a is Article => !!a && a.id !== article.id);
+
+  const recentFillIds = new Set([article.id, ...curatedRelated.map((a) => a.id)]);
+  const recentFill = [...allArticles]
+    .filter((a) => !recentFillIds.has(a.id))
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+  const relatedArticles = [...curatedRelated, ...recentFill].slice(0, 3);
 
   const paragraphs = article.body[language] || article.body.fr;
 

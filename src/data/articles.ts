@@ -552,7 +552,8 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Université Mohammed V', ar: 'جامعة محمد الخامس', en: 'Université Mohammed V' },
       { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' }
-    ]
+    ],
+    relatedSlugs: ['guide-etudiant-rabat-logement-forfaits', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
   },
   {
     id: 'art-12',
@@ -1049,9 +1050,9 @@ export const ARTICLES_DATA: Article[] = [
       en: 'Student Life'
     },
     title: {
-      fr: "Guide étudiant, épisode 2 : se loger et rester connecté à Rabat",
-      ar: 'دليل الطلبة، الحلقة 2: السكن والاتصال بالإنترنت في الرباط',
-      en: 'Student Guide, Episode 2: Housing and Staying Connected in Rabat'
+      fr: "Logement étudiant à Rabat : prix des studios à Agdal et forfaits mobiles",
+      ar: 'سكن الطلبة بالرباط: أسعار الاستوديوهات بأكدال وباقات الهاتف',
+      en: 'Student Housing in Rabat: Studio Prices in Agdal & Mobile Plans'
     },
     subtitle: {
       fr: "La suite promise du guide Vie Étudiante : cités universitaires, résidences privées, marché locatif à Agdal et forfaits mobiles, sans bon plan inventé.",
@@ -1123,7 +1124,8 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Logement Étudiant', ar: 'سكن الطلبة', en: 'Student Housing' },
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Forfait Mobile', ar: 'باقة الهاتف', en: 'Mobile Plan' }
-    ]
+    ],
+    relatedSlugs: ['guide-etudiant-rabat', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
   }
 ];
 
