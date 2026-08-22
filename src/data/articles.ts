@@ -468,6 +468,89 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Tacos & Pâtes', ar: 'تاكوس ومعكرونة', en: 'Tacos & Pasta' },
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' }
     ]
+  },
+  {
+    id: 'art-11',
+    slug: 'guide-etudiant-rabat',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Vie Étudiante',
+      ar: 'حياة الطلبة',
+      en: 'Student Life'
+    },
+    title: {
+      fr: 'Vivre étudiant à Rabat : universités, quartiers et bons plans vérifiés',
+      ar: 'الحياة الطلابية بالرباط: الجامعات، الأحياء ونصائح موثقة',
+      en: 'Student Life in Rabat: Universities, Neighborhoods & Verified Tips'
+    },
+    subtitle: {
+      fr: "Le guide pratique pour s'orienter entre Agdal, Souissi et le tramway, sans bons plans inventés.",
+      ar: 'دليل عملي للتوجه بين أكدال والسويسي والترامواي، دون نصائح مختلقة.',
+      en: 'A practical guide to finding your way between Agdal, Souissi and the tramway, no invented tips.'
+    },
+    excerpt: {
+      fr: 'Où sont les facultés, comment se déplacer, et où manger sans se ruiner : le guide vérifié pour les nouveaux étudiants de Rabat.',
+      ar: 'أين تقع الكليات، وكيف تتنقل، وأين تأكل دون إفلاس: الدليل الموثق للطلبة الجدد بالرباط.',
+      en: "Where the faculties are, how to get around, and where to eat without breaking the bank: the verified guide for Rabat's new students."
+    },
+    body: {
+      fr: [
+        "Chaque rentrée, des milliers d'étudiants découvrent Rabat sans mode d'emploi. Ici Rabat lance donc ce guide Vie Étudiante, pensé comme un manuel pratique plutôt qu'un dépliant touristique : où sont les facultés, comment circuler, où manger sans se ruiner. Une règle simple guide chaque ligne : uniquement des informations vérifiées, jamais un bon plan inventé pour faire joli.",
+        "Rabat est une ville universitaire à part entière. L'Université Mohammed V de Rabat (UM5R), née en 2014 de la fusion des anciennes UM5-Agdal et UM5-Souissi, comptait environ 90 688 étudiants lors de l'année 2023-2024. Ses facultés se répartissent en deux pôles principaux : à Agdal, la Faculté des Sciences Juridiques, Économiques et Sociales (FSJES-Agdal), la Faculté des Lettres et des Sciences Humaines et la Faculté des Sciences de l'Éducation ; à Souissi et Madinat Al Irfane, la FSJES-Souissi, la Faculté des Sciences et l'ENSIAS, l'école d'ingénieurs en informatique rattachée à l'UM5R. À cela s'ajoute l'Université Internationale de Rabat (UIR), établissement privé installé à Technopolis Rabat-Shore, sur la rocade Rabat-Salé.",
+        "Côté quartiers, Agdal reste le cœur historique de la vie étudiante rbatie : c'est là que se concentrent les facultés les plus anciennes, les cafés et les librairies. Souissi et Madinat Al Irfane forment le pôle universitaire plus récent, à quelques stations de tramway. Le tramway de Rabat-Salé, avec ses deux lignes, 27 km de réseau et 43 stations, relie justement Hay Karima à Salé jusqu'au quartier d'Agdal, en passant par le domaine universitaire de Bab Al Irfane, ce qui en fait le moyen le plus simple de naviguer entre facultés, centre-ville et quartiers résidentiels sans voiture.",
+        "Pour manger sans se ruiner, deux adresses déjà testées et vérifiées par notre rédaction restent des valeurs sûres pour un étudiant : Ba Fares, à Diour Jamaa, où les formules petit-déjeuner oscillent entre 55 et 79 MAD ; et Dom's Café, à Agdal, en plein cœur du pôle étudiant, avec son wifi rapide, ses tacos généreux et ses tables ouvertes de 7h30 à 23h30 du lundi au samedi, idéal pour réviser ou enchaîner les visioconférences entre deux cours.",
+        "Ce guide est volontairement incomplet pour l'instant : nous préférons publier trois informations vérifiées plutôt que dix approximations. Les prochaines éditions ajouteront progressivement logement, forfaits mobiles et bons plans supplémentaires, au fur et à mesure qu'ils seront confirmés sur le terrain, jamais avant."
+      ],
+      ar: [
+        "في كل موسم دراسي، يكتشف آلاف الطلبة مدينة الرباط دون دليل استخدام. لهذا تطلق Ici Rabat دليل الحياة الطلابية هذا، كدليل عملي وليس كمنشور سياحي: أين تقع الكليات، كيف تتنقل، وأين تأكل دون إفلاس. قاعدة واحدة بسيطة تحكم كل سطر: معلومات موثقة فقط، أبداً نصيحة مختلقة لملء الصفحة.",
+        "الرباط مدينة جامعية بامتياز. جامعة محمد الخامس بالرباط (UM5R)، التي وُلدت سنة 2014 من اندماج جامعتي محمد الخامس أكدال والسويسي السابقتين، ضمت نحو 90,688 طالباً خلال الموسم الجامعي 2023-2024. تتوزع كلياتها على قطبين رئيسيين: بأكدال، كلية العلوم القانونية والاقتصادية والاجتماعية، كلية الآداب والعلوم الإنسانية، وكلية علوم التربية؛ وبالسويسي ومدينة العرفان، كلية العلوم القانونية والاقتصادية والاجتماعية بالسويسي، كلية العلوم، ومدرسة الإنسياس (ENSIAS) لهندسة المعلوميات التابعة لجامعة محمد الخامس. تضاف إلى ذلك الجامعة الدولية بالرباط (UIR)، وهي مؤسسة خاصة تقع بتكنوبوليس رباط-شور، على الطريق الدائري بين الرباط وسلا.",
+        "أما على مستوى الأحياء، يبقى أكدال القلب التاريخي للحياة الطلابية بالرباط، حيث تتركز أقدم الكليات والمقاهي والمكتبات. ويشكل حي السويسي ومدينة العرفان القطب الجامعي الأحدث، على بعد محطات قليلة بالترامواي. ويربط ترامواي الرباط-سلا، بخطيه الاثنين وشبكته الممتدة على 27 كلم و43 محطة، حي كريمة بسلا بحي أكدال، مروراً بالفضاء الجامعي لباب العرفان، ما يجعله أبسط وسيلة للتنقل بين الكليات ووسط المدينة والأحياء السكنية دون سيارة.",
+        "وللأكل دون إفلاس، يبقى عنوانان تم اختبارهما والتحقق منهما من طرف تحريرنا خيارين آمنين للطلبة: باء فارس بحي ديور الجامع، حيث تتراوح أسعار وجبات الفطور بين 55 و79 درهماً؛ ودومز كافيه بأكدال، في قلب القطب الطلابي، بواي فاي سريع وتاكوس سخي وطاولات مفتوحة من 7:30 صباحاً إلى 11:30 مساءً من الإثنين إلى السبت، وهو مكان مثالي للمراجعة أو لمتابعة اجتماعات مرئية متتالية بين الحصص.",
+        "هذا الدليل غير مكتمل عمداً في الوقت الراهن، إذ نفضل نشر ثلاث معلومات موثقة على عشر معلومات تقريبية. ستضيف الإصدارات القادمة تدريجياً معلومات عن السكن والباقات الهاتفية ونصائح إضافية، فور التحقق منها ميدانياً، وليس قبل ذلك."
+      ],
+      en: [
+        "Every new academic year, thousands of students discover Rabat with no instruction manual. Ici Rabat is launching this Student Life guide as a practical handbook rather than a tourist brochure: where the faculties are, how to get around, where to eat without breaking the bank. One simple rule governs every line: only verified information, never an invented tip to pad out the page.",
+        "Rabat is a genuine university city. Université Mohammed V de Rabat (UM5R), born in 2014 from the merger of the former UM5-Agdal and UM5-Souissi, counted roughly 90,688 students in the 2023-2024 academic year. Its faculties cluster around two main hubs: in Agdal, the Faculty of Legal, Economic and Social Sciences (FSJES-Agdal), the Faculty of Letters and Human Sciences, and the Faculty of Education Sciences; in Souissi and Madinat Al Irfane, FSJES-Souissi, the Faculty of Sciences, and ENSIAS, the computer-science engineering school attached to UM5R. On top of that sits Université Internationale de Rabat (UIR), a private university based at Technopolis Rabat-Shore, on the Rabat-Salé ring road.",
+        "As for neighborhoods, Agdal remains the historic heart of student life in Rabat, home to the oldest faculties, the cafés, and the bookshops. Souissi and Madinat Al Irfane form the newer university hub, a few tram stops away. The Rabat-Salé tramway, with its two lines, 27 km of track and 43 stations, links Hay Karima in Salé all the way to Agdal, passing through the Bab Al Irfane university district, making it the simplest way to move between faculties, downtown, and residential neighborhoods without a car.",
+        "For eating without breaking the bank, two addresses already tested and verified by our editorial team remain safe bets for students: Ba Fares, in Diour Jamaa, where breakfast formulas run between 55 and 79 MAD; and Dom's Café, in Agdal, right in the middle of the student hub, with fast wifi, generous tacos, and tables open from 7:30 AM to 11:30 PM Monday to Saturday, ideal for studying or stacking video calls between classes.",
+        "This guide is deliberately incomplete for now, we'd rather publish three verified facts than ten approximations. Future editions will progressively add housing, mobile plans, and further tips, only once they've been confirmed on the ground, never before."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle.jpg',
+    heroImageCaption: {
+      fr: "Le pôle universitaire d'Agdal, entre facultés, cafés et vie de quartier.",
+      ar: 'قطب أكدال الجامعي، بين الكليات والمقاهي وحياة الحي.',
+      en: 'The Agdal university hub, where faculties, cafés and neighborhood life meet.'
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-22',
+    readTime: {
+      fr: '5 min',
+      ar: '٥ دقائق',
+      en: '5 min'
+    },
+    location: {
+      fr: 'Agdal & Souissi, Rabat',
+      ar: 'أكدال والسويسي، الرباط',
+      en: 'Agdal & Souissi, Rabat'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Vie Étudiante', ar: 'حياة الطلبة', en: 'Student Life' },
+      { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
+      { fr: 'Université Mohammed V', ar: 'جامعة محمد الخامس', en: 'Université Mohammed V' },
+      { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' }
+    ]
   }
 ];
 

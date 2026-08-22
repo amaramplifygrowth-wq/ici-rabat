@@ -309,8 +309,8 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
       {/* Article Body Content & Practical Info Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
         
-        {/* Main Text Content (Takes 8 cols) */}
-        <div className="lg:col-span-8 space-y-6">
+        {/* Main Text Content (Takes 8 cols, or full width when there's no business sidebar) */}
+        <div className={`${article.businessDetails ? 'lg:col-span-8' : 'lg:col-span-12 max-w-3xl mx-auto'} space-y-6`}>
           {paragraphs.map((p, index) => {
             const isFirst = index === 0;
             // Place pull-quote naturally in the editorial rhythm (after paragraph 2)
@@ -346,7 +346,8 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
           )}
         </div>
 
-        {/* Business Practical Info Sidebar Box (Takes 4 cols) */}
+        {/* Business Practical Info Sidebar Box (Takes 4 cols) — only for business-feature articles */}
+        {article.businessDetails && (
         <div className="lg:col-span-4">
           <div className="sticky top-28 bg-[#FFFFFF] border-2 border-[#E3CE93] rounded-none p-6 riso-shadow">
             <div className="flex items-center gap-2 mb-4 pb-3 border-b-2 border-[#141B33]">
@@ -415,7 +416,7 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
               {/* Direct Link CTA Button to Business Website */}
               <div className="pt-3 border-t-2 border-[#141B33] space-y-2">
                 <a
-                  href={article.relatedBusinessUrl}
+                  href={article.relatedBusinessUrl || article.businessDetails.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   id="business-website-cta"
@@ -438,11 +439,12 @@ export const ArticleDetail: React.FC<ArticleDetailProps> = ({
             </div>
           </div>
         </div>
+        )}
 
       </div>
 
-      {/* 
-        Horizontally Scrolling Photo Strip Gallery (when multiple images are present) 
+      {/*
+        Horizontally Scrolling Photo Strip Gallery (when multiple images are present)
       */}
       {article.galleryImages && article.galleryImages.length > 0 && (
         <section className="mb-20 pt-10 border-t-2 border-[#141B33]">

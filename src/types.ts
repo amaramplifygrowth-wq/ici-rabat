@@ -65,8 +65,9 @@ export interface Article {
     role: LocalizedString;
     avatar: string;
   };
-  relatedBusinessName: string;
-  relatedBusinessUrl: string;
+  /** Only set for business-feature articles (e.g. an Amplify partner). Editorial/guide articles that aren't about one business omit these. */
+  relatedBusinessName?: string;
+  relatedBusinessUrl?: string;
   businessDetails?: BusinessDetails;
   isFeaturedHero?: boolean;
   isEditorialPick?: boolean;

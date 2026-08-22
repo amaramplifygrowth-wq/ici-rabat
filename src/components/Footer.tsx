@@ -159,7 +159,7 @@ export const Footer: React.FC<FooterProps> = () => {
                   className="h-5 w-auto -rotate-6"
                 />
               </li>
-              <li className="flex items-center gap-2">
+              <li>
                 <Link
                   to="/lifestyle"
                   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -167,11 +167,6 @@ export const Footer: React.FC<FooterProps> = () => {
                 >
                   {t.navLifestyle}
                 </Link>
-                <img
-                  src={bientotSticker}
-                  alt={t.comingSoonBadge}
-                  className="h-5 w-auto -rotate-6"
-                />
               </li>
               <li>
                 <Link

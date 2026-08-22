@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
     { id: 'home', path: '/', label: t.navHome },
     { id: 'horeca', path: '/horeca', label: t.navHoreca },
     { id: 'evenements', path: '/evenements', label: t.navEvents, badge: t.comingSoonBadge },
-    { id: 'lifestyle', path: '/lifestyle', label: t.navLifestyle, badge: t.comingSoonBadge },
+    { id: 'lifestyle', path: '/lifestyle', label: t.navLifestyle },
     { id: 'about', path: '/about', label: t.navAbout },
   ];
 
