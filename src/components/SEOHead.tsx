@@ -78,18 +78,6 @@ export function SEOHead({ currentView, article }: SEOHeadProps) {
         ? 'Lifestyle & Rabat Design | Ici Rabat'
         : 'Lifestyle & Design Rbati | Ici Rabat';
       pageDesc = 'Boutiques de créateurs, ateliers de poterie à Salé, artisanat d’avant-garde et maisons d’hôtes confidentielles.';
-    } else if (currentView === 'sortir') {
-      path = 'sortir';
-      pageTitle = language === 'ar'
-        ? 'السهر بالرباط: حانات وأسطح وملاهي | هنا الرباط'
-        : language === 'en'
-        ? 'Rabat Nightlife: Bars, Rooftops & Clubs | Ici Rabat'
-        : 'Sortir à Rabat : Bars, Rooftops & Clubs | Ici Rabat';
-      pageDesc = language === 'ar'
-        ? 'حانات الكوكتيل، الأسطح المفتوحة، الصالات والنوادي الليلية — عناوين موثقة للسهر بالرباط.'
-        : language === 'en'
-        ? 'Cocktail bars, rooftops, lounges and clubs — verified addresses for going out in Rabat.'
-        : 'Bars à cocktails, rooftops, lounges et clubs — les adresses vérifiées pour sortir à Rabat.';
     } else if (currentView === 'about') {
       path = 'about';
       pageTitle = language === 'ar'

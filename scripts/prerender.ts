@@ -7,12 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const BASE_URL = 'https://ici-rabat.pages.dev';
-
-// Official social profiles — tells Google these accounts and the site are
-// the same real-world entity ("Ici Rabat"), which feeds into how/whether
-// a knowledge panel or brand search result gets built. Add more handles
-// here as new official accounts (Facebook, TikTok, ...) go live.
-const ORGANIZATION_SAME_AS = ['https://www.instagram.com/icirabatmagazine/'];
 const DIST_DIR = path.resolve(__dirname, '../dist');
 const TEMPLATE_PATH = path.join(DIST_DIR, 'index.html');
 
@@ -133,37 +127,11 @@ async function runPrerender() {
           '@id': `${BASE_URL}/#organization`,
           name: 'Ici Rabat',
           url: `${BASE_URL}/`,
-          logo: `${BASE_URL}/icon-512.png`,
-          sameAs: ORGANIZATION_SAME_AS
+          logo: `${BASE_URL}/icon-512.png`
         }
       ]
     }
   });
-
-  // Breadcrumb name shown for each category in Google's search-result
-  // breadcrumb trail (Home > Category > Article) — kept short, not the
-  // full SEO <title>.
-  const CATEGORY_BREADCRUMB_LABEL: Record<string, string> = {
-    horeca: 'Horeca & Tables',
-    commander: 'Commander',
-    evenements: 'Événements',
-    lifestyle: 'Lifestyle',
-    sortir: 'Sortir',
-    about: 'À Propos'
-  };
-
-  function breadcrumbList(items: { name: string; url: string }[]) {
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: items.map((item, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: item.name,
-        item: item.url
-      }))
-    };
-  }
 
   // 2. Fixed Category Pages
   routes.push({
@@ -171,11 +139,7 @@ async function runPrerender() {
     title: 'Guide Horeca & Bonnes Tables à Rabat | Ici Rabat',
     description: 'Découvrez les meilleures tables, restaurants d’auteurs et cafés de spécialité à Rabat (Agdal, Hassan, Souissi, Oudayas).',
     image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.horeca, url: `${BASE_URL}/horeca` }
-    ])
+    type: 'website'
   });
 
   routes.push({
@@ -183,11 +147,7 @@ async function runPrerender() {
     title: 'Commander Directement dans les Restaurants de Rabat | Ici Rabat',
     description: "Commandez directement auprès des restaurants de Rabat qui gèrent eux-mêmes leurs livraisons, sans commission d'application tierce.",
     image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.commander, url: `${BASE_URL}/commander` }
-    ])
+    type: 'website'
   });
 
   routes.push({
@@ -195,11 +155,7 @@ async function runPrerender() {
     title: 'Événements & Agenda Culturel à Rabat | Ici Rabat',
     description: 'Festivals d’exception, biennales d’art contemporain et soirées musicales dans les lieux historiques de la capitale.',
     image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.evenements, url: `${BASE_URL}/evenements` }
-    ])
+    type: 'website'
   });
 
   routes.push({
@@ -207,23 +163,7 @@ async function runPrerender() {
     title: 'Lifestyle & Design Rbati | Ici Rabat',
     description: 'Boutiques de créateurs, ateliers de poterie à Salé, artisanat d’avant-garde et maisons d’hôtes confidentielles.',
     image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.lifestyle, url: `${BASE_URL}/lifestyle` }
-    ])
-  });
-
-  routes.push({
-    path: 'sortir',
-    title: 'Sortir à Rabat : Bars, Rooftops & Clubs | Ici Rabat',
-    description: 'Bars à cocktails, rooftops et lounges à Rabat — la rubrique nocturne d’Ici Rabat, adresses vérifiées bientôt disponibles.',
-    image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.sortir, url: `${BASE_URL}/sortir` }
-    ])
+    type: 'website'
   });
 
   routes.push({
@@ -231,11 +171,7 @@ async function runPrerender() {
     title: "À Propos d'Ici Rabat | Magazine Urbain",
     description: 'Ligne éditoriale indépendante, engagement pour le patrimoine rbati et curation exigeante des adresses incontournables.',
     image: defaultImage,
-    type: 'website',
-    jsonLd: breadcrumbList([
-      { name: 'Accueil', url: `${BASE_URL}/` },
-      { name: CATEGORY_BREADCRUMB_LABEL.about, url: `${BASE_URL}/about` }
-    ])
+    type: 'website'
   });
 
   // 3. Dynamic Articles from articles.ts (Automatically scales with new articles)
@@ -317,34 +253,6 @@ async function runPrerender() {
 
       schemaGraph.push(bizSchema);
     }
-
-    if (article.faq && article.faq.length > 0) {
-      schemaGraph.push({
-        '@type': 'FAQPage',
-        mainEntity: article.faq.map((item) => ({
-          '@type': 'Question',
-          name: item.question.fr,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: item.answer.fr
-          }
-        }))
-      });
-    }
-
-    schemaGraph.push({
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${BASE_URL}/` },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: CATEGORY_BREADCRUMB_LABEL[article.category] || article.categoryLabel.fr,
-          item: `${BASE_URL}/${article.category}`
-        },
-        { '@type': 'ListItem', position: 3, name: article.title.fr, item: articleUrl }
-      ]
-    });
 
     const pubDate = article.publishedAt || '2026-08-16';
     const pageTitle = typeof article.metaTitle === 'string'

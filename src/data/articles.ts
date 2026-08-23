@@ -124,13 +124,18 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: false,
     isEditorialPick: true,
+    isPartner: true,
+    partnerLabel: {
+      fr: 'Partenaire Amplify',
+      ar: 'شريك Amplify',
+      en: 'Amplify Partner'
+    },
     tags: [
       { fr: 'Petit-Déjeuner Rabat', ar: 'فطور الرباط', en: 'Rabat Breakfast' },
       { fr: 'Diour Jamaa', ar: 'ديور الجامع', en: 'Diour Jamaa' },
       { fr: 'Produits Laitiers', ar: 'منتجات الألبان', en: 'Dairy Products' },
       { fr: 'Couscous du Vendredi', ar: 'كسكس الجمعة', en: 'Friday Couscous' }
-    ],
-    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits', 'doms-cafe-agdal']
+    ]
   },
 
 {
@@ -452,14 +457,19 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: true,
     isEditorialPick: true,
+    isPartner: true,
+    partnerLabel: {
+      fr: 'Partenaire Amplify',
+      ar: 'شريك Amplify',
+      en: 'Amplify Partner'
+    },
     tags: [
       { fr: 'Café Wifi Agdal', ar: 'مقهى واي فاي أكدال', en: 'Wifi Café Agdal' },
       { fr: 'Billard Rabat', ar: 'بلياردو الرباط', en: 'Billiards Rabat' },
       { fr: 'Coworking Café', ar: 'مقهى للعمل', en: 'Coworking Café' },
       { fr: 'Tacos & Pâtes', ar: 'تاكوس ومعكرونة', en: 'Tacos & Pasta' },
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' }
-    ],
-    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits', 'ba-fares-diour-jamaa']
+    ]
   },
   {
     id: 'art-11',
@@ -543,45 +553,7 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Université Mohammed V', ar: 'جامعة محمد الخامس', en: 'Université Mohammed V' },
       { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' }
     ],
-    relatedSlugs: ['guide-etudiant-rabat-logement-forfaits', 'transport-rabat-etudiant-tramway-taxi', 'ba-fares-diour-jamaa'],
-    faq: [
-      {
-        question: {
-          fr: "Combien d'étudiants compte l'Université Mohammed V de Rabat ?",
-          ar: 'كم عدد طلبة جامعة محمد الخامس بالرباط؟',
-          en: 'How many students does Université Mohammed V de Rabat have?'
-        },
-        answer: {
-          fr: "Environ 90 688 étudiants durant l'année 2023-2024, répartis entre le pôle d'Agdal (FSJES, Lettres, Sciences de l'Éducation) et celui de Souissi/Madinat Al Irfane (FSJES-Souissi, Sciences, ENSIAS).",
-          ar: 'نحو 90,688 طالباً خلال الموسم الجامعي 2023-2024، موزعين بين قطب أكدال (العلوم القانونية، الآداب، علوم التربية) وقطب السويسي/مدينة العرفان (العلوم القانونية بالسويسي، العلوم، الإنسياس).',
-          en: 'Roughly 90,688 students in the 2023-2024 academic year, split between the Agdal hub (FSJES, Letters, Education Sciences) and the Souissi/Madinat Al Irfane hub (FSJES-Souissi, Sciences, ENSIAS).'
-        }
-      },
-      {
-        question: {
-          fr: 'Comment se déplacer entre les facultés à Rabat sans voiture ?',
-          ar: 'كيف يمكن التنقل بين الكليات بالرباط دون سيارة؟',
-          en: 'How do you get between faculties in Rabat without a car?'
-        },
-        answer: {
-          fr: 'Le tramway de Rabat-Salé, avec ses deux lignes, 27 km de réseau et 43 stations, relie Hay Karima à Salé jusqu\'à Agdal en passant par le domaine universitaire de Bab Al Irfane.',
-          ar: 'يربط ترامواي الرباط-سلا، بخطيه الاثنين وشبكته الممتدة على 27 كلم و43 محطة، حي كريمة بسلا بحي أكدال، مروراً بالفضاء الجامعي لباب العرفان.',
-          en: "The Rabat-Salé tramway, with its two lines, 27 km of track and 43 stations, links Hay Karima in Salé all the way to Agdal, passing through the Bab Al Irfane university district."
-        }
-      },
-      {
-        question: {
-          fr: 'Où manger pas cher près des facultés à Rabat ?',
-          ar: 'أين يمكن الأكل بأسعار معقولة قرب الكليات بالرباط؟',
-          en: 'Where can you eat cheaply near the faculties in Rabat?'
-        },
-        answer: {
-          fr: "Ba Fares, à Diour Jamaa, avec des formules petit-déjeuner entre 55 et 79 MAD ; et Dom's Café, à Agdal, avec wifi rapide et tables ouvertes de 7h30 à 23h30 du lundi au samedi.",
-          ar: 'باء فارس بحي ديور الجامع، بأسعار فطور تتراوح بين 55 و79 درهماً؛ ودومز كافيه بأكدال، بواي فاي سريع وطاولات مفتوحة من 7:30 صباحاً إلى 11:30 مساءً من الإثنين إلى السبت.',
-          en: "Ba Fares in Diour Jamaa, with breakfast formulas between 55 and 79 MAD; and Dom's Café in Agdal, with fast wifi and tables open 7:30 AM to 11:30 PM, Monday to Saturday."
-        }
-      }
-    ]
+    relatedSlugs: ['guide-etudiant-rabat-logement-forfaits', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
   },
   {
     id: 'art-12',
@@ -1153,298 +1125,7 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Forfait Mobile', ar: 'باقة الهاتف', en: 'Mobile Plan' }
     ],
-    relatedSlugs: ['guide-etudiant-rabat', 'transport-rabat-etudiant-tramway-taxi', 'ba-fares-diour-jamaa'],
-    faq: [
-      {
-        question: {
-          fr: 'Combien coûte un studio à Agdal pour un étudiant ?',
-          ar: 'كم يكلف استوديو بأكدال بالنسبة لطالب؟',
-          en: 'How much does a studio in Agdal cost for a student?'
-        },
-        answer: {
-          fr: 'Entre 3 300 DH pour un petit studio non meublé sans ascenseur et 8 000 DH pour un studio meublé haut standing, la majorité des studios meublés se situant entre 5 500 et 6 700 DH par mois. Partager un studio à deux ramène ce budget à un niveau plus tenable.',
-          ar: 'بين 3300 درهم لاستوديو صغير غير مفروش بدون مصعد، و8000 درهم لاستوديو مفروش راقٍ، مع تمركز أغلب الاستوديوهات المفروشة بين 5500 و6700 درهم شهرياً. ويجعل تقاسم الاستوديو بين طالبين هذه الميزانية أكثر احتمالاً.',
-          en: 'Between 3,300 DH for a small unfurnished studio with no elevator and 8,000 DH for a high-standing furnished one, with most furnished studios clustering between 5,500 and 6,700 DH a month. Splitting a studio between two students brings that down to a more manageable budget.'
-        }
-      },
-      {
-        question: {
-          fr: 'Comment obtenir une chambre en cité universitaire à Rabat ?',
-          ar: 'كيف يمكن الحصول على غرفة بحي جامعي بالرباط؟',
-          en: 'How do you get a room in a public university residence in Rabat?'
-        },
-        answer: {
-          fr: "Via l'ONOUSC, réservé aux étudiants inscrits dans le supérieur, originaires d'une autre ville et issus d'une famille à revenu modeste. Les tarifs ne sont pas publiés en ligne : il faut déposer un dossier directement auprès de l'ONOUSC, lié au statut de bourse de l'étudiant.",
-          ar: 'عبر المكتب الوطني للأعمال الجامعية (ONOUSC)، المخصص للطلبة المسجلين بالتعليم العالي، القادمين من مدينة أخرى، والمنحدرين من أسر ذات دخل محدود. الأسعار غير معلنة عبر الإنترنت: يجب إيداع ملف مباشرة لدى المكتب، مرتبط بوضعية المنحة الدراسية.',
-          en: "Through ONOUSC, reserved for students enrolled in higher education, from outside the city, and from lower-income families. Rates aren't published online — you file an application directly with ONOUSC, tied to the student's scholarship status."
-        }
-      },
-      {
-        question: {
-          fr: 'Quel forfait mobile choisir comme étudiant à Rabat ?',
-          ar: 'ما هي باقة الهاتف المناسبة للطالب بالرباط؟',
-          en: 'Which mobile plan should a student in Rabat pick?'
-        },
-        answer: {
-          fr: "Chez inwi, 99 DH pour 25 Go couvre la majorité des usages étudiants classiques (cours, cartes, réseaux sociaux). Maroc Telecom propose 165 DH pour 14 Go avec 14h d'appels, et Orange des forfaits entre 69 et 299 DH.",
-          ar: 'لدى Inwi، تكفي 99 درهماً مقابل 25 جيغا لتغطية معظم استخدامات الطالب المعتادة (الدروس، الخرائط، الشبكات الاجتماعية). وتقترح اتصالات المغرب 165 درهماً مقابل 14 جيغا مع 14 ساعة اتصال، وOrange باقات بين 69 و299 درهماً.',
-          en: 'At inwi, 99 DH for 25 GB covers most typical student use (classes, maps, social media). Maroc Telecom offers 165 DH for 14 GB with 14 hours of calls, and Orange has plans between 69 and 299 DH.'
-        }
-      }
-    ]
-  },
-  {
-    id: 'art-18',
-    slug: 'transport-rabat-etudiant-tramway-taxi',
-    category: 'lifestyle',
-    categoryLabel: {
-      fr: 'Vie Étudiante',
-      ar: 'حياة الطلبة',
-      en: 'Student Life'
-    },
-    title: {
-      fr: 'Se déplacer à Rabat : prix du tramway, taxis et VTC pour un budget étudiant',
-      ar: 'التنقل بالرباط: أسعار الترامواي والطاكسي وتطبيقات النقل لميزانية الطالب',
-      en: 'Getting Around Rabat: Tram, Taxi & Ride-Hailing Prices for a Student Budget'
-    },
-    subtitle: {
-      fr: "Épisode 3 du guide Vie Étudiante, comme promis : abonnement tramway étudiant, tarifs des petits taxis et couverture Careem à Rabat, avec les vrais prix.",
-      ar: 'الحلقة 3 من دليل الحياة الطلابية كما وعدنا: اشتراك الترامواي للطلبة، أسعار الطاكسي الصغير وتغطية Careem بالرباط، بأسعار حقيقية.',
-      en: "Episode 3 of the Student Life guide, as promised: the student tram subscription, petit taxi fares and Careem coverage in Rabat, with real prices."
-    },
-    excerpt: {
-      fr: "Abonnement tramway étudiant à 160 DH/mois, prix réels des petits taxis, et couverture VTC : le guide vérifié pour se déplacer à Rabat sans se ruiner.",
-      ar: 'اشتراك ترامواي للطلبة بـ160 درهماً شهرياً، الأسعار الحقيقية للطاكسي الصغير، وتغطية تطبيقات النقل: الدليل الموثق للتنقل بالرباط دون إفلاس.',
-      en: "A 160 DH/month student tram subscription, real petit taxi prices, and ride-hailing coverage: the verified guide to getting around Rabat without breaking the bank."
-    },
-    body: {
-      fr: [
-        "Dans notre deuxième guide Vie Étudiante, nous avions promis d'ajouter le transport dans une prochaine édition, une fois les informations vérifiées sur le terrain. Voici cette suite.",
-        "Pour le tramway de Rabat-Salé, le ticket simple coûte 7 DH et permet de voyager librement sur tout le réseau pendant une heure après validation, avec correspondances entre lignes incluses. Un ticket Trambus à 10 DH couvre en plus la ligne de bus 30. Pour un usage quotidien, l'abonnement IRTIYAH Talib, réservé aux étudiants de moins de 26 ans, coûte 160 DH par mois, 450 DH par trimestre, 860 DH par semestre ou 1 600 DH par an, contre 270 DH par mois pour l'abonnement IRTIYAH classique, hors statut étudiant. Il existe aussi un Pass Jeunes (16-30 ans) via l'application du Ministère de la Jeunesse, mais son tarif n'est pas communiqué publiquement au moment de la rédaction, l'inscription et la vérification d'éligibilité se faisant via l'appli Tram Mobile avant tout paiement.",
-        "Pour les petits taxis bleus de Rabat, il n'existe pas de grille tarifaire officielle publiée en ligne par kilomètre : le compteur reste la référence, et les prix constatés pour une course en ville se situent généralement entre 15 et 30 DH de jour pour un trajet court, jusqu'à 40 DH pour une traversée plus longue. Une majoration d'environ 50 % s'applique après 20h, comme dans la plupart des villes marocaines. Vérifier que le compteur est enclenché reste le meilleur réflexe.",
-        "Côté applications de VTC, Careem est actuellement l'option la plus fiable à Rabat, la ville étant décrite comme l'une des deux mieux couvertes du pays avec Casablanca, aux côtés de Casablanca. Le prix est affiché et confirmé dans l'application avant la course, ce qui évite toute négociation, contrairement au petit taxi.",
-        "Ce guide reste, comme les précédents, volontairement incomplet : santé et jobs étudiants suivront dans une prochaine édition, uniquement une fois confirmés sur le terrain."
-      ],
-      ar: [
-        "في دليلنا الثاني للحياة الطلابية، وعدنا بإضافة معلومات التنقل في إصدار قادم، فور التحقق منها ميدانياً. وها هي التكملة.",
-        "بخصوص ترامواي الرباط-سلا، تكلفة التذكرة العادية 7 دراهم، وتتيح التنقل بحرية عبر الشبكة كاملة لمدة ساعة بعد التصديق عليها، مع إمكانية التبديل بين الخطوط. أما تذكرة Trambus بـ10 دراهم فتغطي إضافة إلى ذلك خط الحافلة 30. بالنسبة للاستخدام اليومي، يبلغ سعر اشتراك IRTIYAH Talib، المخصص لطلبة أقل من 26 سنة، 160 درهماً شهرياً، 450 درهماً كل ثلاثة أشهر، 860 درهماً كل ستة أشهر، أو 1600 درهم سنوياً، مقابل 270 درهماً شهرياً لاشتراك IRTIYAH العادي دون صفة طالب. يوجد أيضاً Pass Jeunes (16-30 سنة) عبر تطبيق وزارة الشباب، لكن سعره غير معلن للعموم وقت كتابة هذا المقال، ويتم التسجيل والتحقق من الأهلية عبر تطبيق Tram Mobile قبل أي دفع.",
-        "أما بخصوص سيارات الأجرة الصغيرة الزرقاء بالرباط، فلا توجد قائمة أسعار رسمية منشورة عبر الإنترنت لكل كيلومتر: يبقى العداد هو المرجع، وتتراوح الأسعار المعاينة لرحلة داخل المدينة عادة بين 15 و30 درهماً نهاراً للمسافة القصيرة، وحتى 40 درهماً للمسافة الأطول. وتُطبق زيادة بنسبة 50% تقريباً بعد الساعة الثامنة مساءً، كما هو الحال في أغلب المدن المغربية. التأكد من تشغيل العداد يبقى أفضل احتياط.",
-        "أما بخصوص تطبيقات النقل، فتُعد Careem حالياً الخيار الأكثر موثوقية بالرباط، حيث تُوصف المدينة بأنها من بين الأفضل تغطية بالمغرب إلى جانب الدار البيضاء. ويُعرض السعر ويُؤكَّد داخل التطبيق قبل الرحلة، ما يُجنّب أي تفاوض، خلافاً للطاكسي الصغير.",
-        "يبقى هذا الدليل، كسابقيه، غير مكتمل عمداً: الصحة وفرص العمل الطلابية ستُضاف في إصدار قادم، فقط بعد التحقق منها ميدانياً."
-      ],
-      en: [
-        "In our second Student Life guide, we promised to add transport in a future edition, once verified on the ground. Here is that follow-up.",
-        "For the Rabat-Salé tramway, a single ticket costs 7 DH and allows unlimited travel across the network for one hour after validation, including transfers between lines. A 10 DH Trambus ticket also covers Bus Line 30. For daily use, the IRTIYAH Talib subscription, reserved for students under 26, costs 160 DH a month, 450 DH a quarter, 860 DH for six months, or 1,600 DH a year, versus 270 DH a month for the regular IRTIYAH subscription without student status. A Pass Jeunes (ages 16-30) also exists via the Ministry of Youth's app, but its price isn't publicly listed at the time of writing, with registration and eligibility checks done through the Tram Mobile app before any payment.",
-        "For Rabat's blue petit taxis, there's no official per-kilometer fare table published online: the meter remains the reference, and observed prices for an in-city trip typically run 15 to 30 DH daytime for a short ride, up to 40 DH for a longer crossing. A roughly 50% surcharge applies after 8 PM, as in most Moroccan cities. Checking that the meter is running remains the best habit.",
-        "On ride-hailing apps, Careem is currently the most reliable option in Rabat, the city being described as one of the two best-covered in the country alongside Casablanca. The price is shown and confirmed in the app before the ride, avoiding any negotiation, unlike the petit taxi.",
-        "Like the previous ones, this guide stays deliberately incomplete: health coverage and student jobs will follow in a future edition, only once confirmed on the ground."
-      ]
-    },
-    heroImage: '/banners/banner_lifestyle.jpg',
-    heroImageCaption: {
-      fr: 'Le tramway de Rabat-Salé, colonne vertébrale du trajet quotidien entre facultés et quartiers résidentiels.',
-      ar: 'ترامواي الرباط-سلا، العمود الفقري للتنقل اليومي بين الكليات والأحياء السكنية.',
-      en: "The Rabat-Salé tramway, the backbone of the daily commute between faculties and residential neighborhoods."
-    },
-    galleryImages: [],
-    publishedAt: '2026-08-23',
-    readTime: {
-      fr: '3 min',
-      ar: '٣ دقائق',
-      en: '3 min'
-    },
-    location: {
-      fr: 'Rabat & Salé',
-      ar: 'الرباط وسلا',
-      en: 'Rabat & Salé'
-    },
-    author: {
-      name: 'Yassine Benjelloun',
-      role: {
-        fr: 'Critique Urbain & Art de Vivre',
-        ar: 'ناقد حضري وأسلوب حياة',
-        en: 'Urban & Lifestyle Critic'
-      },
-      avatar: avatarYassine
-    },
-    isFeaturedHero: false,
-    isEditorialPick: true,
-    tags: [
-      { fr: 'Vie Étudiante', ar: 'حياة الطلبة', en: 'Student Life' },
-      { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' },
-      { fr: 'Transport', ar: 'النقل', en: 'Transport' },
-      { fr: 'Petit Taxi', ar: 'طاكسي صغير', en: 'Petit Taxi' }
-    ],
-    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits', 'que-faire-a-rabat-itineraire'],
-    faq: [
-      {
-        question: {
-          fr: "Combien coûte l'abonnement tramway étudiant à Rabat ?",
-          ar: 'كم يكلف اشتراك الترامواي للطلبة بالرباط؟',
-          en: "How much does the student tram subscription cost in Rabat?"
-        },
-        answer: {
-          fr: "L'abonnement IRTIYAH Talib, réservé aux étudiants de moins de 26 ans, coûte 160 DH par mois, 450 DH par trimestre, 860 DH par semestre ou 1 600 DH par an — contre 270 DH par mois pour l'abonnement classique.",
-          ar: 'يكلف اشتراك IRTIYAH Talib، المخصص لطلبة أقل من 26 سنة، 160 درهماً شهرياً، 450 درهماً كل ثلاثة أشهر، 860 درهماً كل ستة أشهر، أو 1600 درهم سنوياً — مقابل 270 درهماً شهرياً للاشتراك العادي.',
-          en: "The IRTIYAH Talib subscription, reserved for students under 26, costs 160 DH a month, 450 DH a quarter, 860 DH for six months, or 1,600 DH a year — versus 270 DH a month for the regular subscription."
-        }
-      },
-      {
-        question: {
-          fr: 'Combien coûte un petit taxi à Rabat ?',
-          ar: 'كم يكلف الطاكسي الصغير بالرباط؟',
-          en: 'How much does a petit taxi cost in Rabat?'
-        },
-        answer: {
-          fr: "Il n'existe pas de grille officielle par kilomètre, mais les prix constatés pour une course en ville vont de 15 à 30 DH de jour pour un trajet court, jusqu'à 40 DH pour une traversée plus longue, avec une majoration d'environ 50 % après 20h.",
-          ar: 'لا توجد قائمة رسمية لكل كيلومتر، لكن الأسعار المعاينة لرحلة داخل المدينة تتراوح بين 15 و30 درهماً نهاراً للمسافة القصيرة، وحتى 40 درهماً للمسافة الأطول، مع زيادة بنسبة 50% تقريباً بعد الساعة الثامنة مساءً.',
-          en: "There's no official per-kilometer table, but observed prices for an in-city trip run 15 to 30 DH daytime for a short ride, up to 40 DH for a longer crossing, with a roughly 50% surcharge after 8 PM."
-        }
-      },
-      {
-        question: {
-          fr: 'Careem fonctionne-t-il bien à Rabat ?',
-          ar: 'هل يعمل تطبيق Careem بشكل جيد بالرباط؟',
-          en: 'Does Careem work well in Rabat?'
-        },
-        answer: {
-          fr: "Oui, Rabat est décrite comme l'une des deux villes les mieux couvertes du Maroc avec Casablanca, avec un prix affiché et confirmé dans l'application avant la course.",
-          ar: 'نعم، تُوصف الرباط بأنها من بين أفضل مدينتين تغطية بالمغرب إلى جانب الدار البيضاء، مع سعر يُعرض ويُؤكَّد داخل التطبيق قبل الرحلة.',
-          en: "Yes, Rabat is described as one of the two best-covered cities in Morocco alongside Casablanca, with a price shown and confirmed in the app before the ride."
-        }
-      }
-    ]
-  },
-  {
-    id: 'art-19',
-    slug: 'que-faire-a-rabat-itineraire',
-    category: 'lifestyle',
-    categoryLabel: {
-      fr: 'Guide Pratique',
-      ar: 'دليل عملي',
-      en: 'Practical Guide'
-    },
-    title: {
-      fr: 'Que faire à Rabat en 1 jour (ou un week-end) : l\'itinéraire complet, vérifié',
-      ar: 'ماذا تفعل في الرباط في يوم واحد (أو نهاية أسبوع): البرنامج الكامل الموثق',
-      en: 'What to Do in Rabat in One Day (or a Weekend): The Complete Verified Itinerary'
-    },
-    subtitle: {
-      fr: 'Kasbah des Oudayas, Tour Hassan, Chellah, médina et Musée Mohammed VI : notre parcours pas à pas dans la capitale, avec les vrais tarifs et horaires.',
-      ar: 'قصبة الأوداية، صومعة حسان، شالة، المدينة القديمة ومتحف محمد السادس: مسارنا خطوة بخطوة في العاصمة، بالأسعار والمواعيد الحقيقية.',
-      en: 'Kasbah des Oudayas, Hassan Tower, Chellah, the medina and the Mohammed VI Museum: our step-by-step route through the capital, with real prices and hours.'
-    },
-    excerpt: {
-      fr: 'De la Kasbah des Oudayas au Musée Mohammed VI, un itinéraire complet et vérifié pour découvrir Rabat en une journée — ou un week-end tranquille.',
-      ar: 'من قصبة الأوداية إلى متحف محمد السادس، برنامج كامل وموثق لاكتشاف الرباط في يوم واحد — أو نهاية أسبوع هادئة.',
-      en: 'From the Kasbah des Oudayas to the Mohammed VI Museum, a complete, verified itinerary to discover Rabat in one day — or a relaxed weekend.'
-    },
-    body: {
-      fr: [
-        "Un week-end à Rabat suffit pour comprendre pourquoi la ville figure aujourd'hui au patrimoine mondial de l'UNESCO : une capitale à taille humaine, où l'on passe de la nécropole médiévale à l'art contemporain en une flânerie de quelques kilomètres. Voici un itinéraire vérifié sur le terrain, avec les vrais tarifs et horaires, pour une journée bien remplie — ou un week-end plus tranquille.",
-        "La matinée commence par la Kasbah des Oudayas, à l'entrée du fleuve Bouregreg : ruelles bleu et blanc, remparts du XIIe siècle et jardin andalou à l'accès gratuit et libre toute la journée. Comptez une à trois heures pour flâner jusqu'au Café Maure, qui sert thé à la menthe et pâtisseries avec vue sur l'estuaire — une pause obligatoire avant de continuer.",
-        "À quinze minutes à pied ou en petit taxi, la Tour Hassan et le Mausolée Mohammed V se visitent gratuitement, tous les jours de 9h à 18h. La photographie est interdite à l'intérieur du mausolée et une tenue correcte est demandée : c'est un lieu à la fois historique et toujours en usage religieux, où des récitateurs du Coran se relaient jour et nuit.",
-        "En redescendant vers la médina, la Rue des Consuls concentre l'essentiel de l'artisanat rbati : tapis, poteries, argenterie et objets en bois, dans une ambiance nettement moins pressante que les souks de Marrakech ou Fès. Pour l'argent au poids, le prix au gramme ne devrait pas dépasser 15 DH — un repère utile avant de négocier.",
-        "Pour l'après-midi, la nécropole de Chellah — rouverte au public en 2024 après une restauration complète — mérite le détour : vestiges mérinides et jardins calmes à environ 2 km du centre-ville. L'entrée coûte 70 DH pour un adulte, 50 DH pour les 15-25 ans, gratuite pour les moins de 7 ans, avec 50 % de réduction pour les résidents marocains et étrangers. Horaires : 9h-20h d'avril à septembre, 9h-18h le reste de l'année, fermeture anticipée à 15h pendant le Ramadan.",
-        "Direction ensuite la marina du Bouregreg, en contrebas des remparts : promenade le long du fleuve, vue sur la médina de Salé en face, et traversée en barque traditionnelle pour 2,5 DH la place — l'une des traversées les plus anciennes et les moins chères de la ville, gérée par une association de bateliers en activité quasi continue. Pour un aller-retour plus rapide, le tramway relie aussi les deux rives pour 7 DH le ticket simple.",
-        "En fin d'après-midi, le Musée Mohammed VI d'art moderne et contemporain, avenue Allal Ben Abdellah, ferme le mardi mais ouvre le reste de la semaine de 10h à 18h ; comptez environ 30 à 40 DH l'entrée selon la source consultée, avec un tarif réduit pour les étudiants et un accès gratuit le vendredi après-midi pour les citoyens marocains. C'est l'endroit pour prendre le pouls de la scène artistique marocaine contemporaine, à quelques minutes à pied de la gare Rabat-Ville.",
-        "Pour le dîner, direction notre Guide Horeca : les tables d'Agdal, d'Hassan ou du bord du Bouregreg couvrent tous les budgets. Et si le week-end le permet, une deuxième journée plus lente — vieille médina de Salé accessible par la même barque ou le tram, cafés d'Agdal ou de Souissi — complète bien ce premier jour dense. Comme pour nos autres guides, cet itinéraire reste volontairement resserré sur ce que nous avons pu vérifier nous-mêmes : les adresses et tarifs seront mis à jour si les tarifs officiels changent."
-      ],
-      ar: [
-        "تكفي عطلة نهاية أسبوع واحدة في الرباط لفهم سبب إدراج المدينة ضمن التراث العالمي لليونسكو: عاصمة بحجم إنساني، تنتقل فيها من مقبرة من العصور الوسطى إلى الفن المعاصر في نزهة لا تتجاوز بضعة كيلومترات. إليكم برنامجاً موثقاً ميدانياً، بالأسعار والمواعيد الحقيقية، ليوم حافل — أو عطلة أهدأ.",
-        "تبدأ الصباح بقصبة الأوداية، عند مصب نهر أبي رقراق: أزقة زرقاء وبيضاء، أسوار من القرن الثاني عشر، وحديقة أندلسية يمكن دخولها مجاناً وبحرية طوال اليوم. خصصوا ما بين ساعة وثلاث ساعات للتجول وصولاً إلى المقهى المغربي (Café Maure)، الذي يقدم أتاي بالنعناع وحلويات مع إطلالة على مصب النهر — استراحة لا بد منها قبل المتابعة.",
-        "على بعد خمس عشرة دقيقة سيراً أو بطاكسي صغير، تُزار صومعة حسان وضريح محمد الخامس مجاناً، يومياً من الساعة 9 صباحاً حتى 6 مساءً. التصوير ممنوع داخل الضريح، ويُطلب من الزوار ارتداء لباس محتشم: فالمكان تاريخي ولا يزال في الوقت نفسه مكان عبادة نشطاً، حيث يتناوب قراء القرآن ليلاً ونهاراً.",
-        "بالعودة نحو المدينة القديمة، يجمع شارع القناصل (Rue des Consuls) معظم الحرف اليدوية الرباطية: سجاد، فخار، فضيات وأشغال خشبية، في أجواء أقل ضغطاً بكثير من أسواق مراكش أو فاس. بالنسبة للفضة المباعة بالوزن، لا ينبغي أن يتجاوز سعر الغرام 15 درهماً — معيار مفيد قبل المساومة.",
-        "بعد الظهر، تستحق مقبرة شالة الأثرية — التي أعيد فتحها للعموم سنة 2024 بعد ترميم شامل — التوقف عندها: أطلال مرينية وحدائق هادئة على بعد حوالي 2 كم من وسط المدينة. تبلغ تكلفة الدخول 70 درهماً للبالغين، و50 درهماً للفئة العمرية 15-25 سنة، ومجانية لمن هم دون 7 سنوات، مع تخفيض 50% للمقيمين المغاربة والأجانب. المواعيد: من 9 صباحاً حتى 8 مساءً من أبريل إلى شتنبر، ومن 9 صباحاً حتى 6 مساءً باقي السنة، مع إغلاق مبكر عند الساعة 3 زوالاً خلال شهر رمضان.",
-        "من هناك، اتجهوا نحو مارينا أبي رقراق أسفل الأسوار: ممشى على ضفة النهر في مواجهة مدينة سلا القديمة، وعبور بقارب تقليدي مقابل 2.5 درهم للمقعد الواحد — من أقدم وأرخص المعابر النهرية بالمدينة، تديره جمعية للبحارة تعمل بشكل شبه متواصل. لعبور أسرع ذهاباً وإياباً، يربط الترامواي أيضاً بين الضفتين مقابل 7 دراهم لتذكرة عادية.",
-        "في آخر النهار، يُغلق متحف محمد السادس للفن الحديث والمعاصر، الواقع بشارع علال بن عبد الله، أبوابه يوم الثلاثاء، لكنه يفتح باقي أيام الأسبوع من 10 صباحاً حتى 6 مساءً؛ توقعوا دفع ما بين 30 و40 درهماً للدخول حسب المصدر، مع تعريفة مخفضة للطلبة ودخول مجاني عصر يوم الجمعة للمواطنين المغاربة. إنه المكان المناسب لمواكبة نبض المشهد الفني المعاصر بالمغرب، على بعد خطوات من محطة قطار الرباط المدينة.",
-        "للعشاء، يغطي دليلنا للمطاعم والمقاهي كل الميزانيات بين أكدال وحسان وضفة أبي رقراق. وإذا سمحت عطلة نهاية الأسبوع، فإن يوماً ثانياً أهدأ — المدينة القديمة بسلا التي يمكن بلوغها بنفس القارب أو الترامواي، أو مقاهي أكدال والسويسي — يُكمّل بشكل جيد هذا اليوم الأول الحافل. وكما في أدلتنا الأخرى، يبقى هذا البرنامج مقتصراً عمداً على ما تمكّنا من التحقق منه بأنفسنا: ستُحدَّث العناوين والأسعار إذا تغيّرت التعريفات الرسمية."
-      ],
-      en: [
-        "A weekend in Rabat is enough to understand why the city made UNESCO's World Heritage list: a human-scale capital where a walk of a few kilometers takes you from a medieval necropolis to contemporary art. Here's an itinerary verified on the ground, with real prices and hours, for a full day out — or a more relaxed weekend.",
-        "The morning starts at the Kasbah des Oudayas, where the Bouregreg River meets the ocean: blue-and-white lanes, 12th-century ramparts, and an Andalusian garden that's free and open all day. Allow one to three hours to wander through to the Café Maure, which serves mint tea and pastries with a view over the estuary — a mandatory break before continuing.",
-        "A fifteen-minute walk or petit taxi ride away, the Hassan Tower and the Mausoleum of Mohammed V are free to visit, open daily from 9 AM to 6 PM. Photography is banned inside the mausoleum and modest dress is expected: it's both a historical site and an active place of worship, where Quran reciters take turns day and night.",
-        "Heading back down toward the medina, Rue des Consuls concentrates most of Rabat's craftsmanship: carpets, pottery, silverware and woodwork, in an atmosphere noticeably less pushy than the souks of Marrakech or Fez. For silver sold by weight, the price per gram shouldn't exceed 15 DH — a useful benchmark before negotiating.",
-        "In the afternoon, the Chellah necropolis — reopened to the public in 2024 after a full restoration — is worth the detour: Marinid ruins and quiet gardens about 2 km from downtown. Entry costs 70 DH for an adult, 50 DH for ages 15-25, free under 7, with a 50% discount for Moroccan and foreign residents. Hours: 9 AM-8 PM from April to September, 9 AM-6 PM the rest of the year, closing early at 3 PM during Ramadan.",
-        "From there, head to the Bouregreg marina below the ramparts: a riverside walk facing Salé's medina, and a crossing by traditional rowboat for 2.5 DH a seat — one of the city's oldest and cheapest river crossings, run by an association of boatmen operating almost around the clock. For a quicker round trip, the tramway also links both banks for a 7 DH single ticket.",
-        "Late afternoon, the Mohammed VI Museum of Modern and Contemporary Art, on Avenue Allal Ben Abdellah, closes on Tuesdays but opens the rest of the week from 10 AM to 6 PM; expect to pay roughly 30 to 40 DH for entry depending on the source, with a reduced student rate and free access on Friday afternoons for Moroccan citizens. It's the place to take the pulse of Morocco's contemporary art scene, a short walk from Rabat-Ville train station.",
-        "For dinner, our Horeca guide covers every budget across Agdal, Hassan, and the Bouregreg waterfront. And if the weekend allows, a slower second day — Salé's old medina, reachable by the same rowboat or the tram, or the cafés of Agdal and Souissi — rounds out this dense first day nicely. Like our other guides, this itinerary stays deliberately narrow to what we could verify ourselves: addresses and prices will be updated if official rates change."
-      ]
-    },
-    heroImage: '/banners/banner_lifestyle.jpg',
-    heroImageCaption: {
-      fr: 'La Kasbah des Oudayas au coucher du soleil, point de départ de notre itinéraire dans Rabat.',
-      ar: 'قصبة الأوداية عند غروب الشمس، نقطة انطلاق برنامجنا في الرباط.',
-      en: 'The Kasbah des Oudayas at sunset, the starting point of our Rabat itinerary.'
-    },
-    galleryImages: [],
-    publishedAt: '2026-08-23',
-    readTime: {
-      fr: '5 min',
-      ar: '٥ دقائق',
-      en: '5 min'
-    },
-    location: {
-      fr: 'Rabat',
-      ar: 'الرباط',
-      en: 'Rabat'
-    },
-    author: {
-      name: 'Nadia El Fassi',
-      role: {
-        fr: 'Rédactrice Lifestyle',
-        ar: 'محررة أسلوب الحياة',
-        en: 'Lifestyle Writer'
-      },
-      avatar: avatarNadia
-    },
-    isFeaturedHero: false,
-    isEditorialPick: true,
-    tags: [
-      { fr: 'Que Faire à Rabat', ar: 'ماذا تفعل بالرباط', en: 'What to Do in Rabat' },
-      { fr: 'Kasbah des Oudayas', ar: 'قصبة الأوداية', en: 'Kasbah des Oudayas' },
-      { fr: 'Chellah', ar: 'شالة', en: 'Chellah' },
-      { fr: 'Tourisme Rabat', ar: 'سياحة الرباط', en: 'Rabat Tourism' }
-    ],
-    relatedSlugs: ['ba-fares-diour-jamaa', 'indian-flavors-agdal', 'transport-rabat-etudiant-tramway-taxi'],
-    faq: [
-      {
-        question: {
-          fr: "Combien coûte l'entrée à la nécropole de Chellah ?",
-          ar: 'كم تكلفة الدخول إلى مقبرة شالة الأثرية؟',
-          en: 'How much does entry to the Chellah necropolis cost?'
-        },
-        answer: {
-          fr: "70 DH pour un adulte, 50 DH pour les 15-25 ans, gratuite pour les moins de 7 ans, avec 50 % de réduction pour les résidents marocains et étrangers.",
-          ar: '70 درهماً للبالغين، 50 درهماً للفئة العمرية 15-25 سنة، ومجانية لمن هم دون 7 سنوات، مع تخفيض 50% للمقيمين المغاربة والأجانب.',
-          en: "70 DH for an adult, 50 DH for ages 15-25, free under 7, with a 50% discount for Moroccan and foreign residents."
-        }
-      },
-      {
-        question: {
-          fr: "Le Musée Mohammed VI d'art moderne est-il gratuit ?",
-          ar: 'هل الدخول إلى متحف محمد السادس للفن الحديث مجاني؟',
-          en: 'Is the Mohammed VI Museum of Modern Art free to visit?'
-        },
-        answer: {
-          fr: "Pas en général : comptez 30 à 40 DH selon la source consultée, avec un tarif réduit étudiant. L'accès est gratuit le vendredi après-midi pour les citoyens marocains ; le musée est fermé le mardi.",
-          ar: 'ليس عموماً: توقعوا دفع ما بين 30 و40 درهماً حسب المصدر، مع تعريفة مخفضة للطلبة. الدخول مجاني عصر يوم الجمعة للمواطنين المغاربة؛ والمتحف مغلق يوم الثلاثاء.',
-          en: "Not generally: expect to pay 30 to 40 DH depending on the source, with a reduced student rate. Entry is free on Friday afternoons for Moroccan citizens; the museum is closed on Tuesdays."
-        }
-      },
-      {
-        question: {
-          fr: 'Combien coûte la traversée en barque entre Rabat et Salé ?',
-          ar: 'كم تكلفة العبور بالقارب بين الرباط وسلا؟',
-          en: 'How much does the rowboat crossing between Rabat and Salé cost?'
-        },
-        answer: {
-          fr: "2,5 DH la place, à bord des barques traditionnelles qui traversent le Bouregreg en quelques minutes, en activité quasi continue.",
-          ar: '2.5 درهم للمقعد الواحد، على متن القوارب التقليدية التي تعبر أبي رقراق في دقائق معدودة، وتعمل بشكل شبه متواصل.',
-          en: "2.5 DH per seat, aboard the traditional rowboats that cross the Bouregreg in a few minutes and operate almost around the clock."
-        }
-      }
-    ]
+    relatedSlugs: ['guide-etudiant-rabat', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
   }
 ];
 
@@ -1471,18 +1152,6 @@ export const UPCOMING_SECTIONS = {
       fr: 'Boutiques de créateurs, ateliers de poterie à Salé, artisanat d’avant-garde et maisons d’hôtes confidentielles.',
       ar: 'أروقة المصممين المبدعين، ورشات الفخار بسلا، وحرف يدوية مبتكرة ودور ضيافة ساحرة.',
       en: 'Designer boutiques, ceramic master workshops in Salé, avant-garde crafts, and discreet boutique riads.'
-    }
-  },
-  sortir: {
-    title: {
-      fr: 'Sortir à Rabat',
-      ar: 'السهر بالرباط',
-      en: 'Rabat Nightlife'
-    },
-    subtitle: {
-      fr: 'Bars à cocktails, rooftops, lounges et clubs — les adresses vérifiées pour sortir à Rabat, en préparation.',
-      ar: 'حانات الكوكتيل، الأسطح المفتوحة، الصالات والنوادي الليلية — عناوين موثقة للسهر بالرباط، قيد الإعداد.',
-      en: 'Cocktail bars, rooftops, lounges and clubs — verified addresses for going out in Rabat, coming soon.'
     }
   }
 };

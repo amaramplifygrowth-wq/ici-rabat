@@ -2,7 +2,7 @@ import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Compass, ArrowRight, Utensils } from 'lucide-react';
 import { ScrollReveal } from './ScrollReveal';
-import dossierSticker from '../assets/images/stickers/sticker_dossier.webp';
+import dossierSticker from '../assets/images/stickers/sticker_dossier.png';
 
 interface WayfindingBannerProps {
   onExploreHoreca: () => void;

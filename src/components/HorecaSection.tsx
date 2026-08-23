@@ -22,13 +22,10 @@ export const HorecaSection: React.FC<HorecaSectionProps> = ({
   const { getLocalized, isRtl, t, language } = useLanguage();
   const [selectedNeighborhood, setSelectedNeighborhood] = useState<string>('all');
 
-  // Amplify partner restaurants always show first, then newest published date first
+  // Sort articles chronologically descending (newest published date first)
   const horecaArticles = [...articles]
     .filter((a) => a.category === 'horeca')
-    .sort((a, b) => {
-      if (!!a.isPartner !== !!b.isPartner) return a.isPartner ? -1 : 1;
-      return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime();
-    });
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 
   const neighborhoods = [
     { id: 'all', label: t.filterAll },
