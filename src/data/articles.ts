@@ -124,12 +124,6 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: false,
     isEditorialPick: true,
-    isPartner: true,
-    partnerLabel: {
-      fr: 'Partenaire Amplify',
-      ar: 'شريك Amplify',
-      en: 'Amplify Partner'
-    },
     tags: [
       { fr: 'Petit-Déjeuner Rabat', ar: 'فطور الرباط', en: 'Rabat Breakfast' },
       { fr: 'Diour Jamaa', ar: 'ديور الجامع', en: 'Diour Jamaa' },
@@ -458,12 +452,6 @@ export const ARTICLES_DATA: Article[] = [
     },
     isFeaturedHero: true,
     isEditorialPick: true,
-    isPartner: true,
-    partnerLabel: {
-      fr: 'Partenaire Amplify',
-      ar: 'شريك Amplify',
-      en: 'Amplify Partner'
-    },
     tags: [
       { fr: 'Café Wifi Agdal', ar: 'مقهى واي فاي أكدال', en: 'Wifi Café Agdal' },
       { fr: 'Billard Rabat', ar: 'بلياردو الرباط', en: 'Billiards Rabat' },
@@ -1352,6 +1340,18 @@ export const UPCOMING_SECTIONS = {
       fr: 'Boutiques de créateurs, ateliers de poterie à Salé, artisanat d’avant-garde et maisons d’hôtes confidentielles.',
       ar: 'أروقة المصممين المبدعين، ورشات الفخار بسلا، وحرف يدوية مبتكرة ودور ضيافة ساحرة.',
       en: 'Designer boutiques, ceramic master workshops in Salé, avant-garde crafts, and discreet boutique riads.'
+    }
+  },
+  sortir: {
+    title: {
+      fr: 'Sortir à Rabat',
+      ar: 'السهر بالرباط',
+      en: 'Rabat Nightlife'
+    },
+    subtitle: {
+      fr: 'Bars à cocktails, rooftops, lounges et clubs — les adresses vérifiées pour sortir à Rabat, en préparation.',
+      ar: 'حانات الكوكتيل، الأسطح المفتوحة، الصالات والنوادي الليلية — عناوين موثقة للسهر بالرباط، قيد الإعداد.',
+      en: 'Cocktail bars, rooftops, lounges and clubs — verified addresses for going out in Rabat, coming soon.'
     }
   }
 };

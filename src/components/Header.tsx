@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { ViewMode, Language } from '../types';
-import { Menu, X, Compass, Globe, Clock, ChevronRight, ShoppingBag } from 'lucide-react';
+import { Menu, X, Compass, Globe, Clock, ChevronRight, ShoppingBag, Martini } from 'lucide-react';
 import bientotSticker from '../assets/images/stickers/sticker_bientot.webp';
 import illustratedLogo from '../assets/images/stickers/logo_illustrated.webp';
 
@@ -29,6 +29,8 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
     activeView = 'evenements';
   } else if (currentPath === '/lifestyle') {
     activeView = 'lifestyle';
+  } else if (currentPath === '/sortir') {
+    activeView = 'sortir';
   } else if (currentPath === '/about') {
     activeView = 'about';
   }
@@ -69,6 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
     { id: 'commander', path: '/commander', label: t.navOrder, accent: true },
     { id: 'evenements', path: '/evenements', label: t.navEvents, badge: t.comingSoonBadge },
     { id: 'lifestyle', path: '/lifestyle', label: t.navLifestyle },
+    { id: 'sortir', path: '/sortir', label: t.navSortir },
     { id: 'about', path: '/about', label: t.navAbout },
   ];
 
@@ -177,6 +180,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                     }`}
                   >
                     {item.accent && <ShoppingBag className="w-4 h-4" />}
+                    {item.id === 'sortir' && <Martini className="w-4 h-4" />}
                     <span>{item.label}</span>
                     {item.badge && (
                       <img
@@ -244,6 +248,7 @@ export const Header: React.FC<HeaderProps> = ({ currentView: propCurrentView }) 
                   <div className="flex items-center gap-2">
                     {isActive && <span className="w-2 h-2 rounded-full bg-[#FFD400]" />}
                     {item.accent && !isActive && <ShoppingBag className="w-4 h-4" />}
+                    {item.id === 'sortir' && <Martini className="w-4 h-4" />}
                     <span>{item.label}</span>
                   </div>
                   <div className="flex items-center gap-2">

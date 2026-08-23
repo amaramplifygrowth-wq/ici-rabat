@@ -9,6 +9,7 @@ interface Translations {
   navHoreca: string;
   navEvents: string;
   navLifestyle: string;
+  navSortir: string;
   navAbout: string;
   comingSoonBadge: string;
   searchPlaceholder: string;
@@ -90,6 +91,7 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     navHoreca: "Horeca & Tables",
     navEvents: "Événements",
     navLifestyle: "Lifestyle",
+    navSortir: "Sortir",
     navAbout: "À Propos",
     comingSoonBadge: "Bientôt",
     searchPlaceholder: "Rechercher une table, un quartier...",
@@ -169,6 +171,7 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     navHoreca: "المطاعم والمقاهي",
     navEvents: "الفعاليات",
     navLifestyle: "أسلوب الحياة",
+    navSortir: "السهر",
     navAbout: "عن المجلة",
     comingSoonBadge: "قريباً",
     searchPlaceholder: "ابحث عن مطعم، مقهى، أو حي...",
@@ -248,6 +251,7 @@ const UI_TRANSLATIONS: Record<Language, Translations> = {
     navHoreca: "Horeca & Dining",
     navEvents: "Events",
     navLifestyle: "Lifestyle",
+    navSortir: "Nightlife",
     navAbout: "About",
     comingSoonBadge: "Soon",
     searchPlaceholder: "Search for a restaurant, café, neighborhood...",

@@ -31,7 +31,7 @@ function LegacyHashRedirectHandler() {
     if (typeof window !== 'undefined' && window.location.hash) {
       const rawHash = window.location.hash.replace('#', '').split('?')[0];
       if (rawHash) {
-        if (['horeca', 'commander', 'evenements', 'lifestyle', 'about'].includes(rawHash)) {
+        if (['horeca', 'commander', 'evenements', 'lifestyle', 'sortir', 'about'].includes(rawHash)) {
           navigate(`/${rawHash}`, { replace: true });
         } else {
           const matchedArticle = ARTICLES_DATA.find((a) => a.slug === rawHash);
@@ -211,6 +211,7 @@ function AppLayout() {
             <Route path="/commander" element={<OrderRouteWrapper />} />
             <Route path="/evenements" element={<CategoryRouteWrapper view="evenements" />} />
             <Route path="/lifestyle" element={<CategoryRouteWrapper view="lifestyle" />} />
+            <Route path="/sortir" element={<CategoryRouteWrapper view="sortir" />} />
             <Route path="/about" element={<CategoryRouteWrapper view="about" />} />
 
             {/* 3. Category + Article Slug (Clean SEO Paths) */}

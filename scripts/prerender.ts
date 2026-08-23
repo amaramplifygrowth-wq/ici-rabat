@@ -148,6 +148,7 @@ async function runPrerender() {
     commander: 'Commander',
     evenements: 'Événements',
     lifestyle: 'Lifestyle',
+    sortir: 'Sortir',
     about: 'À Propos'
   };
 
@@ -210,6 +211,18 @@ async function runPrerender() {
     jsonLd: breadcrumbList([
       { name: 'Accueil', url: `${BASE_URL}/` },
       { name: CATEGORY_BREADCRUMB_LABEL.lifestyle, url: `${BASE_URL}/lifestyle` }
+    ])
+  });
+
+  routes.push({
+    path: 'sortir',
+    title: 'Sortir à Rabat : Bars, Rooftops & Clubs | Ici Rabat',
+    description: 'Bars à cocktails, rooftops et lounges à Rabat — la rubrique nocturne d’Ici Rabat, adresses vérifiées bientôt disponibles.',
+    image: defaultImage,
+    type: 'website',
+    jsonLd: breadcrumbList([
+      { name: 'Accueil', url: `${BASE_URL}/` },
+      { name: CATEGORY_BREADCRUMB_LABEL.sortir, url: `${BASE_URL}/sortir` }
     ])
   });
 

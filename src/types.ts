@@ -45,6 +45,11 @@ export interface BusinessDetails {
   directOrderEnabled?: boolean;
   /** Where the "Commander" CTA sends the customer. Falls back to whatsapp/websiteUrl if omitted. */
   directOrderUrl?: string;
+  /** Nightlife-specific practical info — used by "Sortir" venues (bars, clubs, lounges), left unset for restaurants. */
+  musicGenre?: string;
+  entryFee?: LocalizedString;
+  dressCode?: LocalizedString;
+  ageMinimum?: string;
 }
 
 export interface Article {
@@ -52,7 +57,7 @@ export interface Article {
   slug: string;
   metaTitle?: LocalizedString | string;
   metaDescription?: LocalizedString | string;
-  category: 'horeca' | 'evenements' | 'lifestyle';
+  category: 'horeca' | 'evenements' | 'lifestyle' | 'sortir';
   categoryLabel: LocalizedString;
   title: LocalizedString;
   subtitle?: LocalizedString;
@@ -102,4 +107,4 @@ export interface Article {
   faq?: { question: LocalizedString; answer: LocalizedString }[];
 }
 
-export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about' | 'commander';
+export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about' | 'commander' | 'sortir';
