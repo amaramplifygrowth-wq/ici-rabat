@@ -243,11 +243,20 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
     }
   }
 
-  // If ÉVÉNEMENTS or LIFESTYLE (still empty): Render curated, polished "Bientôt disponible" with preview teasers & clear navigation
+  // If ÉVÉNEMENTS, LIFESTYLE (still empty), or SORTIR: Render curated, polished
+  // "Bientôt disponible" with preview teasers & clear navigation. Each view gets
+  // its own explicit config lookup so a new rubriek never silently inherits
+  // another one's placeholder banner/copy.
   const upcomingConfig =
-    view === 'evenements' ? UPCOMING_SECTIONS.evenements : UPCOMING_SECTIONS.lifestyle;
+    view === 'evenements'
+      ? UPCOMING_SECTIONS.evenements
+      : view === 'sortir'
+      ? UPCOMING_SECTIONS.sortir
+      : UPCOMING_SECTIONS.lifestyle;
 
   const isEvents = view === 'evenements';
+  const isSortir = view === 'sortir';
+  const upcomingBanner = isEvents ? bannerEvenements : isSortir ? bannerEvenements : bannerLifestyle;
 
   return (
     <div id={`upcoming-page-${view}`} className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
@@ -271,7 +280,7 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
       <ScrollReveal direction="up" distance={16}>
         <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-8 sm:mb-10">
           <img
-            src={isEvents ? bannerEvenements : bannerLifestyle}
+            src={upcomingBanner}
             alt=""
             className="w-full h-auto object-cover editorial-photo"
           />
@@ -383,6 +392,8 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
           <h3 className="font-heading font-bold text-xl sm:text-3xl text-[#141B33] mb-2">
             {isEvents
               ? (language === 'ar' ? 'احصل على الأجندة الثقافية فور صدورها' : language === 'en' ? 'Receive the Cultural Agenda upon Release' : 'Recevez l\'Agenda Culturel dès sa parution')
+              : isSortir
+              ? (language === 'ar' ? 'اكتشف عناوين السهر أولاً' : language === 'en' ? 'Discover Rabat Nightlife First' : 'Découvrez les adresses Sortir en avant-première')
               : (language === 'ar' ? 'اكتشف دليل أسلوب الحياة أولاً' : language === 'en' ? 'Discover the Lifestyle Guide First' : 'Découvrez le Guide Lifestyle en avant-première')}
           </h3>
 
