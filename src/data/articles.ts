@@ -1493,11 +1493,11 @@ export const ARTICLES_DATA: Article[] = [
         "More addresses will follow in this Sortir section, only once verified on the ground or directly with the venues themselves — as with all our guides."
       ]
     },
-    heroImage: '/banners/banner_evenements.jpg',
+    heroImage: '/banners/banner_sortir_so_lounge.jpg',
     heroImageCaption: {
-      fr: "Illustration éditoriale — ambiance nocturne, à titre indicatif en attendant une photo du lieu.",
-      ar: 'رسم توضيحي تحريري — أجواء ليلية، لأغراض توضيحية بانتظار صورة حقيقية للمكان.',
-      en: "Editorial illustration — nightlife ambiance, used as a placeholder pending a real photo of the venue."
+      fr: "Illustration éditoriale — ambiance du bar-lounge So Lounge, en attendant une photo officielle du lieu.",
+      ar: 'رسم توضيحي تحريري — أجواء بار So Lounge، بانتظار صورة رسمية للمكان.',
+      en: "Editorial illustration — the So Lounge bar-lounge atmosphere, pending an official photo of the venue."
     },
     galleryImages: [],
     publishedAt: '2026-08-23',
@@ -1558,7 +1558,7 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Bar Lounge', ar: 'بار صالة', en: 'Lounge Bar' },
       { fr: 'Sofitel Rabat', ar: 'سوفيتيل الرباط', en: 'Sofitel Rabat' }
     ],
-    relatedSlugs: ['que-faire-a-rabat-itineraire'],
+    relatedSlugs: ['red-house-sofia-palace-souissi', 'que-faire-a-rabat-itineraire'],
     faq: [
       {
         question: {
@@ -1594,6 +1594,158 @@ export const ARTICLES_DATA: Article[] = [
           fr: "Oui, des soirées dînatoires dansantes sont organisées le vendredi et le samedi.",
           ar: 'نعم، تُنظَّم أمسيات عشاء راقصة أيام الجمعة والسبت.',
           en: 'Yes, dinner-dance evenings are held on Fridays and Saturdays.'
+        }
+      }
+    ]
+  },
+  {
+    id: 'art-21',
+    slug: 'red-house-sofia-palace-souissi',
+    category: 'sortir',
+    categoryLabel: {
+      fr: 'Club & Nightlife',
+      ar: 'نادي ليلي وسهر',
+      en: 'Club & Nightlife'
+    },
+    title: {
+      fr: 'Red House : le club électro-house du complexe Sofia Palace à Souissi',
+      ar: 'Red House: نادي الإلكترو-هاوس بمجمع صوفيا بالاس بالسويسي',
+      en: 'Red House: The Electro-House Club Inside the Sofia Palace Complex'
+    },
+    subtitle: {
+      fr: 'DJs internationaux, musique électro/house/afro/hip-hop et soirées à thème, au sein du complexe nocturne Sofia Palace.',
+      ar: 'دي جي عالميون، موسيقى إلكترو/هاوس/أفرو/هيب هوب وأمسيات ذات طابع خاص، ضمن مجمع صوفيا بالاس الليلي.',
+      en: 'International DJs, electro/house/afro/hip-hop music and themed nights, inside the Sofia Palace nightlife complex.'
+    },
+    excerpt: {
+      fr: 'Deuxième adresse de notre rubrique Sortir : Red House, le club du complexe Sofia Palace à Souissi, avec DJs et soirées à thème vérifiés.',
+      ar: 'العنوان الثاني في ركن السهر لدينا: Red House، نادي مجمع صوفيا بالاس بالسويسي، مع دي جي وأمسيات ذات طابع خاص موثقة.',
+      en: 'The second address in our Sortir section: Red House, the club inside the Sofia Palace complex in Souissi, with verified DJs and themed nights.'
+    },
+    body: {
+      fr: [
+        "Deuxième adresse de notre rubrique Sortir : Red House, à l'intérieur du complexe Sofia Palace, avenue Mehdi Ben Barka à Souissi. Sofia Palace se présente comme un complexe nocturne réunissant cinq espaces sous un même toit — dont Red House, son club dédié à la musique électronique — en activité depuis 2015 et revendiquant environ 8 000 visiteurs par mois.",
+        "Le club met en avant une programmation de DJs internationaux et d'artistes invités, sur une sélection musicale électro, house, afro et hip-hop, avec des soirées à thème et des apparitions surprises principalement le week-end, selon les informations publiées par l'établissement lui-même.",
+        "Red House est ouvert tous les jours, de 21h à 4h du matin. La réservation de table se fait par téléphone, une pratique courante pour ce type d'établissement qui fonctionne beaucoup sur le service de table plutôt que sur l'entrée simple.",
+        "Honnêtement : ni le tarif d'entrée, ni un code vestimentaire officiel, ni le prix des tables ne sont publiés par l'établissement au moment de la rédaction — ces informations varient probablement selon la soirée et l'événement. Nous les ajouterons dès qu'elles seront confirmées.",
+        "Comme pour So Lounge, cette fiche restera mise à jour au fil des vérifications : notre rubrique Sortir grandit adresse par adresse, jamais par supposition."
+      ],
+      ar: [
+        "العنوان الثاني في ركن السهر لدينا: Red House، داخل مجمع صوفيا بالاس، شارع مهدي بنبركة بحي السويسي. يُقدَّم مجمع صوفيا بالاس كمجمع ليلي يجمع خمس مساحات تحت سقف واحد — من بينها Red House، ناديه المخصص للموسيقى الإلكترونية — يعمل منذ سنة 2015 ويُعلن استقباله لحوالي 8000 زائر شهرياً.",
+        "يُبرز النادي برمجة تضم دي جي عالميين وفنانين ضيوفاً، بانتقاء موسيقي يجمع الإلكترو والهاوس والأفرو والهيب هوب، مع أمسيات ذات طابع خاص وظهورات مفاجئة أساساً في عطلة نهاية الأسبوع، وفق المعلومات المنشورة من طرف المؤسسة نفسها.",
+        "يفتح Red House أبوابه يومياً من الساعة 9 مساءً حتى 4 صباحاً. يتم حجز الطاولات عبر الهاتف، وهي ممارسة شائعة لهذا النوع من المؤسسات التي تعتمد كثيراً على خدمة الطاولات بدل الدخول البسيط.",
+        "بصراحة: لا رسوم الدخول ولا قواعد اللباس الرسمية ولا أسعار الطاولات منشورة من طرف المؤسسة وقت كتابة هذا المقال — من المرجح أن تتغير هذه المعلومات حسب الأمسية والحدث. سنضيفها فور تأكيدها.",
+        "كما هو الحال مع So Lounge، ستبقى هذه البطاقة محدَّثة مع كل تحقق جديد: ركن السهر لدينا ينمو عنواناً بعد عنوان، لا بالتخمين أبداً."
+      ],
+      en: [
+        "The second address in our Sortir section: Red House, inside the Sofia Palace complex on Avenue Mehdi Ben Barka in Souissi. Sofia Palace presents itself as a nightlife complex bringing five spaces together under one roof — including Red House, its electronic-music club — operating since 2015 and claiming around 8,000 visitors a month.",
+        "The club highlights a lineup of international DJs and guest artists, with a musical selection spanning electro, house, afro and hip-hop, plus themed nights and surprise appearances mainly on weekends, according to information published by the venue itself.",
+        "Red House is open daily from 9 PM to 4 AM. Table reservations are made by phone, a common practice for this type of venue, which relies heavily on table service rather than simple entry.",
+        "In the interest of honesty: neither the entry fee, an official dress code, nor table pricing are published by the venue at the time of writing — these details likely vary by night and event. We'll add them once confirmed.",
+        "As with So Lounge, this listing will stay updated as we verify more: our Sortir section grows address by address, never by assumption."
+      ]
+    },
+    heroImage: '/banners/banner_sortir_red_house.jpg',
+    heroImageCaption: {
+      fr: "Illustration éditoriale — le dancefloor de Red House, en attendant une photo officielle du lieu.",
+      ar: 'رسم توضيحي تحريري — مضمار الرقص بـ Red House، بانتظار صورة رسمية للمكان.',
+      en: "Editorial illustration — the Red House dancefloor, pending an official photo of the venue."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Souissi',
+      ar: 'السويسي',
+      en: 'Souissi'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice Lifestyle',
+        ar: 'محررة أسلوب الحياة',
+        en: 'Lifestyle Writer'
+      },
+      avatar: avatarNadia
+    },
+    relatedBusinessName: 'Red House',
+    relatedBusinessUrl: 'https://www.redhouselounge.com/',
+    businessDetails: {
+      name: 'Red House',
+      category: {
+        fr: 'Club & Nightlife',
+        ar: 'نادي ليلي وسهر',
+        en: 'Club & Nightlife'
+      },
+      neighborhood: {
+        fr: 'Souissi',
+        ar: 'السويسي',
+        en: 'Souissi'
+      },
+      address: '2 Avenue Mehdi Ben Barka, Sofia Palace, Souissi, Rabat',
+      priceLevel: '€€€',
+      openingHours: {
+        fr: 'Tous les jours, 21h-4h',
+        ar: 'يومياً من 21:00 حتى 4:00 صباحاً',
+        en: 'Daily, 9 PM-4 AM'
+      },
+      websiteUrl: 'https://www.redhouselounge.com/',
+      phone: '+212 6 62 62 64 23',
+      specialty: {
+        fr: 'DJs internationaux, musique électro/house/afro/hip-hop, soirées à thème',
+        ar: 'دي جي عالميون، موسيقى إلكترو/هاوس/أفرو/هيب هوب، أمسيات ذات طابع خاص',
+        en: 'International DJs, electro/house/afro/hip-hop music, themed nights'
+      },
+      musicGenre: 'Électro, House, Afro, Hip-Hop'
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Sortir Rabat', ar: 'السهر بالرباط', en: 'Rabat Nightlife' },
+      { fr: 'Souissi', ar: 'السويسي', en: 'Souissi' },
+      { fr: 'Sofia Palace', ar: 'صوفيا بالاس', en: 'Sofia Palace' },
+      { fr: 'Club Électro', ar: 'نادي إلكترو', en: 'Electro Club' }
+    ],
+    relatedSlugs: ['so-lounge-souissi', 'que-faire-a-rabat-itineraire'],
+    faq: [
+      {
+        question: {
+          fr: 'Où se trouve Red House à Rabat ?',
+          ar: 'أين يقع Red House بالرباط؟',
+          en: 'Where is Red House located in Rabat?'
+        },
+        answer: {
+          fr: "À l'intérieur du complexe Sofia Palace, 2 avenue Mehdi Ben Barka, à Souissi.",
+          ar: 'داخل مجمع صوفيا بالاس، 2 شارع مهدي بنبركة، بحي السويسي.',
+          en: 'Inside the Sofia Palace complex, 2 Avenue Mehdi Ben Barka, in Souissi.'
+        }
+      },
+      {
+        question: {
+          fr: 'Quels sont les horaires de Red House ?',
+          ar: 'ما هي مواعيد عمل Red House؟',
+          en: "What are Red House's opening hours?"
+        },
+        answer: {
+          fr: 'Tous les jours de 21h à 4h du matin.',
+          ar: 'يومياً من الساعة 9 مساءً حتى 4 صباحاً.',
+          en: 'Daily from 9 PM to 4 AM.'
+        }
+      },
+      {
+        question: {
+          fr: 'Quel style de musique joue-t-on à Red House ?',
+          ar: 'ما هو أسلوب الموسيقى المُشغَّل في Red House؟',
+          en: 'What style of music plays at Red House?'
+        },
+        answer: {
+          fr: "Électro, house, afro et hip-hop, avec des DJs internationaux et des soirées à thème, principalement le week-end.",
+          ar: 'إلكترو، هاوس، أفرو وهيب هوب، مع دي جي عالميين وأمسيات ذات طابع خاص، أساساً في عطلة نهاية الأسبوع.',
+          en: 'Electro, house, afro and hip-hop, with international DJs and themed nights, mainly on weekends.'
         }
       }
     ]
