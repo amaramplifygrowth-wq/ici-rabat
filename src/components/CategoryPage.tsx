@@ -17,7 +17,8 @@ import {
   Send,
   MapPin,
   Clock,
-  GraduationCap
+  GraduationCap,
+  Martini
 } from 'lucide-react';
 import { useNewsletterSubscribe } from '../hooks/useNewsletterSubscribe';
 import bannerEvenements from '../assets/images/banners/banner_evenements.jpg';
@@ -222,6 +223,126 @@ export const CategoryPage: React.FC<CategoryPageProps> = ({
                       <p className="text-xs sm:text-sm text-[#4A3F2E] leading-relaxed line-clamp-3 mb-4 font-normal">
                         {getLocalized(item.excerpt)}
                       </p>
+                    </div>
+
+                    <div className="pt-4 border-t border-[#FFE9C2] flex items-center justify-between">
+                      <button
+                        onClick={() => onSelectArticle(item)}
+                        className="text-xs font-bold text-[#141B33] hover:text-[#FF4B12] flex items-center gap-1.5 transition-colors cursor-pointer"
+                      >
+                        <span>{t.readArticle}</span>
+                        <ArrowRight className={`w-3.5 h-3.5 ${isRtl ? 'rotate-180' : ''}`} />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      );
+    }
+  }
+
+  // If SORTIR and real venues already exist: render an actual grid with
+  // price-level/business info (like Horeca cards), not the placeholder below.
+  if (view === 'sortir') {
+    const sortirArticles = [...articles]
+      .filter((a) => a.category === 'sortir')
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+    if (sortirArticles.length > 0) {
+      return (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+          <ScrollReveal direction="up" distance={16}>
+            <div className="comic-border-lg riso-shadow-orange overflow-hidden rounded-none bg-[#141B33] mb-8 sm:mb-10">
+              <img
+                src={bannerEvenements}
+                alt=""
+                className="w-full h-auto object-cover editorial-photo"
+              />
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" distance={16}>
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-4 border-b-2 border-[#141B33]">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <Martini className="w-4 h-4 text-[#FF4B12]" />
+                  <span className="text-xs uppercase tracking-[0.2em] font-semibold text-[#FF4B12]">
+                    {t.navSortir}
+                  </span>
+                </div>
+                <h2 className="font-heading font-bold text-2xl sm:text-4xl text-[#141B33]">
+                  {language === 'ar' ? 'السهر بالرباط' : language === 'en' ? 'Rabat Nightlife' : 'Sortir à Rabat'}
+                </h2>
+              </div>
+              <p className="text-xs sm:text-base text-[#4A3F2E] max-w-md mt-2 md:mt-0 font-normal">
+                {language === 'ar'
+                  ? 'حانات الكوكتيل، الأسطح المفتوحة، الصالات والنوادي الليلية — عناوين تم التحقق منها للسهر بالرباط.'
+                  : language === 'en'
+                  ? 'Cocktail bars, rooftops, lounges and clubs — verified addresses for going out in Rabat.'
+                  : 'Bars à cocktails, rooftops, lounges et clubs — les adresses vérifiées pour sortir à Rabat.'}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-14">
+            {sortirArticles.map((item, idx) => (
+              <ScrollReveal key={item.id} direction="up" distance={24} delay={Math.min(idx * 0.06, 0.3)}>
+                <div className="bg-[#FFFFFF] border-2 border-[#141B33] rounded-none overflow-hidden riso-shadow-sm hover:riso-shadow-magenta transition-all duration-300 flex flex-col justify-between group h-full">
+                  <div
+                    className="relative aspect-[16/10] overflow-hidden bg-[#E3CE93] cursor-pointer"
+                    onClick={() => onSelectArticle(item)}
+                  >
+                    <img
+                      src={item.heroImage}
+                      alt={getLocalized(item.title)}
+                      className="w-full h-full object-cover editorial-photo group-hover:scale-105 transition-transform duration-500 ease-out"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 editorial-overlay z-10" />
+                    {item.businessDetails?.priceLevel && (
+                      <div className="absolute top-3 right-3 z-20 bg-[#FBF1D8]/95 text-[#141B33] font-bold text-xs px-2.5 py-1 rounded-md riso-shadow-sm border-2 border-[#141B33]">
+                        {item.businessDetails.priceLevel}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
+                    <div>
+                      <div className="flex items-center justify-between text-xs text-[#7A6842] font-medium mb-2.5 sm:mb-3">
+                        <span className="flex items-center gap-1 text-[#FF4B12] font-bold">
+                          <MapPin className="w-3.5 h-3.5" />
+                          {getLocalized(item.location)}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {getLocalized(item.readTime)}
+                        </span>
+                      </div>
+
+                      <h3
+                        onClick={() => onSelectArticle(item)}
+                        className="font-heading font-bold text-lg sm:text-xl text-[#141B33] group-hover:text-[#FF4B12] transition-colors leading-snug mb-2.5 sm:mb-3 cursor-pointer"
+                      >
+                        {getLocalized(item.title)}
+                      </h3>
+
+                      <p className="text-xs sm:text-sm text-[#4A3F2E] leading-relaxed line-clamp-3 mb-4 font-normal">
+                        {getLocalized(item.excerpt)}
+                      </p>
+
+                      {item.businessDetails?.specialty && (
+                        <div className="bg-[#FBF1D8] border-2 border-[#141B33] rounded-md p-2.5 mb-4 text-xs text-[#4A3F2E]">
+                          <span className="font-bold text-[#141B33] block mb-0.5">
+                            {t.specialtyLabel} :
+                          </span>
+                          <span className="line-clamp-2">
+                            {getLocalized(item.businessDetails.specialty)}
+                          </span>
+                        </div>
+                      )}
                     </div>
 
                     <div className="pt-4 border-t border-[#FFE9C2] flex items-center justify-between">

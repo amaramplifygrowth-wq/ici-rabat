@@ -1445,6 +1445,158 @@ export const ARTICLES_DATA: Article[] = [
         }
       }
     ]
+  },
+  {
+    id: 'art-20',
+    slug: 'so-lounge-souissi',
+    category: 'sortir',
+    categoryLabel: {
+      fr: 'Lounge & Bar Festif',
+      ar: 'صالة سهر وحفلات',
+      en: 'Lounge & Nightlife Bar'
+    },
+    title: {
+      fr: 'So Lounge : le bar-lounge du Sofitel qui inaugure notre rubrique Sortir',
+      ar: 'So Lounge: بار الصالة بفندق سوفيتيل الذي يفتتح ركن السهر لدينا',
+      en: 'So Lounge: The Sofitel Bar-Lounge That Opens Our Sortir Section'
+    },
+    subtitle: {
+      fr: "Trois ambiances, un seul lieu : cocktails, dancefloor et coin lounge intimiste au Sofitel Rabat Jardin des Roses, à Souissi.",
+      ar: 'ثلاث أجواء في مكان واحد: كوكتيلات، مضمار رقص وركن هادئ بفندق سوفيتيل الرباط جاردان دي روز بالسويسي.',
+      en: "Three moods, one address: cocktails, a dancefloor, and an intimate lounge corner at the Sofitel Rabat Jardin des Roses, in Souissi."
+    },
+    excerpt: {
+      fr: "Le bar-lounge du Sofitel Rabat Jardin des Roses ouvre notre rubrique Sortir : trois espaces, soirées dansantes le week-end, et les infos pratiques vérifiées.",
+      ar: 'بار الصالة بفندق سوفيتيل الرباط جاردان دي روز يفتتح ركن السهر لدينا: ثلاث مساحات، أمسيات راقصة نهاية الأسبوع، ومعلومات عملية موثقة.',
+      en: "The bar-lounge at the Sofitel Rabat Jardin des Roses opens our Sortir section: three spaces, weekend dinner-dance evenings, and the verified practical details."
+    },
+    body: {
+      fr: [
+        "Pour inaugurer notre rubrique Sortir, nous avons choisi une adresse installée plutôt qu'une découverte non vérifiée : le So Lounge, à l'intérieur du Sofitel Rabat Jardin des Roses à Souissi. L'établissement se décrit lui-même comme \"un lieu tendance à l'ambiance lounge sophistiquée, devenu une destination incontournable de la capitale\" — une réputation que confirment les avis indépendants consultés pour cet article.",
+        "Le lieu se décline en trois espaces distincts : So Nice, le bar à cocktails ; So Fun, l'espace dancefloor animé toute l'année par des DJ et de la musique live ; et So Zen, un coin lounge plus intimiste pour une soirée plus calme. Le week-end, des soirées dînatoires dansantes sont proposées le vendredi et le samedi.",
+        "Côté pratique : le So Lounge est ouvert tous les jours de 20h à 4h, fermé le lundi, avec une cuisine internationale et un positionnement haut de gamme (comptez large, l'adresse se situe dans la catégorie la plus élevée relevée par les avis consultés). L'entrée se fait par le Sofitel Rabat Jardin des Roses, avenue Imam Malek, à Souissi.",
+        "Honnêtement : ni le droit d'entrée éventuel ni un code vestimentaire officiel ne sont publiés par l'établissement au moment de la rédaction. Nous mettrons à jour cette fiche dès que ces informations seront confirmées directement auprès du lieu.",
+        "D'autres adresses suivront dans cette rubrique Sortir, uniquement une fois vérifiées sur le terrain ou auprès des établissements eux-mêmes — comme pour tous nos guides."
+      ],
+      ar: [
+        "لافتتاح ركن السهر لدينا، اخترنا عنواناً راسخاً بدل اكتشاف غير موثق: So Lounge، داخل فندق سوفيتيل الرباط جاردان دي روز بالسويسي. يصف المكان نفسه بأنه \"وجهة رائجة بأجواء صالة راقية، أصبحت معلماً لا يفوت في العاصمة\" — وهي سمعة تؤكدها التقييمات المستقلة التي تم الاطلاع عليها لهذا المقال.",
+        "يتوزع المكان على ثلاث مساحات: So Nice، بار الكوكتيلات؛ So Fun، مضمار الرقص الذي ينشط طوال السنة بحفلات دي جي وموسيقى حية؛ وSo Zen، ركن هادئ أكثر حميمية لأمسية أهدأ. في عطلة نهاية الأسبوع، تُقام أمسيات عشاء راقصة أيام الجمعة والسبت.",
+        "من الناحية العملية: يفتح So Lounge أبوابه يومياً من الساعة 8 مساءً حتى 4 صباحاً، ويُغلق يوم الاثنين، بمطبخ عالمي وتموضع راقٍ (توقعوا ميزانية مرتفعة، إذ يقع العنوان ضمن أعلى فئة سعرية وردت في التقييمات المُطّلع عليها). المدخل عبر فندق سوفيتيل الرباط جاردان دي روز، شارع الإمام مالك بالسويسي.",
+        "بصراحة: لا رسوم الدخول المحتملة ولا قواعد اللباس الرسمية منشورة من طرف المؤسسة وقت كتابة هذا المقال. سنُحدّث هذه البطاقة فور تأكيد هذه المعلومات مباشرة من المكان.",
+        "ستتبع عناوين أخرى في ركن السهر هذا، فقط بعد التحقق منها ميدانياً أو لدى المؤسسات نفسها — كما هو الحال في كل أدلتنا."
+      ],
+      en: [
+        "To open our Sortir section, we chose an established address rather than an unverified discovery: So Lounge, inside the Sofitel Rabat Jardin des Roses in Souissi. The venue describes itself as \"a stylish hotspot with a sophisticated lounge vibe... a now-iconic destination\" in the capital — a reputation backed up by the independent reviews consulted for this piece.",
+        "The venue is split into three distinct spaces: So Nice, the cocktail bar; So Fun, the dancefloor animated year-round by DJs and live music; and So Zen, a more intimate lounge corner for a quieter evening. On weekends, dinner-dance evenings are held on Fridays and Saturdays.",
+        "Practically speaking: So Lounge is open daily from 8 PM to 4 AM, closed on Mondays, with an international menu and an upscale positioning (budget accordingly — the address falls in the highest price bracket noted across the reviews consulted). Entry is through the Sofitel Rabat Jardin des Roses, Avenue Imam Malek, Souissi.",
+        "In the interest of honesty: neither a specific entry fee nor an official dress code is published by the venue at the time of writing. We'll update this listing as soon as those details are confirmed directly with the establishment.",
+        "More addresses will follow in this Sortir section, only once verified on the ground or directly with the venues themselves — as with all our guides."
+      ]
+    },
+    heroImage: '/banners/banner_evenements.jpg',
+    heroImageCaption: {
+      fr: "Illustration éditoriale — ambiance nocturne, à titre indicatif en attendant une photo du lieu.",
+      ar: 'رسم توضيحي تحريري — أجواء ليلية، لأغراض توضيحية بانتظار صورة حقيقية للمكان.',
+      en: "Editorial illustration — nightlife ambiance, used as a placeholder pending a real photo of the venue."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Souissi',
+      ar: 'السويسي',
+      en: 'Souissi'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    relatedBusinessName: 'So Lounge',
+    relatedBusinessUrl: 'https://sofitel.accor.com/en/hotels/6813/B003.bar.html',
+    businessDetails: {
+      name: 'So Lounge',
+      category: {
+        fr: 'Lounge & Bar Festif',
+        ar: 'صالة سهر وحفلات',
+        en: 'Lounge & Nightlife Bar'
+      },
+      neighborhood: {
+        fr: 'Souissi',
+        ar: 'السويسي',
+        en: 'Souissi'
+      },
+      address: 'Sofitel Rabat Jardin des Roses, Avenue Imam Malek, Souissi, Rabat',
+      priceLevel: '€€€€',
+      openingHours: {
+        fr: 'Tous les jours, 20h-4h — fermé le lundi',
+        ar: 'يومياً من 20:00 حتى 4:00 صباحاً — مغلق يوم الاثنين',
+        en: 'Daily, 8 PM-4 AM — closed Mondays'
+      },
+      websiteUrl: 'https://sofitel.accor.com/en/hotels/6813/B003.bar.html',
+      phone: '+212 537 67 56 56',
+      specialty: {
+        fr: 'Trois espaces : So Nice (bar à cocktails), So Fun (dancefloor/DJ), So Zen (lounge intimiste)',
+        ar: 'ثلاث مساحات: So Nice (بار كوكتيلات)، So Fun (مضمار رقص/دي جي)، So Zen (صالة هادئة)',
+        en: 'Three spaces: So Nice (cocktail bar), So Fun (dancefloor/DJ), So Zen (intimate lounge)'
+      },
+      servesCuisine: 'International'
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Sortir Rabat', ar: 'السهر بالرباط', en: 'Rabat Nightlife' },
+      { fr: 'Souissi', ar: 'السويسي', en: 'Souissi' },
+      { fr: 'Bar Lounge', ar: 'بار صالة', en: 'Lounge Bar' },
+      { fr: 'Sofitel Rabat', ar: 'سوفيتيل الرباط', en: 'Sofitel Rabat' }
+    ],
+    relatedSlugs: ['que-faire-a-rabat-itineraire'],
+    faq: [
+      {
+        question: {
+          fr: 'Où se trouve le So Lounge à Rabat ?',
+          ar: 'أين يقع So Lounge بالرباط؟',
+          en: 'Where is So Lounge located in Rabat?'
+        },
+        answer: {
+          fr: "À l'intérieur du Sofitel Rabat Jardin des Roses, avenue Imam Malek, dans le quartier de Souissi.",
+          ar: 'داخل فندق سوفيتيل الرباط جاردان دي روز، شارع الإمام مالك، بحي السويسي.',
+          en: 'Inside the Sofitel Rabat Jardin des Roses, Avenue Imam Malek, in the Souissi district.'
+        }
+      },
+      {
+        question: {
+          fr: 'Quels sont les horaires du So Lounge ?',
+          ar: 'ما هي مواعيد عمل So Lounge؟',
+          en: 'What are So Lounge\'s opening hours?'
+        },
+        answer: {
+          fr: 'Tous les jours de 20h à 4h, fermé le lundi.',
+          ar: 'يومياً من 20:00 حتى 4:00 صباحاً، مغلق يوم الاثنين.',
+          en: 'Daily from 8 PM to 4 AM, closed on Mondays.'
+        }
+      },
+      {
+        question: {
+          fr: "Le So Lounge propose-t-il des soirées à thème ?",
+          ar: 'هل يقدم So Lounge أمسيات خاصة؟',
+          en: 'Does So Lounge host special evenings?'
+        },
+        answer: {
+          fr: "Oui, des soirées dînatoires dansantes sont organisées le vendredi et le samedi.",
+          ar: 'نعم، تُنظَّم أمسيات عشاء راقصة أيام الجمعة والسبت.',
+          en: 'Yes, dinner-dance evenings are held on Fridays and Saturdays.'
+        }
+      }
+    ]
   }
 ];
 
