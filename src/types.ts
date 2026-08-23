@@ -93,6 +93,13 @@ export interface Article {
    * omitted or when a slug can't be found.
    */
   relatedSlugs?: string[];
+  /**
+   * Optional Q&A pairs drawn from facts already stated in this article's
+   * body (never invented separately) — rendered as FAQPage structured
+   * data so Google can surface them as an expandable rich result for
+   * question-shaped searches ("combien coûte...", "comment...").
+   */
+  faq?: { question: LocalizedString; answer: LocalizedString }[];
 }
 
 export type ViewMode = 'home' | 'horeca' | 'evenements' | 'lifestyle' | 'article' | 'about' | 'commander';

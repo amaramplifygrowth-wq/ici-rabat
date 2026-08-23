@@ -555,7 +555,45 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Université Mohammed V', ar: 'جامعة محمد الخامس', en: 'Université Mohammed V' },
       { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' }
     ],
-    relatedSlugs: ['guide-etudiant-rabat-logement-forfaits', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
+    relatedSlugs: ['guide-etudiant-rabat-logement-forfaits', 'transport-rabat-etudiant-tramway-taxi', 'ba-fares-diour-jamaa'],
+    faq: [
+      {
+        question: {
+          fr: "Combien d'étudiants compte l'Université Mohammed V de Rabat ?",
+          ar: 'كم عدد طلبة جامعة محمد الخامس بالرباط؟',
+          en: 'How many students does Université Mohammed V de Rabat have?'
+        },
+        answer: {
+          fr: "Environ 90 688 étudiants durant l'année 2023-2024, répartis entre le pôle d'Agdal (FSJES, Lettres, Sciences de l'Éducation) et celui de Souissi/Madinat Al Irfane (FSJES-Souissi, Sciences, ENSIAS).",
+          ar: 'نحو 90,688 طالباً خلال الموسم الجامعي 2023-2024، موزعين بين قطب أكدال (العلوم القانونية، الآداب، علوم التربية) وقطب السويسي/مدينة العرفان (العلوم القانونية بالسويسي، العلوم، الإنسياس).',
+          en: 'Roughly 90,688 students in the 2023-2024 academic year, split between the Agdal hub (FSJES, Letters, Education Sciences) and the Souissi/Madinat Al Irfane hub (FSJES-Souissi, Sciences, ENSIAS).'
+        }
+      },
+      {
+        question: {
+          fr: 'Comment se déplacer entre les facultés à Rabat sans voiture ?',
+          ar: 'كيف يمكن التنقل بين الكليات بالرباط دون سيارة؟',
+          en: 'How do you get between faculties in Rabat without a car?'
+        },
+        answer: {
+          fr: 'Le tramway de Rabat-Salé, avec ses deux lignes, 27 km de réseau et 43 stations, relie Hay Karima à Salé jusqu\'à Agdal en passant par le domaine universitaire de Bab Al Irfane.',
+          ar: 'يربط ترامواي الرباط-سلا، بخطيه الاثنين وشبكته الممتدة على 27 كلم و43 محطة، حي كريمة بسلا بحي أكدال، مروراً بالفضاء الجامعي لباب العرفان.',
+          en: "The Rabat-Salé tramway, with its two lines, 27 km of track and 43 stations, links Hay Karima in Salé all the way to Agdal, passing through the Bab Al Irfane university district."
+        }
+      },
+      {
+        question: {
+          fr: 'Où manger pas cher près des facultés à Rabat ?',
+          ar: 'أين يمكن الأكل بأسعار معقولة قرب الكليات بالرباط؟',
+          en: 'Where can you eat cheaply near the faculties in Rabat?'
+        },
+        answer: {
+          fr: "Ba Fares, à Diour Jamaa, avec des formules petit-déjeuner entre 55 et 79 MAD ; et Dom's Café, à Agdal, avec wifi rapide et tables ouvertes de 7h30 à 23h30 du lundi au samedi.",
+          ar: 'باء فارس بحي ديور الجامع، بأسعار فطور تتراوح بين 55 و79 درهماً؛ ودومز كافيه بأكدال، بواي فاي سريع وطاولات مفتوحة من 7:30 صباحاً إلى 11:30 مساءً من الإثنين إلى السبت.',
+          en: "Ba Fares in Diour Jamaa, with breakfast formulas between 55 and 79 MAD; and Dom's Café in Agdal, with fast wifi and tables open 7:30 AM to 11:30 PM, Monday to Saturday."
+        }
+      }
+    ]
   },
   {
     id: 'art-12',
@@ -1127,7 +1165,167 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Agdal', ar: 'أكدال', en: 'Agdal' },
       { fr: 'Forfait Mobile', ar: 'باقة الهاتف', en: 'Mobile Plan' }
     ],
-    relatedSlugs: ['guide-etudiant-rabat', 'ba-fares-diour-jamaa', 'doms-cafe-agdal']
+    relatedSlugs: ['guide-etudiant-rabat', 'transport-rabat-etudiant-tramway-taxi', 'ba-fares-diour-jamaa'],
+    faq: [
+      {
+        question: {
+          fr: 'Combien coûte un studio à Agdal pour un étudiant ?',
+          ar: 'كم يكلف استوديو بأكدال بالنسبة لطالب؟',
+          en: 'How much does a studio in Agdal cost for a student?'
+        },
+        answer: {
+          fr: 'Entre 3 300 DH pour un petit studio non meublé sans ascenseur et 8 000 DH pour un studio meublé haut standing, la majorité des studios meublés se situant entre 5 500 et 6 700 DH par mois. Partager un studio à deux ramène ce budget à un niveau plus tenable.',
+          ar: 'بين 3300 درهم لاستوديو صغير غير مفروش بدون مصعد، و8000 درهم لاستوديو مفروش راقٍ، مع تمركز أغلب الاستوديوهات المفروشة بين 5500 و6700 درهم شهرياً. ويجعل تقاسم الاستوديو بين طالبين هذه الميزانية أكثر احتمالاً.',
+          en: 'Between 3,300 DH for a small unfurnished studio with no elevator and 8,000 DH for a high-standing furnished one, with most furnished studios clustering between 5,500 and 6,700 DH a month. Splitting a studio between two students brings that down to a more manageable budget.'
+        }
+      },
+      {
+        question: {
+          fr: 'Comment obtenir une chambre en cité universitaire à Rabat ?',
+          ar: 'كيف يمكن الحصول على غرفة بحي جامعي بالرباط؟',
+          en: 'How do you get a room in a public university residence in Rabat?'
+        },
+        answer: {
+          fr: "Via l'ONOUSC, réservé aux étudiants inscrits dans le supérieur, originaires d'une autre ville et issus d'une famille à revenu modeste. Les tarifs ne sont pas publiés en ligne : il faut déposer un dossier directement auprès de l'ONOUSC, lié au statut de bourse de l'étudiant.",
+          ar: 'عبر المكتب الوطني للأعمال الجامعية (ONOUSC)، المخصص للطلبة المسجلين بالتعليم العالي، القادمين من مدينة أخرى، والمنحدرين من أسر ذات دخل محدود. الأسعار غير معلنة عبر الإنترنت: يجب إيداع ملف مباشرة لدى المكتب، مرتبط بوضعية المنحة الدراسية.',
+          en: "Through ONOUSC, reserved for students enrolled in higher education, from outside the city, and from lower-income families. Rates aren't published online — you file an application directly with ONOUSC, tied to the student's scholarship status."
+        }
+      },
+      {
+        question: {
+          fr: 'Quel forfait mobile choisir comme étudiant à Rabat ?',
+          ar: 'ما هي باقة الهاتف المناسبة للطالب بالرباط؟',
+          en: 'Which mobile plan should a student in Rabat pick?'
+        },
+        answer: {
+          fr: "Chez inwi, 99 DH pour 25 Go couvre la majorité des usages étudiants classiques (cours, cartes, réseaux sociaux). Maroc Telecom propose 165 DH pour 14 Go avec 14h d'appels, et Orange des forfaits entre 69 et 299 DH.",
+          ar: 'لدى Inwi، تكفي 99 درهماً مقابل 25 جيغا لتغطية معظم استخدامات الطالب المعتادة (الدروس، الخرائط، الشبكات الاجتماعية). وتقترح اتصالات المغرب 165 درهماً مقابل 14 جيغا مع 14 ساعة اتصال، وOrange باقات بين 69 و299 درهماً.',
+          en: 'At inwi, 99 DH for 25 GB covers most typical student use (classes, maps, social media). Maroc Telecom offers 165 DH for 14 GB with 14 hours of calls, and Orange has plans between 69 and 299 DH.'
+        }
+      }
+    ]
+  },
+  {
+    id: 'art-18',
+    slug: 'transport-rabat-etudiant-tramway-taxi',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Vie Étudiante',
+      ar: 'حياة الطلبة',
+      en: 'Student Life'
+    },
+    title: {
+      fr: 'Se déplacer à Rabat : prix du tramway, taxis et VTC pour un budget étudiant',
+      ar: 'التنقل بالرباط: أسعار الترامواي والطاكسي وتطبيقات النقل لميزانية الطالب',
+      en: 'Getting Around Rabat: Tram, Taxi & Ride-Hailing Prices for a Student Budget'
+    },
+    subtitle: {
+      fr: "Épisode 3 du guide Vie Étudiante, comme promis : abonnement tramway étudiant, tarifs des petits taxis et couverture Careem à Rabat, avec les vrais prix.",
+      ar: 'الحلقة 3 من دليل الحياة الطلابية كما وعدنا: اشتراك الترامواي للطلبة، أسعار الطاكسي الصغير وتغطية Careem بالرباط، بأسعار حقيقية.',
+      en: "Episode 3 of the Student Life guide, as promised: the student tram subscription, petit taxi fares and Careem coverage in Rabat, with real prices."
+    },
+    excerpt: {
+      fr: "Abonnement tramway étudiant à 160 DH/mois, prix réels des petits taxis, et couverture VTC : le guide vérifié pour se déplacer à Rabat sans se ruiner.",
+      ar: 'اشتراك ترامواي للطلبة بـ160 درهماً شهرياً، الأسعار الحقيقية للطاكسي الصغير، وتغطية تطبيقات النقل: الدليل الموثق للتنقل بالرباط دون إفلاس.',
+      en: "A 160 DH/month student tram subscription, real petit taxi prices, and ride-hailing coverage: the verified guide to getting around Rabat without breaking the bank."
+    },
+    body: {
+      fr: [
+        "Dans notre deuxième guide Vie Étudiante, nous avions promis d'ajouter le transport dans une prochaine édition, une fois les informations vérifiées sur le terrain. Voici cette suite.",
+        "Pour le tramway de Rabat-Salé, le ticket simple coûte 7 DH et permet de voyager librement sur tout le réseau pendant une heure après validation, avec correspondances entre lignes incluses. Un ticket Trambus à 10 DH couvre en plus la ligne de bus 30. Pour un usage quotidien, l'abonnement IRTIYAH Talib, réservé aux étudiants de moins de 26 ans, coûte 160 DH par mois, 450 DH par trimestre, 860 DH par semestre ou 1 600 DH par an, contre 270 DH par mois pour l'abonnement IRTIYAH classique, hors statut étudiant. Il existe aussi un Pass Jeunes (16-30 ans) via l'application du Ministère de la Jeunesse, mais son tarif n'est pas communiqué publiquement au moment de la rédaction, l'inscription et la vérification d'éligibilité se faisant via l'appli Tram Mobile avant tout paiement.",
+        "Pour les petits taxis bleus de Rabat, il n'existe pas de grille tarifaire officielle publiée en ligne par kilomètre : le compteur reste la référence, et les prix constatés pour une course en ville se situent généralement entre 15 et 30 DH de jour pour un trajet court, jusqu'à 40 DH pour une traversée plus longue. Une majoration d'environ 50 % s'applique après 20h, comme dans la plupart des villes marocaines. Vérifier que le compteur est enclenché reste le meilleur réflexe.",
+        "Côté applications de VTC, Careem est actuellement l'option la plus fiable à Rabat, la ville étant décrite comme l'une des deux mieux couvertes du pays avec Casablanca, aux côtés de Casablanca. Le prix est affiché et confirmé dans l'application avant la course, ce qui évite toute négociation, contrairement au petit taxi.",
+        "Ce guide reste, comme les précédents, volontairement incomplet : santé et jobs étudiants suivront dans une prochaine édition, uniquement une fois confirmés sur le terrain."
+      ],
+      ar: [
+        "في دليلنا الثاني للحياة الطلابية، وعدنا بإضافة معلومات التنقل في إصدار قادم، فور التحقق منها ميدانياً. وها هي التكملة.",
+        "بخصوص ترامواي الرباط-سلا، تكلفة التذكرة العادية 7 دراهم، وتتيح التنقل بحرية عبر الشبكة كاملة لمدة ساعة بعد التصديق عليها، مع إمكانية التبديل بين الخطوط. أما تذكرة Trambus بـ10 دراهم فتغطي إضافة إلى ذلك خط الحافلة 30. بالنسبة للاستخدام اليومي، يبلغ سعر اشتراك IRTIYAH Talib، المخصص لطلبة أقل من 26 سنة، 160 درهماً شهرياً، 450 درهماً كل ثلاثة أشهر، 860 درهماً كل ستة أشهر، أو 1600 درهم سنوياً، مقابل 270 درهماً شهرياً لاشتراك IRTIYAH العادي دون صفة طالب. يوجد أيضاً Pass Jeunes (16-30 سنة) عبر تطبيق وزارة الشباب، لكن سعره غير معلن للعموم وقت كتابة هذا المقال، ويتم التسجيل والتحقق من الأهلية عبر تطبيق Tram Mobile قبل أي دفع.",
+        "أما بخصوص سيارات الأجرة الصغيرة الزرقاء بالرباط، فلا توجد قائمة أسعار رسمية منشورة عبر الإنترنت لكل كيلومتر: يبقى العداد هو المرجع، وتتراوح الأسعار المعاينة لرحلة داخل المدينة عادة بين 15 و30 درهماً نهاراً للمسافة القصيرة، وحتى 40 درهماً للمسافة الأطول. وتُطبق زيادة بنسبة 50% تقريباً بعد الساعة الثامنة مساءً، كما هو الحال في أغلب المدن المغربية. التأكد من تشغيل العداد يبقى أفضل احتياط.",
+        "أما بخصوص تطبيقات النقل، فتُعد Careem حالياً الخيار الأكثر موثوقية بالرباط، حيث تُوصف المدينة بأنها من بين الأفضل تغطية بالمغرب إلى جانب الدار البيضاء. ويُعرض السعر ويُؤكَّد داخل التطبيق قبل الرحلة، ما يُجنّب أي تفاوض، خلافاً للطاكسي الصغير.",
+        "يبقى هذا الدليل، كسابقيه، غير مكتمل عمداً: الصحة وفرص العمل الطلابية ستُضاف في إصدار قادم، فقط بعد التحقق منها ميدانياً."
+      ],
+      en: [
+        "In our second Student Life guide, we promised to add transport in a future edition, once verified on the ground. Here is that follow-up.",
+        "For the Rabat-Salé tramway, a single ticket costs 7 DH and allows unlimited travel across the network for one hour after validation, including transfers between lines. A 10 DH Trambus ticket also covers Bus Line 30. For daily use, the IRTIYAH Talib subscription, reserved for students under 26, costs 160 DH a month, 450 DH a quarter, 860 DH for six months, or 1,600 DH a year, versus 270 DH a month for the regular IRTIYAH subscription without student status. A Pass Jeunes (ages 16-30) also exists via the Ministry of Youth's app, but its price isn't publicly listed at the time of writing, with registration and eligibility checks done through the Tram Mobile app before any payment.",
+        "For Rabat's blue petit taxis, there's no official per-kilometer fare table published online: the meter remains the reference, and observed prices for an in-city trip typically run 15 to 30 DH daytime for a short ride, up to 40 DH for a longer crossing. A roughly 50% surcharge applies after 8 PM, as in most Moroccan cities. Checking that the meter is running remains the best habit.",
+        "On ride-hailing apps, Careem is currently the most reliable option in Rabat, the city being described as one of the two best-covered in the country alongside Casablanca. The price is shown and confirmed in the app before the ride, avoiding any negotiation, unlike the petit taxi.",
+        "Like the previous ones, this guide stays deliberately incomplete: health coverage and student jobs will follow in a future edition, only once confirmed on the ground."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle.jpg',
+    heroImageCaption: {
+      fr: 'Le tramway de Rabat-Salé, colonne vertébrale du trajet quotidien entre facultés et quartiers résidentiels.',
+      ar: 'ترامواي الرباط-سلا، العمود الفقري للتنقل اليومي بين الكليات والأحياء السكنية.',
+      en: "The Rabat-Salé tramway, the backbone of the daily commute between faculties and residential neighborhoods."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Rabat & Salé',
+      ar: 'الرباط وسلا',
+      en: 'Rabat & Salé'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Vie Étudiante', ar: 'حياة الطلبة', en: 'Student Life' },
+      { fr: 'Tramway Rabat-Salé', ar: 'ترامواي الرباط-سلا', en: 'Rabat-Salé Tramway' },
+      { fr: 'Transport', ar: 'النقل', en: 'Transport' },
+      { fr: 'Petit Taxi', ar: 'طاكسي صغير', en: 'Petit Taxi' }
+    ],
+    relatedSlugs: ['guide-etudiant-rabat', 'guide-etudiant-rabat-logement-forfaits'],
+    faq: [
+      {
+        question: {
+          fr: "Combien coûte l'abonnement tramway étudiant à Rabat ?",
+          ar: 'كم يكلف اشتراك الترامواي للطلبة بالرباط؟',
+          en: "How much does the student tram subscription cost in Rabat?"
+        },
+        answer: {
+          fr: "L'abonnement IRTIYAH Talib, réservé aux étudiants de moins de 26 ans, coûte 160 DH par mois, 450 DH par trimestre, 860 DH par semestre ou 1 600 DH par an — contre 270 DH par mois pour l'abonnement classique.",
+          ar: 'يكلف اشتراك IRTIYAH Talib، المخصص لطلبة أقل من 26 سنة، 160 درهماً شهرياً، 450 درهماً كل ثلاثة أشهر، 860 درهماً كل ستة أشهر، أو 1600 درهم سنوياً — مقابل 270 درهماً شهرياً للاشتراك العادي.',
+          en: "The IRTIYAH Talib subscription, reserved for students under 26, costs 160 DH a month, 450 DH a quarter, 860 DH for six months, or 1,600 DH a year — versus 270 DH a month for the regular subscription."
+        }
+      },
+      {
+        question: {
+          fr: 'Combien coûte un petit taxi à Rabat ?',
+          ar: 'كم يكلف الطاكسي الصغير بالرباط؟',
+          en: 'How much does a petit taxi cost in Rabat?'
+        },
+        answer: {
+          fr: "Il n'existe pas de grille officielle par kilomètre, mais les prix constatés pour une course en ville vont de 15 à 30 DH de jour pour un trajet court, jusqu'à 40 DH pour une traversée plus longue, avec une majoration d'environ 50 % après 20h.",
+          ar: 'لا توجد قائمة رسمية لكل كيلومتر، لكن الأسعار المعاينة لرحلة داخل المدينة تتراوح بين 15 و30 درهماً نهاراً للمسافة القصيرة، وحتى 40 درهماً للمسافة الأطول، مع زيادة بنسبة 50% تقريباً بعد الساعة الثامنة مساءً.',
+          en: "There's no official per-kilometer table, but observed prices for an in-city trip run 15 to 30 DH daytime for a short ride, up to 40 DH for a longer crossing, with a roughly 50% surcharge after 8 PM."
+        }
+      },
+      {
+        question: {
+          fr: 'Careem fonctionne-t-il bien à Rabat ?',
+          ar: 'هل يعمل تطبيق Careem بشكل جيد بالرباط؟',
+          en: 'Does Careem work well in Rabat?'
+        },
+        answer: {
+          fr: "Oui, Rabat est décrite comme l'une des deux villes les mieux couvertes du Maroc avec Casablanca, avec un prix affiché et confirmé dans l'application avant la course.",
+          ar: 'نعم، تُوصف الرباط بأنها من بين أفضل مدينتين تغطية بالمغرب إلى جانب الدار البيضاء، مع سعر يُعرض ويُؤكَّد داخل التطبيق قبل الرحلة.',
+          en: "Yes, Rabat is described as one of the two best-covered cities in Morocco alongside Casablanca, with a price shown and confirmed in the app before the ride."
+        }
+      }
+    ]
   }
 ];
 

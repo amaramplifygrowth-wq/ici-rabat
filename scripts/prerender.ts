@@ -305,6 +305,20 @@ async function runPrerender() {
       schemaGraph.push(bizSchema);
     }
 
+    if (article.faq && article.faq.length > 0) {
+      schemaGraph.push({
+        '@type': 'FAQPage',
+        mainEntity: article.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question.fr,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer.fr
+          }
+        }))
+      });
+    }
+
     schemaGraph.push({
       '@type': 'BreadcrumbList',
       itemListElement: [
