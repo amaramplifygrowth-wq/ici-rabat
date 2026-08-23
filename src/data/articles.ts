@@ -1749,6 +1749,384 @@ export const ARTICLES_DATA: Article[] = [
         }
       }
     ]
+  },
+  {
+    id: 'art-22',
+    slug: 'plages-rabat-guide',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Guide Pratique',
+      ar: 'دليل عملي',
+      en: 'Practical Guide'
+    },
+    title: {
+      fr: 'Les plages de Rabat et alentours : guide complet, plage par plage',
+      ar: 'شواطئ الرباط وضواحيها: دليل كامل، شاطئاً بشاطئ',
+      en: "Rabat's Beaches, Near and Far: The Complete, Beach-by-Beach Guide"
+    },
+    subtitle: {
+      fr: 'Des Oudayas à Bouznika, cinq plages vérifiées avec distances, équipements et consignes de sécurité — pas de bon plan inventé.',
+      ar: 'من الأوداية إلى بوزنيقة، خمس شواطئ موثقة بالمسافات والتجهيزات وتعليمات السلامة — بدون أي معلومة مختلقة.',
+      en: 'From the Oudayas to Bouznika, five verified beaches with distances, facilities, and safety guidance — no invented tips.'
+    },
+    excerpt: {
+      fr: 'Cinq plages autour de Rabat, de la plus proche à la plus lointaine, avec distances, équipements et consignes de sécurité vérifiés — pour profiter de la côte sans mauvaise surprise.',
+      ar: 'خمس شواطئ حول الرباط، من الأقرب إلى الأبعد، بمسافات وتجهيزات وتعليمات سلامة موثقة — للاستمتاع بالساحل دون مفاجآت.',
+      en: 'Five beaches around Rabat, from closest to farthest, with verified distances, facilities, and safety guidance — so you can enjoy the coast without surprises.'
+    },
+    body: {
+      fr: [
+        "Rabat borde l'Atlantique, et la côte offre plusieurs options de plage, de la plus proche accessible à pied à la sortie de journée en voiture. Voici cinq adresses vérifiées, classées par distance, avec équipements et consignes de sécurité — car plusieurs de ces plages n'ont ni surveillance ni poste de secours, une information à connaître avant de s'y baigner.",
+        "Plage des Oudayas, à 5-10 minutes à pied de la médina, est la plus accessible : sable épais avec des zones plus caillouteuses vers les rochers, sans surveillance, toilettes ni douches, et une offre de restauration limitée à la Kasbah. Idéale pour une pause rapide, moins pour la baignade.",
+        "De l'autre côté du fleuve, Plage de Salé s'atteint en 13 minutes en voiture ou environ 35 minutes en tramway, avec une vue panoramique sur la médina et les remparts de Rabat. Elle non plus n'est pas surveillée, et le vent y est fréquent ; en revanche, la restauration est abondante du côté de la marina.",
+        "Plage des Nations, à environ 15 km de Rabat, est un spot de surf reconnu, à l'accès gratuit et ouvert à tous. Elle a obtenu le label Pavillon Bleu cinq années consécutives, un gage de qualité de l'eau et de propreté du sable, grâce à une gestion associative appuyée par les autorités locales.",
+        "Plus au sud, Plage de Skhirat (environ 26 km, 30 minutes en voiture) offre un sable fin et clair adapté aux familles comme aux surfeurs, avec toilettes et douches sur place, mais peu d'ombre et une offre de restauration limitée — prévoir un pique-nique.",
+        "Enfin, Plage de Bouznika (environ 35 minutes en voiture) déroule 5 km de sable doré et une eau réputée limpide, avec des maîtres-nageurs en été, des douches, et des restaurants de fruits de mer à proximité — la mieux équipée des cinq pour une journée complète.",
+        "Un point de sécurité, sérieusement : la Protection civile marocaine recommande de se baigner uniquement dans les zones surveillées, de respecter les drapeaux de baignade, de ne jamais nager seul, de surveiller les enfants en permanence même en zone surveillée, et d'éviter la baignade juste après un repas copieux ou une forte exposition au soleil. Sur les plages non surveillées de cette liste — Oudayas et Salé notamment — la prudence est d'autant plus de mise.",
+        "Pour s'y rendre sans voiture, notre guide transport détaille les prix du tramway ; et pour combiner plage et visite, notre itinéraire d'une journée à Rabat commence justement du côté de la Kasbah des Oudayas."
+      ],
+      ar: [
+        "تطل الرباط على المحيط الأطلسي، ويوفر ساحلها عدة خيارات للشواطئ، من مسافة قريبة يمكن قطعها سيراً إلى رحلة يوم كامل بالسيارة. إليكم خمسة عناوين موثقة، مرتبة حسب المسافة، مع التجهيزات وملاحظات السلامة — إذ لا تتوفر عدة شواطئ في هذه القائمة على حراسة أو نقطة إسعافات أولية، وهي معلومة يجدر معرفتها قبل السباحة.",
+        "شاطئ الأوداية، على بعد 5 إلى 10 دقائق سيراً من المدينة القديمة، هو الأقرب: رمل سميك مع مناطق أكثر صخرية قرب الصخور، دون حراسة أو مراحيض أو دشات، وعرض مطاعم محدود عند القصبة. مناسب لاستراحة سريعة، أقل ملاءمة للسباحة.",
+        "على الضفة الأخرى من النهر، يُمكن الوصول إلى شاطئ سلا خلال 13 دقيقة بالسيارة أو حوالي 35 دقيقة بالترامواي، مع إطلالة بانورامية على المدينة القديمة وأسوار الرباط. وهو أيضاً غير مراقَب، والرياح متكررة فيه؛ في المقابل، تتوفر المطاعم بكثرة قرب المارينا.",
+        "شاطئ الأمم، على بعد حوالي 15 كم من الرباط، هو موقع معروف لركوب الأمواج، بدخول مجاني ومفتوح للجميع. حصل على شارة العلم الأزرق خمس سنوات متتالية — وهي علامة على جودة المياه ونظافة الرمال — بفضل تسيير جمعوي مدعوم من السلطات المحلية.",
+        "جنوباً أكثر، يوفر شاطئ الصخيرات (حوالي 26 كم، 30 دقيقة بالسيارة) رملاً ناعماً فاتح اللون يناسب العائلات وراكبي الأمواج على حد سواء، مع مراحيض ودشات في الموقع، لكن ظلاً قليلاً وعرض مطاعم محدود — يُنصح بإحضار وجبة خفيفة.",
+        "أخيراً، يمتد شاطئ بوزنيقة (حوالي 35 دقيقة بالسيارة) على 5 كم من الرمل الذهبي بمياه توصف بالصفاء، مع منقذين في الصيف، ودشات، ومطاعم للمأكولات البحرية قريبة — الأفضل تجهيزاً من بين الخمسة ليوم كامل.",
+        "ملاحظة سلامة مهمة: توصي الحماية المدنية المغربية بالسباحة فقط في المناطق المراقَبة، واحترام إشارات أعلام السباحة، وعدم السباحة منفرداً أبداً، ومراقبة الأطفال باستمرار حتى في المناطق المراقَبة، وتجنب السباحة مباشرة بعد وجبة دسمة أو تعرض مطول للشمس. وفي الشواطئ غير المراقَبة بهذه القائمة — الأوداية وسلا خصوصاً — تزداد أهمية الحذر.",
+        "للوصول دون سيارة، يفصّل دليلنا للتنقل أسعار الترامواي؛ ولمن يريد الجمع بين الشاطئ والزيارة، يبدأ برنامجنا ليوم واحد بالرباط تحديداً من جهة قصبة الأوداية."
+      ],
+      en: [
+        "Rabat sits on the Atlantic, and the coastline offers several beach options, from a short walk away to a full car day-trip. Here are five verified addresses, ranked by distance, with facilities and safety notes — because several of these beaches have no lifeguards or first-aid post, worth knowing before you swim.",
+        "Plage des Oudayas, a 5-10 minute walk from the medina, is the most accessible: thick sand with rockier patches near the rocks, no lifeguards, toilets or showers, and limited dining options up at the Kasbah. Good for a quick break, less so for swimming.",
+        "Across the river, Plage de Salé is reachable in 13 minutes by car or roughly 35 minutes by tram, with panoramic views of Rabat's medina and ramparts. It's also unsupervised, and wind is common; dining, on the other hand, is plentiful near the marina.",
+        "Plage des Nations, about 15 km from Rabat, is a recognized surf spot with free, open access. It has held Blue Flag certification for five consecutive years — a mark of water quality and sand cleanliness — thanks to volunteer association management backed by local authorities.",
+        "Further south, Plage de Skhirat (about 26 km, 30 minutes by car) offers fine, light-colored sand suited to both families and surfers, with toilets and showers on site, but little shade and limited dining — bring a picnic.",
+        "Finally, Plage de Bouznika (about 35 minutes by car) stretches 5 km of golden sand with reputedly crystal-clear water, summer lifeguards, showers, and nearby seafood restaurants — the best-equipped of the five for a full day out.",
+        "A serious safety note: Morocco's Protection Civile recommends swimming only in supervised zones, following the beach flag signals, never swimming alone, watching children constantly even in supervised areas, and avoiding swimming right after a heavy meal or prolonged sun exposure. On the unsupervised beaches in this list — Oudayas and Salé in particular — extra caution applies.",
+        "To get there without a car, our transport guide covers tram prices; and to combine a beach stop with sightseeing, our one-day Rabat itinerary starts right by the Kasbah des Oudayas."
+      ]
+    },
+    heroImage: '/banners/banner_about.jpg',
+    heroImageCaption: {
+      fr: "Illustration éditoriale — ambiance côtière, en attendant une image dédiée aux plages de Rabat.",
+      ar: 'رسم توضيحي تحريري — أجواء ساحلية، بانتظار صورة مخصصة لشواطئ الرباط.',
+      en: "Editorial illustration — coastal ambiance, pending a dedicated image for Rabat's beaches."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '4 min',
+      ar: '٤ دقائق',
+      en: '4 min'
+    },
+    location: {
+      fr: 'Rabat & environs',
+      ar: 'الرباط وضواحيها',
+      en: 'Rabat & surroundings'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Plages Rabat', ar: 'شواطئ الرباط', en: 'Rabat Beaches' },
+      { fr: 'Plage des Nations', ar: 'شاطئ الأمم', en: 'Plage des Nations' },
+      { fr: 'Sécurité Baignade', ar: 'سلامة السباحة', en: 'Swimming Safety' },
+      { fr: 'Tourisme Rabat', ar: 'سياحة الرباط', en: 'Rabat Tourism' }
+    ],
+    relatedSlugs: ['que-faire-a-rabat-itineraire', 'transport-rabat-etudiant-tramway-taxi'],
+    faq: [
+      {
+        question: {
+          fr: 'Quelle est la plage la plus proche du centre de Rabat ?',
+          ar: 'ما هو أقرب شاطئ من وسط الرباط؟',
+          en: "What's the closest beach to central Rabat?"
+        },
+        answer: {
+          fr: "Plage des Oudayas, à 5-10 minutes à pied de la médina — mais sans surveillance ni équipements (toilettes, douches).",
+          ar: 'شاطئ الأوداية، على بعد 5 إلى 10 دقائق سيراً من المدينة القديمة — لكن دون حراسة أو تجهيزات (مراحيض، دشات).',
+          en: "Plage des Oudayas, 5-10 minutes on foot from the medina — but with no lifeguards or facilities (toilets, showers)."
+        }
+      },
+      {
+        question: {
+          fr: 'Quelle plage près de Rabat a le label Pavillon Bleu ?',
+          ar: 'أي شاطئ قرب الرباط يحمل شارة العلم الأزرق؟',
+          en: 'Which beach near Rabat holds Blue Flag certification?'
+        },
+        answer: {
+          fr: "Plage des Nations (environ 15 km de Rabat), certifiée Pavillon Bleu cinq années consécutives.",
+          ar: 'شاطئ الأمم (على بعد حوالي 15 كم من الرباط)، حاصل على شارة العلم الأزرق خمس سنوات متتالية.',
+          en: "Plage des Nations (about 15 km from Rabat), Blue Flag-certified for five consecutive years."
+        }
+      },
+      {
+        question: {
+          fr: 'Quelles plages autour de Rabat sont surveillées par des maîtres-nageurs ?',
+          ar: 'ما هي الشواطئ المراقَبة بمنقذين حول الرباط؟',
+          en: 'Which beaches around Rabat have lifeguards?'
+        },
+        answer: {
+          fr: "D'après nos sources, seule Plage de Bouznika mentionne des maîtres-nageurs, en été. Les autres plages de cette liste (Oudayas, Salé, Nations, Skhirat) ne sont pas surveillées : respectez les consignes générales de sécurité en mer.",
+          ar: 'وفق مصادرنا، شاطئ بوزنيقة فقط يذكر وجود منقذين، في الصيف. أما الشواطئ الأخرى في هذه القائمة (الأوداية، سلا، الأمم، الصخيرات) فغير مراقَبة: يُرجى احترام تعليمات السلامة العامة في البحر.',
+          en: "According to our sources, only Plage de Bouznika mentions lifeguards, in summer. The other beaches on this list (Oudayas, Salé, Nations, Skhirat) are unsupervised: follow general sea-safety guidance."
+        }
+      }
+    ]
+  },
+  {
+    id: 'art-23',
+    slug: 'sante-jobs-etudiants-rabat-amo-anapec',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Vie Étudiante',
+      ar: 'حياة الطلبة',
+      en: 'Student Life'
+    },
+    title: {
+      fr: 'Santé et petits jobs à Rabat : la couverture AMO et les pistes ANAPEC pour étudiants',
+      ar: 'الصحة والعمل الطلابي بالرباط: التغطية الصحية AMO ومسارات الوكالة الوطنية ANAPEC',
+      en: 'Health Cover and Student Jobs in Rabat: AMO Coverage and ANAPEC Pathways'
+    },
+    subtitle: {
+      fr: "Épisode 4 du guide Vie Étudiante, comme promis : l'assurance maladie obligatoire (AMO) gratuite et ce que l'on sait vraiment des jobs et stages étudiants.",
+      ar: 'الحلقة 4 من دليل الحياة الطلابية كما وعدنا: التغطية الصحية الإجبارية (AMO) المجانية وما نعرفه فعلاً عن العمل الطلابي والتداريب.',
+      en: "Episode 4 of the Student Life guide, as promised: the free mandatory health coverage (AMO) and what's actually known about student jobs and internships."
+    },
+    excerpt: {
+      fr: "L'AMO étudiante est gratuite pour les moins de 30 ans, l'inscription se fait via votre université, et l'ANAPEC reste le point d'entrée officiel pour stages et insertion. Voici ce qui est vérifié — et ce qui ne l'est pas.",
+      ar: 'التغطية الصحية الطلابية مجانية لمن هم دون 30 سنة، ويتم التسجيل عبر جامعتكم، وتبقى الوكالة الوطنية ANAPEC المدخل الرسمي للتداريب والإدماج المهني. إليكم ما تم التحقق منه — وما لم يُتحقق منه بعد.',
+      en: "Student AMO coverage is free for under-30s, registration runs through your university, and ANAPEC remains the official entry point for internships and job placement. Here's what's verified — and what isn't."
+    },
+    body: {
+      fr: [
+        "Comme promis dans notre guide transport, voici le quatrième épisode de notre série Vie Étudiante, consacré à deux sujets qui touchent directement le quotidien étudiant à Rabat : la couverture santé et les petits jobs.",
+        "Commençons par l'AMO (Assurance Maladie Obligatoire) étudiante : elle est entièrement gratuite pour les étudiants inscrits régulièrement dans un établissement d'enseignement supérieur ou de formation professionnelle, à condition d'avoir 30 ans ou moins et de ne pas déjà bénéficier d'une autre couverture médicale. L'État prend en charge les cotisations pour les étudiants du public. L'inscription se fait chaque année via un formulaire électronique sur la plateforme de votre université — pour l'Université Mohammed V de Rabat par exemple, sur etu.um5.ac.ma — après quoi l'établissement transmet la demande à la CNOPS (Caisse Nationale des Organismes de Prévoyance Sociale). La CNOPS traite ensuite le dossier dans un délai maximal de 30 jours, et le suivi des remboursements se fait sur le portail cnops.org.ma.",
+        "Pour les petits jobs et stages, les sources disponibles restent plus vagues que pour l'AMO — nous préférons le dire honnêtement plutôt que d'inventer des chiffres. Les postes les plus fréquemment cités pour les étudiants marocains incluent le travail saisonnier dans le tourisme et l'hôtellerie, le soutien scolaire particulier, les centres d'appel, et les postes d'accueil. Aucune grille de salaire fiable et vérifiable n'a été trouvée pour ces postes au moment de la rédaction : nous ne publierons donc pas de chiffre tant qu'il n'est pas confirmé par une source solide.",
+        "Pour l'insertion professionnelle après le diplôme, l'ANAPEC (Agence Nationale de Promotion de l'Emploi et des Compétences) est l'organisme public de référence. Son programme phare, IDMAJ, favorise l'insertion via des stages rémunérés pour les jeunes diplômés. L'inscription se fait en ligne sur anapec.org : création d'un compte, envoi des documents (copie de la carte d'identité nationale, copies des diplômes, CV à jour), puis passage à l'agence ANAPEC la plus proche pour finaliser le dossier. Un dispositif complémentaire, TAHFIZ, encourage les employeurs à recruter de jeunes diplômés en réduisant leurs charges sociales — un mécanisme qui joue indirectement en faveur des candidats.",
+        "Comme pour les épisodes précédents, ce guide reste volontairement prudent sur ce qui n'est pas vérifiable : les montants exacts des stages IDMAJ et les tarifs des petits jobs évoluent et ne sont pas systématiquement publiés — mieux vaut confirmer directement auprès de l'agence ANAPEC ou de l'employeur concerné plutôt que de se fier à un chiffre non sourcé."
+      ],
+      ar: [
+        "كما وعدنا في دليل التنقل، إليكم الحلقة الرابعة من سلسلتنا حول الحياة الطلابية، المخصصة لموضوعين يمسان مباشرة الحياة اليومية للطلبة بالرباط: التغطية الصحية والعمل الطلابي.",
+        "لنبدأ بالتغطية الصحية الإجبارية (AMO) للطلبة: وهي مجانية بالكامل للطلبة المسجلين بانتظام في مؤسسة للتعليم العالي أو التكوين المهني، بشرط أن تكون أعمارهم 30 سنة أو أقل وألا يستفيدوا بالفعل من تغطية صحية أخرى. تتحمل الدولة الاشتراكات بالنسبة لطلبة القطاع العام. يتم التسجيل سنوياً عبر استمارة إلكترونية على منصة جامعتكم — بالنسبة لجامعة محمد الخامس بالرباط مثلاً، عبر etu.um5.ac.ma — وبعدها تُحيل المؤسسة الطلب إلى الصندوق الوطني لمنظمات الاحتياط الاجتماعي (CNOPS). يعالج الصندوق الملف بعدها في أجل أقصاه 30 يوماً، ويتم تتبع التعويضات عبر بوابة cnops.org.ma.",
+        "أما بخصوص العمل الطلابي والتداريب، فالمصادر المتوفرة تبقى أقل دقة مقارنة بمعلومات AMO — ونفضل قول ذلك بصراحة بدل اختلاق أرقام. أكثر الوظائف المذكورة للطلبة المغاربة تشمل العمل الموسمي في السياحة والفندقة، الدروس الخصوصية، مراكز الاتصال، ووظائف الاستقبال. لم يتم العثور على أي جدول أجور موثوق وقابل للتحقق لهذه الوظائف وقت كتابة هذا المقال: لن ننشر إذن أي رقم قبل التأكد منه عبر مصدر موثوق.",
+        "بالنسبة للإدماج المهني بعد التخرج، تبقى الوكالة الوطنية لإنعاش التشغيل والكفاءات (ANAPEC) الهيئة العمومية المرجعية. برنامجها الرئيسي، إدماج (IDMAJ)، يشجع الإدماج المهني عبر تداريب مؤدى عنها للخريجين الشباب. يتم التسجيل عبر الإنترنت على anapec.org: إنشاء حساب، إرسال الوثائق (نسخة من البطاقة الوطنية، نسخ الشهادات، سيرة ذاتية محينة)، ثم التوجه إلى أقرب وكالة ANAPEC لإتمام الملف. يوجد أيضاً برنامج تحفيز (TAHFIZ) يشجع أصحاب العمل على توظيف الخريجين الشباب عبر تخفيض الأعباء الاجتماعية — آلية تصب بشكل غير مباشر في صالح المترشحين.",
+        "كما في الحلقات السابقة، يبقى هذا الدليل حذراً عمداً بخصوص ما لا يمكن التحقق منه: المبالغ الدقيقة لتداريب IDMAJ وأسعار العمل الطلابي تتغير ولا تُنشر بشكل منتظم — الأفضل التأكد مباشرة لدى وكالة ANAPEC أو صاحب العمل المعني بدل الاعتماد على رقم غير موثق."
+      ],
+      en: [
+        "As promised in our transport guide, here's the fourth episode of our Student Life series, covering two topics that directly affect daily student life in Rabat: health coverage and student jobs.",
+        "Let's start with student AMO (Assurance Maladie Obligatoire) coverage: it's entirely free for students regularly enrolled in a higher education or vocational training institution, provided they are 30 or younger and not already covered by another medical plan. The state covers contributions for public-sector students. Registration happens each year through an online form on your university's platform — for Mohammed V University in Rabat, for instance, at etu.um5.ac.ma — after which the institution forwards the request to CNOPS (Caisse Nationale des Organismes de Prévoyance Sociale). CNOPS then processes the file within a maximum of 30 days, and reimbursement tracking is done through the cnops.org.ma portal.",
+        "For student jobs and internships, the available sources are notably vaguer than for AMO — we'd rather say so honestly than invent figures. The positions most commonly cited for Moroccan students include seasonal work in tourism and hospitality, private tutoring, call centers, and reception roles. No reliable, verifiable pay scale was found for these roles at the time of writing, so we won't publish a figure until one is confirmed by a solid source.",
+        "For post-graduation job placement, ANAPEC (Agence Nationale de Promotion de l'Emploi et des Compétences) is the reference public agency. Its flagship program, IDMAJ, supports professional insertion through paid internships for young graduates. Registration is done online at anapec.org: create an account, submit documents (national ID copy, diploma copies, an up-to-date CV), then visit the nearest ANAPEC agency to finalize the file. A complementary scheme, TAHFIZ, encourages employers to hire young graduates by reducing their social contributions — a mechanism that indirectly benefits candidates.",
+        "As with previous episodes, this guide stays deliberately cautious about what isn't verifiable: exact IDMAJ internship amounts and student job pay rates change and aren't systematically published — better to confirm directly with the ANAPEC agency or the employer in question than to rely on an unsourced figure."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle_sante_jobs.jpg',
+    heroImageCaption: {
+      fr: "Illustration : campus universitaire, carte d'assurance santé et ordinateur portable — le quotidien administratif étudiant à Rabat.",
+      ar: 'رسم توضيحي: حرم جامعي، بطاقة تأمين صحي وحاسوب محمول — الحياة الإدارية اليومية للطالب بالرباط.',
+      en: "Illustration: university campus, health insurance card and laptop — the everyday administrative side of student life in Rabat."
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Rabat',
+      ar: 'الرباط',
+      en: 'Rabat'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice Lifestyle',
+        ar: 'محررة أسلوب الحياة',
+        en: 'Lifestyle Writer'
+      },
+      avatar: avatarNadia
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Vie Étudiante', ar: 'حياة الطلبة', en: 'Student Life' },
+      { fr: 'AMO Étudiante', ar: 'التغطية الصحية الطلابية', en: 'Student Health Coverage' },
+      { fr: 'ANAPEC', ar: 'ANAPEC', en: 'ANAPEC' },
+      { fr: 'Jobs Étudiants', ar: 'العمل الطلابي', en: 'Student Jobs' }
+    ],
+    relatedSlugs: ['transport-rabat-etudiant-tramway-taxi', 'guide-etudiant-rabat-logement-forfaits', 'guide-etudiant-rabat'],
+    faq: [
+      {
+        question: {
+          fr: "L'AMO est-elle vraiment gratuite pour les étudiants ?",
+          ar: 'هل التغطية الصحية AMO مجانية فعلاً للطلبة؟',
+          en: 'Is student AMO coverage really free?'
+        },
+        answer: {
+          fr: "Oui, pour les étudiants inscrits régulièrement dans l'enseignement supérieur ou la formation professionnelle, âgés de 30 ans ou moins, et non déjà couverts par une autre assurance médicale.",
+          ar: 'نعم، بالنسبة للطلبة المسجلين بانتظام في التعليم العالي أو التكوين المهني، البالغين 30 سنة أو أقل، وغير المستفيدين مسبقاً من تأمين صحي آخر.',
+          en: 'Yes, for students regularly enrolled in higher education or vocational training, aged 30 or under, and not already covered by another medical plan.'
+        }
+      },
+      {
+        question: {
+          fr: "Comment s'inscrire à l'AMO étudiante ?",
+          ar: 'كيف يتم التسجيل في التغطية الصحية الطلابية AMO؟',
+          en: 'How do you register for student AMO coverage?'
+        },
+        answer: {
+          fr: "Via un formulaire électronique annuel sur la plateforme de votre université (etu.um5.ac.ma pour l'UM5), qui transmet ensuite votre dossier à la CNOPS, traité sous 30 jours maximum.",
+          ar: 'عبر استمارة إلكترونية سنوية على منصة جامعتكم (etu.um5.ac.ma بالنسبة لجامعة محمد الخامس)، التي تحيل بعدها ملفكم إلى CNOPS، الذي يعالجه في أجل أقصاه 30 يوماً.',
+          en: "Through an annual online form on your university's platform (etu.um5.ac.ma for UM5), which then forwards your file to CNOPS, processed within a maximum of 30 days."
+        }
+      },
+      {
+        question: {
+          fr: "Combien paie-t-on pour un stage IDMAJ via l'ANAPEC ?",
+          ar: 'كم يُدفع مقابل تدريب IDMAJ عبر ANAPEC؟',
+          en: 'How much do IDMAJ internships via ANAPEC pay?'
+        },
+        answer: {
+          fr: "Nous n'avons pas trouvé de montant fiable et vérifiable au moment de la rédaction — mieux vaut se renseigner directement auprès de l'agence ANAPEC ou de l'employeur.",
+          ar: 'لم نعثر على مبلغ موثوق وقابل للتحقق وقت كتابة هذا المقال — الأفضل الاستفسار مباشرة لدى وكالة ANAPEC أو صاحب العمل.',
+          en: "We couldn't find a reliable, verifiable amount at the time of writing — best to check directly with the ANAPEC agency or the employer."
+        }
+      }
+    ]
+  },
+  {
+    id: 'art-24',
+    slug: 'corniche-bouregreg-plus-beaux-points-de-vue-rabat',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Guide Pratique',
+      ar: 'دليل عملي',
+      en: 'Practical Guide'
+    },
+    title: {
+      fr: 'La Corniche Bouregreg et les plus beaux points de vue de Rabat',
+      ar: 'كورنيش أبي رقراق وأجمل نقاط الإطلالة بالرباط',
+      en: "Corniche Bouregreg and Rabat's Best Viewpoints"
+    },
+    subtitle: {
+      fr: "Au-delà des Oudayas et de Chellah déjà couverts dans notre itinéraire, la promenade du Bouregreg et deux adresses avec vue méritent le détour.",
+      ar: 'إلى جانب الأوداية وشالة اللتين سبق تناولهما في مقال البرنامج اليومي، يستحق كورنيش أبي رقراق وعنوانان بإطلالة مميزة زيارة خاصة.',
+      en: "Beyond the Oudayas and Chellah already covered in our day-trip itinerary, the Bouregreg promenade and two spots with a view are worth the detour."
+    },
+    excerpt: {
+      fr: "La Corniche Bouregreg, artère de promenade entre Rabat et Salé, plus deux adresses vérifiées avec vue sur la vallée — un complément à notre itinéraire d'une journée, pas une redite.",
+      ar: 'كورنيش أبي رقراق، شريان التنزه بين الرباط وسلا، إضافة إلى عنوانين موثقين بإطلالة على الوادي — تكملة لمقال برنامجنا اليومي، وليس تكراراً له.',
+      en: "The Corniche Bouregreg, the promenade linking Rabat and Salé, plus two verified spots with a view over the valley — a complement to our day-trip itinerary, not a repeat of it."
+    },
+    body: {
+      fr: [
+        "Notre itinéraire d'une journée à Rabat couvre déjà la Kasbah des Oudayas, le Café Maure et Chellah — trois valeurs sûres pour la vue. Cet article se concentre volontairement sur ce qui n'y figure pas encore, à commencer par la Corniche Bouregreg.",
+        "La Corniche Bouregreg est la promenade aménagée le long de l'avenue Al Marsa, sur la rive qui relie Rabat et Salé de part et d'autre du fleuve, à proximité de la Kasbah des Oudayas, de la Tour Hassan et de la médina. On y marche, on y fait du vélo, on y pique-nique dans des espaces verts aménagés, et on peut traverser le Bouregreg en petite embarcation reliant les deux rives. Le fleuve a longtemps servi de route commerciale entre les deux villes, et des investissements urbains récents ont modernisé les quais et créé des zones de loisirs le long du parcours.",
+        "Pour dîner avec vue sur l'eau, le Dhow, restaurant et lounge installé sur un bateau amarré Quai de Bouregreg, avenue Al Marsa, propose une vue panoramique sur le fleuve et la ville — une option à considérer pour un dîner plutôt qu'un déjeuner rapide, sans que nous ayons de retour vérifié sur les prix ou la carte au moment de la rédaction.",
+        "Du côté de Chellah, La Ciconia, café-restaurant situé aux abords du site archéologique, offre une vue dégagée sur la Tour Mohammed VI et la vallée du Bouregreg, dans un cadre végétalisé, avec salades et jus proposés en carte — une halte à envisager après la visite de Chellah plutôt qu'un point de passage obligé en soi.",
+        "Nous avons volontairement écarté certaines adresses de rooftop repérées en recherche mais dont nous n'avons pas pu confirmer indépendamment les détails (horaires, accès, existence actuelle) — nous préférons publier moins d'adresses mais toutes vérifiées.",
+        "Pour la suite du programme journée ou week-end, notre itinéraire complet reste le point de départ ; ce guide en est le complément, pas le remplaçant."
+      ],
+      ar: [
+        "يغطي مقال برنامجنا اليومي بالرباط بالفعل قصبة الأوداية، المقهى المغربي (Café Maure) وشالة — ثلاث قيم مضمونة للإطلالة. يركز هذا المقال عمداً على ما لم يُذكر بعد، بدءاً بكورنيش أبي رقراق.",
+        "كورنيش أبي رقراق هو الممشى المهيأ على طول شارع المرسى، على الضفة التي تربط الرباط وسلا على جانبي النهر، بالقرب من قصبة الأوداية وصومعة حسان والمدينة القديمة. يمكن التنزه سيراً، ركوب الدراجات، التنزه في المساحات الخضراء المهيأة، وعبور أبي رقراق بقارب صغير يربط الضفتين. لطالما كان النهر طريقاً تجارياً بين المدينتين، وساهمت استثمارات حضرية حديثة في تحديث الأرصفة وإنشاء مناطق ترفيهية على طول المسار.",
+        "لتناول العشاء بإطلالة على الماء، يقترح مطعم وصالة Le Dhow، المُقام على قارب راسٍ برصيف أبي رقراق بشارع المرسى، إطلالة بانورامية على النهر والمدينة — خيار يُنظر فيه للعشاء أكثر من الغداء السريع، دون أن نتوفر على تقييم موثق للأسعار أو القائمة وقت كتابة هذا المقال.",
+        "بالقرب من شالة، يوفر La Ciconia، وهو مقهى ومطعم قريب من الموقع الأثري، إطلالة مفتوحة على صومعة محمد السادس ووادي أبي رقراق، في محيط أخضر، مع سلطات وعصائر ضمن قائمته — محطة يُنظر فيها بعد زيارة شالة أكثر من كونها محطة إلزامية بحد ذاتها.",
+        "استبعدنا عمداً بعض عناوين الـrooftop التي رصدناها أثناء البحث لكن لم نتمكن من التحقق منها بشكل مستقل (المواقيت، الولوج، الوجود الفعلي حالياً) — نفضل نشر عدد أقل من العناوين لكن كلها موثقة.",
+        "لبرنامج يوم كامل أو نهاية أسبوع، يبقى مقال برنامجنا اليومي الكامل نقطة الانطلاق؛ هذا الدليل يكمّله، ولا يحل محله."
+      ],
+      en: [
+        "Our day-trip itinerary for Rabat already covers the Kasbah des Oudayas, Café Maure, and Chellah — three reliable picks for a view. This article deliberately focuses on what isn't in there yet, starting with the Corniche Bouregreg.",
+        "The Corniche Bouregreg is the developed promenade running along Avenue Al Marsa, on the bank connecting Rabat and Salé on either side of the river, near the Kasbah des Oudayas, the Hassan Tower, and the medina. You can walk it, cycle it, picnic in landscaped green spaces, and cross the Bouregreg by small boat linking the two banks. The river long served as a trade route between the two cities, and recent urban investment has modernized the docks and created recreation zones along the route.",
+        "For dinner with a water view, Le Dhow, a restaurant and lounge set on a boat moored at Quai de Bouregreg, Avenue Al Marsa, offers panoramic views of the river and city — worth considering for dinner rather than a quick lunch, though we have no verified feedback on pricing or the menu at the time of writing.",
+        "Near Chellah, La Ciconia, a café-restaurant close to the archaeological site, offers an open view of the Mohammed VI Tower and the Bouregreg valley in a green setting, with salads and juices on the menu — a stop worth considering after visiting Chellah rather than a must on its own.",
+        "We deliberately left out a few rooftop spots surfaced during research whose details (hours, access, whether they're currently operating) we couldn't independently confirm — we'd rather publish fewer addresses, all verified, than more with gaps.",
+        "For a full day or weekend program, our complete itinerary remains the starting point; this guide is its complement, not a replacement."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle_corniche.jpg',
+    heroImageCaption: {
+      fr: 'Illustration : la Corniche Bouregreg au coucher du soleil, avec la Kasbah des Oudayas et Salé en arrière-plan.',
+      ar: 'رسم توضيحي: كورنيش أبي رقراق عند غروب الشمس، مع قصبة الأوداية وسلا في الخلفية.',
+      en: 'Illustration: the Corniche Bouregreg at sunset, with the Kasbah des Oudayas and Salé in the background.'
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-23',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Rabat & Salé',
+      ar: 'الرباط وسلا',
+      en: 'Rabat & Salé'
+    },
+    author: {
+      name: 'Yassine Benjelloun',
+      role: {
+        fr: 'Critique Urbain & Art de Vivre',
+        ar: 'ناقد حضري وأسلوب حياة',
+        en: 'Urban & Lifestyle Critic'
+      },
+      avatar: avatarYassine
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Corniche Bouregreg', ar: 'كورنيش أبي رقراق', en: 'Corniche Bouregreg' },
+      { fr: 'Points de Vue', ar: 'نقاط الإطلالة', en: 'Viewpoints' },
+      { fr: 'Chellah', ar: 'شالة', en: 'Chellah' },
+      { fr: 'Guide Pratique', ar: 'دليل عملي', en: 'Practical Guide' }
+    ],
+    relatedSlugs: ['que-faire-a-rabat-itineraire', 'plages-rabat-guide', 'so-lounge-souissi'],
+    faq: [
+      {
+        question: {
+          fr: "Qu'est-ce que la Corniche Bouregreg ?",
+          ar: 'ما هو كورنيش أبي رقراق؟',
+          en: 'What is the Corniche Bouregreg?'
+        },
+        answer: {
+          fr: "La promenade aménagée le long de l'avenue Al Marsa, reliant les rives de Rabat et Salé, avec pistes pour la marche et le vélo, espaces verts, et une traversée en petite embarcation entre les deux villes.",
+          ar: 'الممشى المهيأ على طول شارع المرسى، الذي يربط ضفتي الرباط وسلا، مع مسارات للمشي وركوب الدراجات، ومساحات خضراء، وعبور بقارب صغير بين المدينتين.',
+          en: "The developed promenade along Avenue Al Marsa, connecting the Rabat and Salé riverbanks, with walking and cycling paths, green spaces, and a small-boat crossing between the two cities."
+        }
+      },
+      {
+        question: {
+          fr: 'Cet article répète-t-il notre itinéraire déjà publié ?',
+          ar: 'هل يكرر هذا المقال برنامجنا اليومي المنشور سابقاً؟',
+          en: 'Does this article repeat our already-published itinerary?'
+        },
+        answer: {
+          fr: "Non : la Kasbah des Oudayas, le Café Maure et Chellah sont déjà couverts en détail dans notre itinéraire d'une journée. Cet article se concentre sur la Corniche Bouregreg et deux adresses supplémentaires vérifiées.",
+          ar: 'لا: تم تناول قصبة الأوداية والمقهى المغربي وشالة بالتفصيل في مقال برنامجنا اليومي. يركز هذا المقال على كورنيش أبي رقراق وعنوانين إضافيين موثقين.',
+          en: "No — the Kasbah des Oudayas, Café Maure, and Chellah are already covered in detail in our day-trip itinerary. This article focuses on the Corniche Bouregreg and two additional verified spots."
+        }
+      },
+      {
+        question: {
+          fr: 'Où dîner avec une vue sur le Bouregreg ?',
+          ar: 'أين يمكن تناول العشاء بإطلالة على أبي رقراق؟',
+          en: 'Where can you have dinner with a view of the Bouregreg?'
+        },
+        answer: {
+          fr: "Le Dhow, restaurant-lounge sur un bateau amarré Quai de Bouregreg, avenue Al Marsa, propose une vue panoramique sur le fleuve — nous n'avons toutefois pas de retour vérifié sur les prix ou la carte.",
+          ar: 'Le Dhow، مطعم-صالة على متن قارب راسٍ برصيف أبي رقراق بشارع المرسى، يوفر إطلالة بانورامية على النهر — لا نتوفر مع ذلك على تقييم موثق للأسعار أو القائمة.',
+          en: "Le Dhow, a restaurant-lounge on a boat moored at Quai de Bouregreg, Avenue Al Marsa, offers a panoramic river view — though we have no verified feedback on pricing or the menu."
+        }
+      }
+    ]
   }
 ];
 
