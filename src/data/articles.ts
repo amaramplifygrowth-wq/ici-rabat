@@ -2178,11 +2178,11 @@ export const ARTICLES_DATA: Article[] = [
         "For the rest of the medina visit — Kasbah des Oudayas, Café Maure — our day-trip itinerary remains the full starting point."
       ]
     },
-    heroImage: '/banners/banner_lifestyle.jpg',
+    heroImage: '/banners/banner_lifestyle_souks.jpg',
     heroImageCaption: {
-      fr: 'Visuel provisoire en attendant une image dédiée à cet article.',
-      ar: 'صورة مؤقتة في انتظار صورة مخصصة لهذا المقال.',
-      en: 'Placeholder image while a dedicated visual is prepared for this article.'
+      fr: 'Illustration : une ruelle de souk dans la médina, entre babouches, argenterie et tapis berbères.',
+      ar: 'رسم توضيحي: زنقة في السوق بالمدينة العتيقة، بين البلغة والفضيات والزرابي الأمازيغية.',
+      en: 'Illustration: a souk alley in the medina, between babouches, silverware and Berber carpets.'
     },
     galleryImages: [],
     publishedAt: '2026-08-26',
