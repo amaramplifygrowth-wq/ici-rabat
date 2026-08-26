@@ -1406,7 +1406,7 @@ export const ARTICLES_DATA: Article[] = [
       { fr: 'Chellah', ar: 'شالة', en: 'Chellah' },
       { fr: 'Tourisme Rabat', ar: 'سياحة الرباط', en: 'Rabat Tourism' }
     ],
-    relatedSlugs: ['ba-fares-diour-jamaa', 'indian-flavors-agdal', 'transport-rabat-etudiant-tramway-taxi'],
+    relatedSlugs: ['souks-medina-rabat-shopping-guide', 'indian-flavors-agdal', 'transport-rabat-etudiant-tramway-taxi'],
     faq: [
       {
         question: {
@@ -2124,6 +2124,131 @@ export const ARTICLES_DATA: Article[] = [
           fr: "Le Dhow, restaurant-lounge sur un bateau amarré Quai de Bouregreg, avenue Al Marsa, propose une vue panoramique sur le fleuve — nous n'avons toutefois pas de retour vérifié sur les prix ou la carte.",
           ar: 'Le Dhow، مطعم-صالة على متن قارب راسٍ برصيف أبي رقراق بشارع المرسى، يوفر إطلالة بانورامية على النهر — لا نتوفر مع ذلك على تقييم موثق للأسعار أو القائمة.',
           en: "Le Dhow, a restaurant-lounge on a boat moored at Quai de Bouregreg, Avenue Al Marsa, offers a panoramic river view — though we have no verified feedback on pricing or the menu."
+        }
+      }
+    ]
+  },
+  {
+    id: 'art-25',
+    slug: 'souks-medina-rabat-shopping-guide',
+    category: 'lifestyle',
+    categoryLabel: {
+      fr: 'Guide Pratique',
+      ar: 'دليل عملي',
+      en: 'Practical Guide'
+    },
+    title: {
+      fr: 'Souks de la médina de Rabat : où acheter tapis, babouches et argenterie',
+      ar: 'أسواق مدينة الرباط العتيقة: أين تشترون السجاد والبلغة والفضيات',
+      en: "Rabat's Medina Souks: Where to Buy Carpets, Babouches and Silver"
+    },
+    subtitle: {
+      fr: 'Rue des Consuls, Souk Sebat et Marché Central : trois adresses vérifiées pour le shopping artisanal, avec horaires et repères de négociation.',
+      ar: 'شارع القناصل، سوق السباط والسوق المركزي: ثلاثة عناوين موثقة للتسوق الحرفي، مع المواقيت ومعايير التفاوض.',
+      en: 'Rue des Consuls, Souk Sebat and Marché Central: three verified spots for craft shopping, with hours and bargaining benchmarks.'
+    },
+    excerpt: {
+      fr: "Notre itinéraire d'une journée passe par la Rue des Consuls sans s'y attarder. Ce guide y revient en détail, avec deux autres adresses de la médina — horaires, spécialités et conseils de négociation vérifiés.",
+      ar: 'يمر برنامجنا اليومي بشارع القناصل دون التوقف طويلاً. يعود هذا الدليل إليه بتفصيل أكبر، مع عنوانين آخرين بالمدينة العتيقة — مواقيت وتخصصات ونصائح تفاوض موثقة.',
+      en: "Our day-trip itinerary passes through Rue des Consuls without lingering. This guide comes back to it in detail, with two more medina addresses — verified hours, specialties, and bargaining tips."
+    },
+    body: {
+      fr: [
+        "La médina de Rabat, fondée au XVIIe siècle par les Morisques andalous expulsés d'Espagne, concentre plusieurs souks aux spécialités distinctes. Notre itinéraire d'une journée à Rabat évoque déjà la Rue des Consuls en passant ; ce guide s'y attarde, plus deux autres adresses vérifiées.",
+        "La Rue des Consuls, aussi appelée Souk Tahti, est l'artère principale du souk artisanal, longue d'environ un kilomètre et débouchant sur la Kasbah des Oudayas. Son nom vient de l'obligation historique faite aux diplomates étrangers d'y résider, à proximité de l'ancien Souk El Ghazal où se négociaient les rançons des captifs. La rue a été rénovée et reste moins dense que les souks d'autres villes marocaines : on y trouve tapis, poteries, boiseries, pierre travaillée et surtout de l'argenterie, avec parfois de belles pièces anciennes chez les bijoutiers. Les horaires varient selon les commerçants, mais l'activité est quotidienne. Pour l'argenterie, un repère parfois cité par les guides est de ne pas dépasser environ 15 DH par gramme — un ordre de grandeur à vérifier sur place, le cours de l'argent évoluant dans le temps.",
+        "Souk Sebat, situé sur la rue Souika, est spécialisé dans le cuir et la bijouterie : babouches, sacs en cuir, bijoux en or et en argent, fabriqués et vendus dans des ruelles étroites où l'on croise des artisans au travail. Il est ouvert quotidiennement de 9h à 20h20 selon nos sources.",
+        "Hors les murs de la médina, le Marché Central propose une autre ambiance : produits frais, objets artisanaux et vêtements, dans une atmosphère plus locale que touristique — un bon complément si l'on cherche à voir comment les Rbatis font leurs courses au quotidien, plutôt qu'un lieu de souvenirs.",
+        "Sur la négociation : elle est la norme dans les souks marocains, contrairement aux commerces à prix fixe. Aucune règle officielle ne fixe de pourcentage de réduction attendu — mieux vaut comparer plusieurs échoppes avant de conclure, en particulier pour l'argenterie et les tapis, plutôt que de se fier à un chiffre unique.",
+        "Pour la suite de la visite de la médina — Kasbah des Oudayas, Café Maure — notre itinéraire d'une journée reste le point de départ complet."
+      ],
+      ar: [
+        "تضم مدينة الرباط العتيقة، التي أسسها الموريسكيون الأندلسيون المطرودون من إسبانيا في القرن السابع عشر، عدة أسواق بتخصصات مختلفة. يذكر برنامجنا اليومي بالرباط شارع القناصل مروراً دون التوقف طويلاً؛ يعود هذا الدليل إليه بتفصيل أكبر، مع عنوانين آخرين موثقين.",
+        "شارع القناصل، المعروف أيضاً بسوق التحتي، هو الشريان الرئيسي للسوق الحرفي، بطول كيلومتر تقريباً وينتهي عند قصبة الأوداية. يعود اسمه إلى الإلزام التاريخي للدبلوماسيين الأجانب بالإقامة فيه، بالقرب من سوق الغزال القديم حيث كانت تُتفاوض فدية الأسرى. تم ترميم الشارع ويبقى أقل ازدحاماً من أسواق مدن مغربية أخرى: يمكن إيجاد السجاد والفخار والأشغال الخشبية والحجرية وخاصة الفضيات، مع قطع قديمة جميلة أحياناً عند الصاغة. تختلف المواقيت حسب التجار، لكن النشاط يومي. بخصوص الفضيات، يذكر بعض المرشدين معياراً يقارب 15 درهماً للغرام كحد أقصى — وهو تقدير يجب التحقق منه ميدانياً، إذ يتغير سعر الفضة مع الوقت.",
+        "سوق السباط، الواقع بزنقة السويقة، متخصص في الجلد والمجوهرات: بلغة، حقائب جلدية، مجوهرات ذهبية وفضية، تُصنع وتُباع في أزقة ضيقة يعمل فيها الحرفيون. يفتح يومياً من الساعة 9 صباحاً إلى 8:20 مساءً وفق مصادرنا.",
+        "خارج أسوار المدينة العتيقة، يوفر السوق المركزي أجواء مختلفة: منتجات طازجة، أغراض حرفية وملابس، في جو أقرب للمحلي منه للسياحي — إضافة جيدة لمن يريد رؤية كيفية تسوق الرباطيين يومياً، أكثر من كونه مكاناً للتذكارات.",
+        "بخصوص المساومة: فهي القاعدة في الأسواق المغربية، خلافاً للمحلات ذات الأسعار الثابتة. لا توجد قاعدة رسمية تحدد نسبة تخفيض متوقعة — الأفضل مقارنة عدة محلات قبل الشراء، خاصة بالنسبة للفضيات والسجاد، بدل الاعتماد على رقم واحد.",
+        "لمتابعة زيارة المدينة العتيقة — قصبة الأوداية، المقهى المغربي — يبقى مقال برنامجنا اليومي نقطة الانطلاق الكاملة."
+      ],
+      en: [
+        "Rabat's medina, founded in the 17th century by Andalusian Moriscos expelled from Spain, concentrates several souks with distinct specialties. Our day-trip itinerary already mentions Rue des Consuls in passing; this guide lingers there, plus two more verified addresses.",
+        "Rue des Consuls, also known as Souk Tahti, is the main artery of the artisanal souk, roughly one kilometer long and opening onto the Kasbah des Oudayas. Its name comes from the historical requirement that foreign diplomats reside there, near the former Souk El Ghazal where captives' ransoms were negotiated. The street has been renovated and stays less crowded than souks in other Moroccan cities: you'll find carpets, pottery, woodwork, worked stone, and above all silverwork, sometimes with fine antique pieces among the jewelers. Hours vary by merchant, but there's daily activity. For silverwork, a benchmark sometimes cited by guides is not to exceed roughly 15 DH per gram — a rough order of magnitude worth checking on the spot, since the price of silver moves over time.",
+        "Souk Sebat, located on Souika street, specializes in leather and jewelry: babouches, leather bags, gold and silver jewelry, made and sold in narrow alleys where you'll see artisans at work. According to our sources, it's open daily from 9 AM to 8:20 PM.",
+        "Outside the medina walls, Marché Central offers a different atmosphere: fresh produce, craft goods, and clothing, in a setting more local than touristy — a good complement if you want to see how Rbatis do their everyday shopping, rather than a souvenir stop.",
+        "On bargaining: it's the norm in Moroccan souks, unlike fixed-price shops. There's no official rule setting an expected discount percentage — better to compare a few stalls before buying, especially for silverwork and carpets, than to rely on a single figure.",
+        "For the rest of the medina visit — Kasbah des Oudayas, Café Maure — our day-trip itinerary remains the full starting point."
+      ]
+    },
+    heroImage: '/banners/banner_lifestyle.jpg',
+    heroImageCaption: {
+      fr: 'Visuel provisoire en attendant une image dédiée à cet article.',
+      ar: 'صورة مؤقتة في انتظار صورة مخصصة لهذا المقال.',
+      en: 'Placeholder image while a dedicated visual is prepared for this article.'
+    },
+    galleryImages: [],
+    publishedAt: '2026-08-26',
+    readTime: {
+      fr: '3 min',
+      ar: '٣ دقائق',
+      en: '3 min'
+    },
+    location: {
+      fr: 'Médina de Rabat',
+      ar: 'مدينة الرباط العتيقة',
+      en: 'Rabat Medina'
+    },
+    author: {
+      name: 'Nadia El Fassi',
+      role: {
+        fr: 'Rédactrice Lifestyle',
+        ar: 'محررة أسلوب الحياة',
+        en: 'Lifestyle Writer'
+      },
+      avatar: avatarNadia
+    },
+    isFeaturedHero: false,
+    isEditorialPick: true,
+    tags: [
+      { fr: 'Médina', ar: 'المدينة العتيقة', en: 'Medina' },
+      { fr: 'Rue des Consuls', ar: 'شارع القناصل', en: 'Rue des Consuls' },
+      { fr: 'Shopping Artisanal', ar: 'التسوق الحرفي', en: 'Craft Shopping' },
+      { fr: 'Guide Pratique', ar: 'دليل عملي', en: 'Practical Guide' }
+    ],
+    relatedSlugs: ['que-faire-a-rabat-itineraire', 'corniche-bouregreg-plus-beaux-points-de-vue-rabat', 'guide-etudiant-rabat'],
+    faq: [
+      {
+        question: {
+          fr: "Qu'achète-t-on Rue des Consuls à Rabat ?",
+          ar: 'ماذا يمكن شراؤه في شارع القناصل بالرباط؟',
+          en: "What can you buy on Rue des Consuls in Rabat?"
+        },
+        answer: {
+          fr: "Tapis, poteries, boiseries, pierre travaillée et surtout argenterie — l'artère principale du souk artisanal de la médina, longue d'environ un kilomètre.",
+          ar: 'السجاد، الفخار، الأشغال الخشبية، الحجر المشغول وخاصة الفضيات — الشريان الرئيسي للسوق الحرفي بالمدينة العتيقة، بطول كيلومتر تقريباً.',
+          en: "Carpets, pottery, woodwork, worked stone, and above all silverwork — the main artery of the medina's artisanal souk, roughly one kilometer long."
+        }
+      },
+      {
+        question: {
+          fr: "Quels sont les horaires du Souk Sebat ?",
+          ar: 'ما هي مواقيت سوق السباط؟',
+          en: "What are Souk Sebat's hours?"
+        },
+        answer: {
+          fr: "Selon nos sources, il est ouvert quotidiennement de 9h à 20h20. Nous recommandons de vérifier sur place, les horaires des souks pouvant varier d'un commerçant à l'autre.",
+          ar: 'وفق مصادرنا، يفتح يومياً من الساعة 9 صباحاً إلى 8:20 مساءً. نوصي بالتحقق ميدانياً، إذ قد تختلف المواقيت من تاجر لآخر.',
+          en: "According to our sources, it's open daily from 9 AM to 8:20 PM. We recommend checking on the spot, since souk hours can vary from one merchant to another."
+        }
+      },
+      {
+        question: {
+          fr: "Faut-il négocier les prix dans les souks de Rabat ?",
+          ar: 'هل يجب المساومة على الأسعار في أسواق الرباط؟',
+          en: "Should you bargain prices in Rabat's souks?"
+        },
+        answer: {
+          fr: "Oui, la négociation est la norme dans les souks marocains. Il n'existe pas de pourcentage officiel : mieux vaut comparer plusieurs échoppes avant de conclure.",
+          ar: 'نعم، المساومة هي القاعدة في الأسواق المغربية. لا توجد نسبة رسمية: الأفضل مقارنة عدة محلات قبل الشراء.',
+          en: "Yes, bargaining is the norm in Moroccan souks. There's no official percentage — better to compare a few stalls before buying."
         }
       }
     ]
