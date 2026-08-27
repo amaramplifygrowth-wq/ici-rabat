@@ -1,0 +1,13 @@
+{
+  "name": "Ici Rabat",
+  "short_name": "Ici Rabat",
+  "description": "Le magazine urbain & art de vivre de la capitale",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#141B33",
+  "background_color": "#FBF1D8",
+  "display": "standalone",
+  "start_url": "/"
+}

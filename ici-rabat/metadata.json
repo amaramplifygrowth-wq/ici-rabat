@@ -1,0 +1,6 @@
+{
+  "name": "Ici Rabat",
+  "description": "Magazine en ligne trilingue dédié à l'art de vivre, la gastronomie et la culture de Rabat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
